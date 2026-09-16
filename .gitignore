@@ -1,0 +1,14 @@
+# Python & virtual environment
+__pycache__/
+*.py[cod]
+venv/
+env/
+.venv/
+
+# Large datasets & binaries (keep modelfiles tracked only if light, or ignore raw data)
+dataset/*.mat
+*.npy
+
+# OS specific
+.DS_Store
+Thumbs.db

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEG Driver Drowsiness Monitor</title>
+    <!-- Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-blue: #38bdf8;
+            --alert-red: #ef4444;
+            --safe-green: #22c55e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        h1 { margin: 0; font-size: 1.5rem; }
+        .status-badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            background-color: #334155;
+        }
+
+        /* Banner for Rolling Alert */
+        #alert-banner {
+            display: none;
+            background-color: var(--alert-red);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { opacity: 0.85; }
+            to { opacity: 1; transform: scale(1.01); }
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-title { font-size: 0.85rem; color: #94a3b8; margin-bottom: 5px; }
+        .card-value { font-size: 1.8rem; font-weight: bold; }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .chart-container {
+            background-color: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>EEG Live Driver Drowsiness Monitor</h1>
+        <div id="connection-status" class="status-badge">Connecting to WS...</div>
+    </header>
+
+    <div id="alert-banner">
+        ⚠️ DROWSINESS DETECTED! (PROBABILITY &gt; 75% FOR 3+ EPOCHS)
+    </div>
+
+    <div class="metrics-grid">
+        <div class="card">
+            <div class="card-title">Drowsiness Probability</div>
+            <div id="prob-val" class="card-value" style="color: var(--accent-blue);">0.00%</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Consecutive High-Risk Epochs</div>
+            <div id="epochs-count" class="card-value">0 / 3</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Ground Truth Label</div>
+            <div id="truth-label" class="card-value">--</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Current Epoch Index</div>
+            <div id="epoch-index" class="card-value">#0</div>
+        </div>
+    </div>
+
+    <div class="charts-grid">
+        <div class="chart-container">
+            <canvas id="eegChart"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
