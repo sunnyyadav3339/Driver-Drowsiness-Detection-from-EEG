@@ -1,0 +1,146 @@
+% References for the EEG driver-drowsiness paper.
+% PDFs of open-access entries are in papers/ (file name noted in each `file` field).
+% Entries marked "% VERIFY" were taken from secondary listings; check against the publisher page before submission.
+
+% ---------- Datasets ----------
+@article{cao2019sadt,
+  author  = {Cao, Zehong and Chuang, Chun-Hsiang and King, Jung-Kai and Lin, Chin-Teng},
+  title   = {Multi-channel {EEG} recordings during a sustained-attention driving task},
+  journal = {Scientific Data},
+  volume  = {6},
+  pages   = {19},
+  year    = {2019},
+  doi     = {10.1038/s41597-019-0027-4},
+  file    = {papers/2019_Cao_SustainedAttentionDrivingDataset_SciData.pdf}
+}
+
+@article{cui2022interpretable,
+  author  = {Cui, Jian and Lan, Zirui and Sourina, Olga and M{\"u}ller-Wittig, Wolfgang},
+  title   = {{EEG}-Based Cross-Subject Driver Drowsiness Recognition With an Interpretable Convolutional Neural Network},
+  journal = {IEEE Transactions on Neural Networks and Learning Systems},
+  year    = {2022},
+  doi     = {10.1109/TNNLS.2022.3147208},
+  note    = {Source of the balanced 11-subject / 2022-sample SADT release},
+  file    = {papers/2107.09507v4.pdf}
+}
+
+% ---------- Drowsiness / fatigue models (recent) ----------
+@article{po2026deltagatenet,
+  author  = {Po, Yip Tin and Wang, Jianming and Miao, Yutao and Zhang, Jiayan and Zhao, Yunxu and Ouyang, Xiaomin and Li, Zhihong and Zhang, Nevin L.},
+  title   = {{DeltaGateNet}: Bidirectional Temporal Dynamics Modeling for {EEG}-based Driving Fatigue Recognition},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  year    = {2026},
+  eprint  = {2602.14071},
+  archivePrefix = {arXiv},
+  note    = {Code: https://github.com/yip-tin-po-alex/DeltaGateNet (MIT). Volume/pages not yet known.},
+  file    = {papers/2026_DeltaGateNet_Po_arXiv2602.14071.pdf}
+}
+
+@article{jang2025tta,
+  author  = {Jang, Geun-Deok and Han, Dong-Kyun and Park, Seo-Hyeon and Lee, Seong-Whan},
+  title   = {Calibration-Free {EEG}-based Driver Drowsiness Detection with Online Test-Time Adaptation},
+  journal = {IEEE Transactions on Human-Machine Systems},
+  year    = {2025},
+  eprint  = {2511.22030},
+  archivePrefix = {arXiv},
+  note    = {Volume/pages not yet known.},
+  file    = {papers/2025_CalibrationFree_TTA_Jang_arXiv2511.22030.pdf}
+}
+
+@article{feng2025id3rsnet,
+  author  = {Feng, Xiao and Guo, Zhongyuan and Kwong, Sam},
+  title   = {{ID3RSNet}: cross-subject driver drowsiness detection from raw single-channel {EEG} with an interpretable residual shrinkage network},
+  journal = {Frontiers in Neuroscience},
+  volume  = {18},
+  pages   = {1508747},
+  year    = {2025},
+  doi     = {10.3389/fnins.2024.1508747},
+  file    = {papers/2025_ID3RSNet_FrontNeurosci.pdf}
+}
+
+% VERIFY: author list not yet checked (paywalled)
+@article{yuan2025eon,
+  author  = {Yuan, others},
+  title   = {{EEG}-Based Cross-Dataset Driver Drowsiness Recognition With an Entropy Optimization Network},
+  journal = {IEEE Journal of Biomedical and Health Informatics},
+  year    = {2025},
+  doi     = {10.1109/JBHI.2024.3519730}
+}
+
+% VERIFY: author list and volume not yet checked (paywalled); PubMed ID 40068221
+@article{rahman2025prestimulus,
+  author  = {Rahman, others},
+  title   = {An investigation of pre-stimulus {EEG} for prediction of driver reaction time},
+  journal = {Biomedical Physics \& Engineering Express},
+  year    = {2025}
+}
+
+% ---------- Methods we borrow from ----------
+@article{aimoldin2026latency,
+  author  = {Aimoldin, Anuar and Mussabayeva, Ayana and Mussabayev, Yedige and Liu, Xue and Zhang, Kun},
+  title   = {Behavioral Latency as Weak Event-Time Supervision for {EEG} Reaction-Time Decoding},
+  journal = {Neural Computation},
+  year    = {2026},
+  eprint  = {2608.29428},
+  archivePrefix = {arXiv},
+  note    = {Accepted; volume/pages not yet known.},
+  file    = {papers/2026_BehavioralLatency_EventTime_arXiv2608.29428.pdf}
+}
+
+@article{wu2025revisitingea,
+  author  = {Wu, Dongrui},
+  title   = {Revisiting {Euclidean} Alignment for Transfer Learning in {EEG}-Based Brain-Computer Interfaces},
+  year    = {2025},
+  eprint  = {2502.09203},
+  archivePrefix = {arXiv},
+  file    = {papers/2025_RevisitingEuclideanAlignment_arXiv2502.09203.pdf}
+}
+
+@article{lopes2026aligned,
+  author  = {Lopes, Bruna J. and Schwartz, Gabriel and Chevallier, Sylvain and de Camargo, Raphael Y. and Aristimunha, Bruno},
+  title   = {Learning aligned {EEG} representations with subject-specific encoders},
+  year    = {2026},
+  eprint  = {2606.16462},
+  archivePrefix = {arXiv},
+  file    = {papers/2026_AlignedSubjectSpecificEncoders_arXiv2606.16462.pdf}
+}
+
+% ---------- Foundation models ----------
+@inproceedings{wang2025cbramod,
+  author    = {Wang, Jiquan and Zhao, Sha and Luo, Zhiling and Zhou, Yangxuan and Jiang, Haiteng and Li, Shijian and Li, Tao and Pan, Gang},
+  title     = {{CBraMod}: A Criss-Cross Brain Foundation Model for {EEG} Decoding},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025},
+  eprint    = {2412.07236},
+  archivePrefix = {arXiv},
+  file      = {papers/2025_CBraMod_ICLR_arXiv2412.07236.pdf}
+}
+
+@inproceedings{elouahidi2025reve,
+  author    = {El Ouahidi, Yassine and Lys, Jonathan and Th{\"o}lke, Philipp and Farrugia, Nicolas and Pasdeloup, Bastien and Gripon, Vincent and Jerbi, Karim and Lioi, Giulia},
+  title     = {{REVE}: A Foundation Model for {EEG} -- Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2025},
+  eprint    = {2510.21585},
+  archivePrefix = {arXiv},
+  file      = {papers/2025_REVE_NeurIPS_arXiv2510.21585.pdf}
+}
+
+% ---------- Baselines / tools ----------
+@article{lawhern2018eegnet,
+  author  = {Lawhern, Vernon J. and Solon, Amelia J. and Waytowich, Nicholas R. and Gordon, Stephen M. and Hung, Chou P. and Lance, Brent J.},
+  title   = {{EEGNet}: a compact convolutional neural network for {EEG}-based brain--computer interfaces},
+  journal = {Journal of Neural Engineering},
+  volume  = {15},
+  number  = {5},
+  pages   = {056013},
+  year    = {2018},
+  doi     = {10.1088/1741-2552/aace8c}
+}
+
+@misc{pyriemann,
+  author = {Barachant, Alexandre and others},
+  title  = {{pyRiemann}: Machine learning for multivariate data with {Riemannian} geometry},
+  howpublished = {\url{https://github.com/pyRiemann/pyRiemann}},
+  note   = {Cite the version recorded in the run's env.json}
+}

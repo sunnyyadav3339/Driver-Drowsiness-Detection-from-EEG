@@ -1,0 +1,23 @@
+[{"stream_name":"stdout","time":23.565934988,"data":"device=cuda data=/kaggle/input/datasets/sunnyydv602/eeg-dataset/dataset.mat N=2022 models=['deltagatenet'] seeds=[0] subjects=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10), np.int64(11)]\n"}
+,{"stream_name":"stdout","time":2904.428753099,"data":"[   2881s] deltagatenet  streaming    seed 0 subj  1  acc 0.8404  f1 0.8404  auc 0.9002  (2881s, best ep 40)\n"}
+,{"stream_name":"stdout","time":5628.543968591,"data":"[   5605s] deltagatenet  streaming    seed 0 subj  2  acc 0.1818  f1 0.1811  auc 0.1527  (2724s, best ep 72)\n"}
+,{"stream_name":"stdout","time":8256.295681923,"data":"[   8232s] deltagatenet  streaming    seed 0 subj  3  acc 0.8133  f1 0.8117  auc 0.8878  (2628s, best ep 124)\n"}
+,{"stream_name":"stdout","time":10909.661667253,"data":"[  10886s] deltagatenet  streaming    seed 0 subj  4  acc 0.6149  f1 0.5892  auc 0.6980  (2653s, best ep 27)\n"}
+,{"stream_name":"stdout","time":13594.880180435,"data":"[  13571s] deltagatenet  streaming    seed 0 subj  5  acc 0.7411  f1 0.7381  auc 0.8583  (2685s, best ep 33)\n"}
+,{"stream_name":"stdout","time":16446.363851063,"data":"[  16422s] deltagatenet  streaming    seed 0 subj  6  acc 0.7108  f1 0.6845  auc 0.9293  (2851s, best ep 47)\n"}
+,{"stream_name":"stdout","time":19346.318670861,"data":"[  19322s] deltagatenet  streaming    seed 0 subj  7  acc 0.5490  f1 0.5376  auc 0.6167  (2900s, best ep 46)\n"}
+,{"stream_name":"stdout","time":22121.072529047,"data":"[  22097s] deltagatenet  streaming    seed 0 subj  8  acc 0.7386  f1 0.7382  auc 0.7938  (2775s, best ep 91)\n"}
+,{"stream_name":"stdout","time":24802.597156216,"data":"[  24779s] deltagatenet  streaming    seed 0 subj  9  acc 0.7293  f1 0.7214  auc 0.8377  (2682s, best ep 66)\n"}
+,{"stream_name":"stdout","time":27759.390049319,"data":"[  27735s] deltagatenet  streaming    seed 0 subj 10  acc 0.6574  f1 0.6119  auc 0.9805  (2957s, best ep 31)\n"}
+,{"stream_name":"stdout","time":30621.466493948,"data":"[  30598s] deltagatenet  streaming    seed 0 subj 11  acc 0.5442  f1 0.4808  auc 0.7698  (2862s, best ep 2)\n"}
+,{"stream_name":"stdout","time":30621.532746139,"data":"| model | mode | seeds | acc | macro-F1 | drowsy-F1 | AUC | acc std (subjects) |\n"}
+,{"stream_name":"stdout","time":30621.532773695,"data":"|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":30621.532781227,"data":"| deltagatenet | streaming | 1 | 64.74 ± 0.00 | 63.04 | 65.45 | 0.766 | 17.34 |\n"}
+,{"stream_name":"stdout","time":30621.532788443,"data":"done in 30598s\n"}
+,{"stream_name":"stderr","time":30628.160964335,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":30628.161002968,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":30628.444858478,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":30628.444923218,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":30629.27576152,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":30630.26221116,"data":"[NbConvertApp] Writing 287662 bytes to __results__.html\n"}
+]

@@ -12,3 +12,5 @@ dataset/*.mat
 # OS specific
 .DS_Store
 Thumbs.db
+# Research: generated Kaggle kernels
+research/kaggle/build/

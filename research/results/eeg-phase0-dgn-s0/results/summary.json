@@ -1,0 +1,17 @@
+[
+  {
+    "model":"deltagatenet",
+    "mode":"streaming",
+    "n_seeds":1,
+    "n_subjects":11,
+    "acc_mean":0.6473606585,
+    "f1_macro_mean":0.6304245643,
+    "f1_drowsy_mean":0.6544511819,
+    "auc_mean":0.7658879643,
+    "acc_std_seeds":0.0,
+    "f1_macro_std_seeds":0.0,
+    "f1_drowsy_std_seeds":0.0,
+    "auc_std_seeds":0.0,
+    "acc_std_subjects":0.1734326909
+  }
+]
