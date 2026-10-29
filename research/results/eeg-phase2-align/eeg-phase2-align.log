@@ -1,0 +1,471 @@
+[{"stream_name":"stdout","time":22.875865683,"data":"device=cuda N=2022 models=['bandpower_lr', 'riemann_lr', 'icnn_running'] refs=['none', 'all', 'rand10', 'rand30', 'alert10', 'alert30'] seeds=[0, 1, 2]\n"}
+,{"stream_name":"stdout","time":25.989977135,"data":"[     0s] bandpower_lr none     seed 0 subj  1  acc 0.4840  auc 0.4160  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.087572,"data":"[     0s] bandpower_lr none     seed 0 subj  2  acc 0.6136  auc 0.6827  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.181456382,"data":"[     0s] bandpower_lr none     seed 0 subj  3  acc 0.7333  auc 0.8089  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.276839281,"data":"[     0s] bandpower_lr none     seed 0 subj  4  acc 0.6351  auc 0.7043  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.371687559,"data":"[     1s] bandpower_lr none     seed 0 subj  5  acc 0.7589  auc 0.8230  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.457611589,"data":"[     1s] bandpower_lr none     seed 0 subj  6  acc 0.8253  auc 0.8895  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.538953738,"data":"[     1s] bandpower_lr none     seed 0 subj  7  acc 0.5196  auc 0.6009  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.630958218,"data":"[     1s] bandpower_lr none     seed 0 subj  8  acc 0.6818  auc 0.8106  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.722904858,"data":"[     1s] bandpower_lr none     seed 0 subj  9  acc 0.8248  auc 0.9009  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.826166966,"data":"[     1s] bandpower_lr none     seed 0 subj 10  acc 0.6667  auc 0.8700  (0.1s)\n"}
+,{"stream_name":"stdout","time":26.917271284999998,"data":"[     1s] bandpower_lr none     seed 0 subj 11  acc 0.6416  auc 0.6618  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.015903394,"data":"[     1s] bandpower_lr all      seed 0 subj  1  acc 0.4734  auc 0.5057  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.109439319,"data":"[     1s] bandpower_lr all      seed 0 subj  2  acc 0.8333  auc 0.8652  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.196334278,"data":"[     1s] bandpower_lr all      seed 0 subj  3  acc 0.7000  auc 0.8011  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.287317806,"data":"[     1s] bandpower_lr all      seed 0 subj  4  acc 0.6284  auc 0.7109  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.375878633,"data":"[     2s] bandpower_lr all      seed 0 subj  5  acc 0.7902  auc 0.8202  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.458008507,"data":"[     2s] bandpower_lr all      seed 0 subj  6  acc 0.7952  auc 0.8582  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.540243721,"data":"[     2s] bandpower_lr all      seed 0 subj  7  acc 0.5686  auc 0.5805  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.631807643,"data":"[     2s] bandpower_lr all      seed 0 subj  8  acc 0.7311  auc 0.7951  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.718278926,"data":"[     2s] bandpower_lr all      seed 0 subj  9  acc 0.8567  auc 0.9151  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.808461104,"data":"[     2s] bandpower_lr all      seed 0 subj 10  acc 0.8056  auc 0.8841  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.890098387,"data":"[     2s] bandpower_lr all      seed 0 subj 11  acc 0.6283  auc 0.6460  (0.1s)\n"}
+,{"stream_name":"stdout","time":27.985967418,"data":"[     2s] bandpower_lr rand10   seed 0 subj  1  acc 0.5160  auc 0.4899  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.088184505,"data":"[     2s] bandpower_lr rand10   seed 0 subj  2  acc 0.8409  auc 0.9323  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.179882324,"data":"[     2s] bandpower_lr rand10   seed 0 subj  3  acc 0.6667  auc 0.7915  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.26469556,"data":"[     2s] bandpower_lr rand10   seed 0 subj  4  acc 0.6486  auc 0.7378  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.367291286,"data":"[     3s] bandpower_lr rand10   seed 0 subj  5  acc 0.6339  auc 0.8546  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.44862702,"data":"[     3s] bandpower_lr rand10   seed 0 subj  6  acc 0.8133  auc 0.8679  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.53383885,"data":"[     3s] bandpower_lr rand10   seed 0 subj  7  acc 0.5686  auc 0.5817  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.623796872,"data":"[     3s] bandpower_lr rand10   seed 0 subj  8  acc 0.7235  auc 0.7880  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.705431339,"data":"[     3s] bandpower_lr rand10   seed 0 subj  9  acc 0.8280  auc 0.9088  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.79047228,"data":"[     3s] bandpower_lr rand10   seed 0 subj 10  acc 0.7593  auc 0.9074  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.886039624,"data":"[     3s] bandpower_lr rand10   seed 0 subj 11  acc 0.5973  auc 0.6727  (0.1s)\n"}
+,{"stream_name":"stdout","time":28.994993886,"data":"[     3s] bandpower_lr rand10   seed 1 subj  1  acc 0.3191  auc 0.3904  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.09881257,"data":"[     3s] bandpower_lr rand10   seed 1 subj  2  acc 0.7955  auc 0.8478  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.182707419,"data":"[     3s] bandpower_lr rand10   seed 1 subj  3  acc 0.7400  auc 0.8053  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.272109109,"data":"[     3s] bandpower_lr rand10   seed 1 subj  4  acc 0.6689  auc 0.7569  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.367666243,"data":"[     4s] bandpower_lr rand10   seed 1 subj  5  acc 0.7098  auc 0.8160  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.461347142,"data":"[     4s] bandpower_lr rand10   seed 1 subj  6  acc 0.7590  auc 0.8352  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.554168758,"data":"[     4s] bandpower_lr rand10   seed 1 subj  7  acc 0.5000  auc 0.6086  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.648290025,"data":"[     4s] bandpower_lr rand10   seed 1 subj  8  acc 0.6818  auc 0.7542  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.732270862,"data":"[     4s] bandpower_lr rand10   seed 1 subj  9  acc 0.7898  auc 0.8805  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.819775432,"data":"[     4s] bandpower_lr rand10   seed 1 subj 10  acc 0.7963  auc 0.8669  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.901981864,"data":"[     4s] bandpower_lr rand10   seed 1 subj 11  acc 0.5000  auc 0.6272  (0.1s)\n"}
+,{"stream_name":"stdout","time":29.988334018,"data":"[     4s] bandpower_lr rand10   seed 2 subj  1  acc 0.6436  auc 0.6524  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.077432977,"data":"[     4s] bandpower_lr rand10   seed 2 subj  2  acc 0.2197  auc 0.1513  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.161132325,"data":"[     4s] bandpower_lr rand10   seed 2 subj  3  acc 0.6867  auc 0.8016  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.250877535,"data":"[     4s] bandpower_lr rand10   seed 2 subj  4  acc 0.6149  auc 0.7036  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.340833818,"data":"[     4s] bandpower_lr rand10   seed 2 subj  5  acc 0.7812  auc 0.8466  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.429668727,"data":"[     5s] bandpower_lr rand10   seed 2 subj  6  acc 0.7590  auc 0.8547  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.511978599,"data":"[     5s] bandpower_lr rand10   seed 2 subj  7  acc 0.5490  auc 0.5636  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.607872908,"data":"[     5s] bandpower_lr rand10   seed 2 subj  8  acc 0.7045  auc 0.7953  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.689160155,"data":"[     5s] bandpower_lr rand10   seed 2 subj  9  acc 0.8121  auc 0.9198  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.791438768,"data":"[     5s] bandpower_lr rand10   seed 2 subj 10  acc 0.7963  auc 0.8813  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.871711934,"data":"[     5s] bandpower_lr rand10   seed 2 subj 11  acc 0.5265  auc 0.5876  (0.1s)\n"}
+,{"stream_name":"stdout","time":30.977149233,"data":"[     5s] bandpower_lr rand30   seed 0 subj  1  acc 0.3777  auc 0.4258  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.07537077,"data":"[     5s] bandpower_lr rand30   seed 0 subj  2  acc 0.8485  auc 0.8779  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.160241316,"data":"[     5s] bandpower_lr rand30   seed 0 subj  3  acc 0.6933  auc 0.8052  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.310035054,"data":"[     5s] bandpower_lr rand30   seed 0 subj  4  acc 0.6351  auc 0.7120  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.412755369,"data":"[     6s] bandpower_lr rand30   seed 0 subj  5  acc 0.7366  auc 0.8190  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.50078457,"data":"[     6s] bandpower_lr rand30   seed 0 subj  6  acc 0.7892  auc 0.8624  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.583386431,"data":"[     6s] bandpower_lr rand30   seed 0 subj  7  acc 0.5980  auc 0.5798  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.668486803,"data":"[     6s] bandpower_lr rand30   seed 0 subj  8  acc 0.7197  auc 0.7873  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.750977517,"data":"[     6s] bandpower_lr rand30   seed 0 subj  9  acc 0.8408  auc 0.9194  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.841226409,"data":"[     6s] bandpower_lr rand30   seed 0 subj 10  acc 0.7963  auc 0.8745  (0.1s)\n"}
+,{"stream_name":"stdout","time":31.925943525,"data":"[     6s] bandpower_lr rand30   seed 0 subj 11  acc 0.6239  auc 0.6466  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.021913213,"data":"[     6s] bandpower_lr rand30   seed 1 subj  1  acc 0.6223  auc 0.6294  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.123053911,"data":"[     6s] bandpower_lr rand30   seed 1 subj  2  acc 0.8333  auc 0.8657  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.212097067,"data":"[     6s] bandpower_lr rand30   seed 1 subj  3  acc 0.7133  auc 0.8004  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.301902992,"data":"[     6s] bandpower_lr rand30   seed 1 subj  4  acc 0.6351  auc 0.7155  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.396295531,"data":"[     7s] bandpower_lr rand30   seed 1 subj  5  acc 0.7812  auc 0.8182  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.491665043,"data":"[     7s] bandpower_lr rand30   seed 1 subj  6  acc 0.7711  auc 0.8474  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.579048474,"data":"[     7s] bandpower_lr rand30   seed 1 subj  7  acc 0.5686  auc 0.5836  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.673919825,"data":"[     7s] bandpower_lr rand30   seed 1 subj  8  acc 0.7121  auc 0.8027  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.759860701,"data":"[     7s] bandpower_lr rand30   seed 1 subj  9  acc 0.8439  auc 0.9136  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.856424649,"data":"[     7s] bandpower_lr rand30   seed 1 subj 10  acc 0.7593  auc 0.8450  (0.1s)\n"}
+,{"stream_name":"stdout","time":32.936548972,"data":"[     7s] bandpower_lr rand30   seed 1 subj 11  acc 0.6283  auc 0.6490  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.030728835,"data":"[     7s] bandpower_lr rand30   seed 2 subj  1  acc 0.3670  auc 0.4303  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.127777102,"data":"[     7s] bandpower_lr rand30   seed 2 subj  2  acc 0.6742  auc 0.7883  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.217269393,"data":"[     7s] bandpower_lr rand30   seed 2 subj  3  acc 0.7267  auc 0.7973  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.308001699,"data":"[     7s] bandpower_lr rand30   seed 2 subj  4  acc 0.6284  auc 0.7135  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.404665773,"data":"[     8s] bandpower_lr rand30   seed 2 subj  5  acc 0.7098  auc 0.7903  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.489867786,"data":"[     8s] bandpower_lr rand30   seed 2 subj  6  acc 0.8012  auc 0.8575  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.573319317,"data":"[     8s] bandpower_lr rand30   seed 2 subj  7  acc 0.5784  auc 0.5821  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.661659124,"data":"[     8s] bandpower_lr rand30   seed 2 subj  8  acc 0.7197  auc 0.7956  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.745969412,"data":"[     8s] bandpower_lr rand30   seed 2 subj  9  acc 0.8344  auc 0.9133  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.834433398,"data":"[     8s] bandpower_lr rand30   seed 2 subj 10  acc 0.7870  auc 0.8851  (0.1s)\n"}
+,{"stream_name":"stdout","time":33.907935122,"data":"[     8s] bandpower_lr rand30   seed 2 subj 11  acc 0.6195  auc 0.6115  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.004399392,"data":"[     8s] bandpower_lr alert10  seed 0 subj  1  acc 0.4628  auc 0.4553  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.102533176,"data":"[     8s] bandpower_lr alert10  seed 0 subj  2  acc 0.4394  auc 0.1788  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.191054929,"data":"[     8s] bandpower_lr alert10  seed 0 subj  3  acc 0.7400  auc 0.8210  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.278705788,"data":"[     8s] bandpower_lr alert10  seed 0 subj  4  acc 0.5608  auc 0.7191  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.375270521,"data":"[     9s] bandpower_lr alert10  seed 0 subj  5  acc 0.6830  auc 0.8011  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.463440742,"data":"[     9s] bandpower_lr alert10  seed 0 subj  6  acc 0.8072  auc 0.8638  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.550110026,"data":"[     9s] bandpower_lr alert10  seed 0 subj  7  acc 0.5882  auc 0.5902  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.648497606,"data":"[     9s] bandpower_lr alert10  seed 0 subj  8  acc 0.6856  auc 0.7792  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.737987706,"data":"[     9s] bandpower_lr alert10  seed 0 subj  9  acc 0.8439  auc 0.9144  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.841757143,"data":"[     9s] bandpower_lr alert10  seed 0 subj 10  acc 0.7870  auc 0.8563  (0.1s)\n"}
+,{"stream_name":"stdout","time":34.927858582,"data":"[     9s] bandpower_lr alert10  seed 0 subj 11  acc 0.5841  auc 0.6315  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.016957493,"data":"[     9s] bandpower_lr alert30  seed 0 subj  1  acc 0.4255  auc 0.4221  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.110818132,"data":"[     9s] bandpower_lr alert30  seed 0 subj  2  acc 0.4470  auc 0.1901  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.196051002,"data":"[     9s] bandpower_lr alert30  seed 0 subj  3  acc 0.7067  auc 0.8060  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.285791466,"data":"[     9s] bandpower_lr alert30  seed 0 subj  4  acc 0.6216  auc 0.7084  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.376790359,"data":"[    10s] bandpower_lr alert30  seed 0 subj  5  acc 0.6964  auc 0.8215  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.461701757,"data":"[    10s] bandpower_lr alert30  seed 0 subj  6  acc 0.8072  auc 0.8548  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.545731404,"data":"[    10s] bandpower_lr alert30  seed 0 subj  7  acc 0.5980  auc 0.6009  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.636745685,"data":"[    10s] bandpower_lr alert30  seed 0 subj  8  acc 0.6894  auc 0.7940  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.716344457,"data":"[    10s] bandpower_lr alert30  seed 0 subj  9  acc 0.8567  auc 0.9160  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.806395728,"data":"[    10s] bandpower_lr alert30  seed 0 subj 10  acc 0.7963  auc 0.8909  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.887366533,"data":"[    10s] bandpower_lr alert30  seed 0 subj 11  acc 0.4867  auc 0.5333  (0.1s)\n"}
+,{"stream_name":"stdout","time":35.949533822,"data":"| model | mode | seeds | acc | macro-F1 | drowsy-F1 | AUC | acc std (subjects) |\n"}
+,{"stream_name":"stdout","time":35.949544449,"data":"|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":35.949548433,"data":"| bandpower_lr | none | 1 | 67.14 ± 0.00 | 65.50 | 67.70 | 0.743 | 10.55 |\n"}
+,{"stream_name":"stdout","time":35.94955296,"data":"| bandpower_lr | all | 1 | 71.01 ± 0.00 | 70.88 | 71.49 | 0.762 | 11.65 |\n"}
+,{"stream_name":"stdout","time":35.949556696,"data":"| bandpower_lr | rand10 | 3 | 66.52 ± 1.90 | 65.49 | 64.60 | 0.742 | 10.25 |\n"}
+,{"stream_name":"stdout","time":35.949560503,"data":"| bandpower_lr | rand30 | 3 | 69.62 ± 1.57 | 69.41 | 70.13 | 0.756 | 10.74 |\n"}
+,{"stream_name":"stdout","time":35.949564278,"data":"| bandpower_lr | alert10 | 1 | 65.29 ± 0.00 | 63.24 | 58.37 | 0.692 | 13.04 |\n"}
+,{"stream_name":"stdout","time":35.949568033,"data":"| bandpower_lr | alert30 | 1 | 64.83 ± 0.00 | 62.86 | 57.03 | 0.685 | 14.06 |\n"}
+,{"stream_name":"stdout","time":40.400284429,"data":"[    15s] riemann_lr   none     seed 0 subj  1  acc 0.6064  auc 0.8055  (4.4s)\n"}
+,{"stream_name":"stdout","time":45.008286893,"data":"[    19s] riemann_lr   none     seed 0 subj  2  acc 0.9242  auc 0.9387  (4.6s)\n"}
+,{"stream_name":"stdout","time":49.880494249,"data":"[    24s] riemann_lr   none     seed 0 subj  3  acc 0.5867  auc 0.7348  (4.9s)\n"}
+,{"stream_name":"stdout","time":54.833477468,"data":"[    29s] riemann_lr   none     seed 0 subj  4  acc 0.7162  auc 0.7739  (4.9s)\n"}
+,{"stream_name":"stdout","time":59.468038939,"data":"[    34s] riemann_lr   none     seed 0 subj  5  acc 0.8616  auc 0.9141  (4.6s)\n"}
+,{"stream_name":"stdout","time":64.12572377,"data":"[    38s] riemann_lr   none     seed 0 subj  6  acc 0.8735  auc 0.9541  (4.7s)\n"}
+,{"stream_name":"stdout","time":68.657508411,"data":"[    43s] riemann_lr   none     seed 0 subj  7  acc 0.4608  auc 0.6105  (4.5s)\n"}
+,{"stream_name":"stdout","time":73.101422943,"data":"[    47s] riemann_lr   none     seed 0 subj  8  acc 0.5682  auc 0.7511  (4.4s)\n"}
+,{"stream_name":"stdout","time":77.531059883,"data":"[    52s] riemann_lr   none     seed 0 subj  9  acc 0.6051  auc 0.7431  (4.4s)\n"}
+,{"stream_name":"stdout","time":82.428474151,"data":"[    57s] riemann_lr   none     seed 0 subj 10  acc 0.5463  auc 0.5768  (4.9s)\n"}
+,{"stream_name":"stdout","time":86.963183897,"data":"[    61s] riemann_lr   none     seed 0 subj 11  acc 0.4381  auc 0.4210  (4.5s)\n"}
+,{"stream_name":"stderr","time":86.96444868,"data":"/kaggle/working/code/research/src/run_align.py:80: DeprecationWarning: pyriemann.utils.mean is deprecated and will be removed in 0.14.0; use pyriemann.geometry.mean instead.\n"}
+,{"stream_name":"stderr","time":86.964459091,"data":"  from pyriemann.utils.mean import mean_riemann\n"}
+,{"stream_name":"stdout","time":94.516488459,"data":"[    69s] riemann_lr   all      seed 0 subj  1  acc 0.8617  auc 0.9168  (4.1s)\n"}
+,{"stream_name":"stdout","time":98.49149581,"data":"[    73s] riemann_lr   all      seed 0 subj  2  acc 0.8636  auc 0.9534  (4.0s)\n"}
+,{"stream_name":"stdout","time":102.738513609,"data":"[    77s] riemann_lr   all      seed 0 subj  3  acc 0.6600  auc 0.6981  (4.2s)\n"}
+,{"stream_name":"stdout","time":106.792492267,"data":"[    81s] riemann_lr   all      seed 0 subj  4  acc 0.7297  auc 0.7977  (4.0s)\n"}
+,{"stream_name":"stdout","time":110.729895872,"data":"[    85s] riemann_lr   all      seed 0 subj  5  acc 0.8304  auc 0.8941  (3.9s)\n"}
+,{"stream_name":"stdout","time":114.839980343,"data":"[    89s] riemann_lr   all      seed 0 subj  6  acc 0.9337  auc 0.9909  (4.1s)\n"}
+,{"stream_name":"stdout","time":119.008581606,"data":"[    93s] riemann_lr   all      seed 0 subj  7  acc 0.5882  auc 0.5840  (4.2s)\n"}
+,{"stream_name":"stdout","time":122.834476581,"data":"[    97s] riemann_lr   all      seed 0 subj  8  acc 0.7614  auc 0.8225  (3.8s)\n"}
+,{"stream_name":"stdout","time":126.519577977,"data":"[   101s] riemann_lr   all      seed 0 subj  9  acc 0.6338  auc 0.6731  (3.7s)\n"}
+,{"stream_name":"stdout","time":130.560219783,"data":"[   105s] riemann_lr   all      seed 0 subj 10  acc 0.6481  auc 0.5936  (4.0s)\n"}
+,{"stream_name":"stdout","time":134.475088164,"data":"[   109s] riemann_lr   all      seed 0 subj 11  acc 0.4469  auc 0.4256  (3.9s)\n"}
+,{"stream_name":"stdout","time":138.81351084,"data":"[   113s] riemann_lr   rand10   seed 0 subj  1  acc 0.7819  auc 0.8721  (4.0s)\n"}
+,{"stream_name":"stdout","time":142.940513476,"data":"[   117s] riemann_lr   rand10   seed 0 subj  2  acc 0.7955  auc 0.9573  (4.1s)\n"}
+,{"stream_name":"stdout","time":147.065128772,"data":"[   121s] riemann_lr   rand10   seed 0 subj  3  acc 0.7467  auc 0.7433  (4.1s)\n"}
+,{"stream_name":"stdout","time":151.124511616,"data":"[   125s] riemann_lr   rand10   seed 0 subj  4  acc 0.7162  auc 0.8214  (4.1s)\n"}
+,{"stream_name":"stdout","time":155.051345778,"data":"[   129s] riemann_lr   rand10   seed 0 subj  5  acc 0.8170  auc 0.8801  (3.9s)\n"}
+,{"stream_name":"stdout","time":159.168749476,"data":"[   133s] riemann_lr   rand10   seed 0 subj  6  acc 0.7952  auc 0.9239  (4.1s)\n"}
+,{"stream_name":"stdout","time":163.391260934,"data":"[   138s] riemann_lr   rand10   seed 0 subj  7  acc 0.5784  auc 0.5682  (4.2s)\n"}
+,{"stream_name":"stdout","time":167.176373658,"data":"[   141s] riemann_lr   rand10   seed 0 subj  8  acc 0.7197  auc 0.8055  (3.8s)\n"}
+,{"stream_name":"stdout","time":171.178099224,"data":"[   145s] riemann_lr   rand10   seed 0 subj  9  acc 0.6369  auc 0.6557  (4.0s)\n"}
+,{"stream_name":"stdout","time":175.349479221,"data":"[   149s] riemann_lr   rand10   seed 0 subj 10  acc 0.6667  auc 0.5367  (4.2s)\n"}
+,{"stream_name":"stdout","time":179.295642429,"data":"[   153s] riemann_lr   rand10   seed 0 subj 11  acc 0.3363  auc 0.2968  (3.9s)\n"}
+,{"stream_name":"stdout","time":183.532598709,"data":"[   158s] riemann_lr   rand10   seed 1 subj  1  acc 0.8617  auc 0.9241  (3.9s)\n"}
+,{"stream_name":"stdout","time":187.563677864,"data":"[   162s] riemann_lr   rand10   seed 1 subj  2  acc 0.8106  auc 0.9157  (4.0s)\n"}
+,{"stream_name":"stdout","time":191.707512109,"data":"[   166s] riemann_lr   rand10   seed 1 subj  3  acc 0.6667  auc 0.7756  (4.1s)\n"}
+,{"stream_name":"stdout","time":195.893624393,"data":"[   170s] riemann_lr   rand10   seed 1 subj  4  acc 0.7838  auc 0.8084  (4.2s)\n"}
+,{"stream_name":"stdout","time":199.93411369,"data":"[   174s] riemann_lr   rand10   seed 1 subj  5  acc 0.8259  auc 0.8949  (4.0s)\n"}
+,{"stream_name":"stdout","time":203.98122454,"data":"[   178s] riemann_lr   rand10   seed 1 subj  6  acc 0.8373  auc 0.8800  (4.0s)\n"}
+,{"stream_name":"stdout","time":208.064482947,"data":"[   182s] riemann_lr   rand10   seed 1 subj  7  acc 0.5784  auc 0.6086  (4.1s)\n"}
+,{"stream_name":"stdout","time":211.84213238,"data":"[   186s] riemann_lr   rand10   seed 1 subj  8  acc 0.7008  auc 0.8035  (3.8s)\n"}
+,{"stream_name":"stdout","time":215.825953193,"data":"[   190s] riemann_lr   rand10   seed 1 subj  9  acc 0.6210  auc 0.7156  (4.0s)\n"}
+,{"stream_name":"stdout","time":219.826207014,"data":"[   194s] riemann_lr   rand10   seed 1 subj 10  acc 0.5833  auc 0.5628  (4.0s)\n"}
+,{"stream_name":"stdout","time":223.795770363,"data":"[   198s] riemann_lr   rand10   seed 1 subj 11  acc 0.4292  auc 0.4260  (4.0s)\n"}
+,{"stream_name":"stdout","time":228.02451729,"data":"[   202s] riemann_lr   rand10   seed 2 subj  1  acc 0.8032  auc 0.8955  (3.9s)\n"}
+,{"stream_name":"stdout","time":232.103522947,"data":"[   206s] riemann_lr   rand10   seed 2 subj  2  acc 0.7424  auc 0.8648  (4.1s)\n"}
+,{"stream_name":"stdout","time":235.969767712,"data":"[   210s] riemann_lr   rand10   seed 2 subj  3  acc 0.5733  auc 0.7253  (3.9s)\n"}
+,{"stream_name":"stdout","time":240.01921368,"data":"[   214s] riemann_lr   rand10   seed 2 subj  4  acc 0.7770  auc 0.8378  (4.0s)\n"}
+,{"stream_name":"stdout","time":244.009823651,"data":"[   218s] riemann_lr   rand10   seed 2 subj  5  acc 0.8438  auc 0.9169  (4.0s)\n"}
+,{"stream_name":"stdout","time":248.05529286,"data":"[   222s] riemann_lr   rand10   seed 2 subj  6  acc 0.9398  auc 0.9935  (4.0s)\n"}
+,{"stream_name":"stdout","time":252.237538073,"data":"[   226s] riemann_lr   rand10   seed 2 subj  7  acc 0.5588  auc 0.5579  (4.2s)\n"}
+,{"stream_name":"stdout","time":256.066482967,"data":"[   230s] riemann_lr   rand10   seed 2 subj  8  acc 0.6894  auc 0.7734  (3.8s)\n"}
+,{"stream_name":"stdout","time":259.8590159,"data":"[   234s] riemann_lr   rand10   seed 2 subj  9  acc 0.6624  auc 0.6968  (3.8s)\n"}
+,{"stream_name":"stdout","time":263.878530773,"data":"[   238s] riemann_lr   rand10   seed 2 subj 10  acc 0.6481  auc 0.6193  (4.0s)\n"}
+,{"stream_name":"stdout","time":267.838475936,"data":"[   242s] riemann_lr   rand10   seed 2 subj 11  acc 0.5044  auc 0.5022  (4.0s)\n"}
+,{"stream_name":"stdout","time":272.791492476,"data":"[   247s] riemann_lr   rand30   seed 0 subj  1  acc 0.8457  auc 0.9007  (4.2s)\n"}
+,{"stream_name":"stdout","time":276.689671092,"data":"[   251s] riemann_lr   rand30   seed 0 subj  2  acc 0.8409  auc 0.9360  (3.9s)\n"}
+,{"stream_name":"stdout","time":280.65343872,"data":"[   255s] riemann_lr   rand30   seed 0 subj  3  acc 0.6867  auc 0.7285  (4.0s)\n"}
+,{"stream_name":"stdout","time":284.605190433,"data":"[   259s] riemann_lr   rand30   seed 0 subj  4  acc 0.7162  auc 0.7905  (3.9s)\n"}
+,{"stream_name":"stdout","time":288.576728652,"data":"[   263s] riemann_lr   rand30   seed 0 subj  5  acc 0.8080  auc 0.8654  (4.0s)\n"}
+,{"stream_name":"stdout","time":292.606072943,"data":"[   267s] riemann_lr   rand30   seed 0 subj  6  acc 0.8795  auc 0.9723  (4.0s)\n"}
+,{"stream_name":"stdout","time":296.634336028,"data":"[   271s] riemann_lr   rand30   seed 0 subj  7  acc 0.6078  auc 0.5975  (4.0s)\n"}
+,{"stream_name":"stdout","time":300.319104851,"data":"[   274s] riemann_lr   rand30   seed 0 subj  8  acc 0.7273  auc 0.7653  (3.7s)\n"}
+,{"stream_name":"stdout","time":303.978973263,"data":"[   278s] riemann_lr   rand30   seed 0 subj  9  acc 0.7038  auc 0.7184  (3.7s)\n"}
+,{"stream_name":"stdout","time":308.045431132,"data":"[   282s] riemann_lr   rand30   seed 0 subj 10  acc 0.6389  auc 0.5501  (4.1s)\n"}
+,{"stream_name":"stdout","time":312.181474393,"data":"[   286s] riemann_lr   rand30   seed 0 subj 11  acc 0.4071  auc 0.3916  (4.1s)\n"}
+,{"stream_name":"stdout","time":316.824546547,"data":"[   291s] riemann_lr   rand30   seed 1 subj  1  acc 0.8298  auc 0.9117  (3.9s)\n"}
+,{"stream_name":"stdout","time":320.752533776,"data":"[   295s] riemann_lr   rand30   seed 1 subj  2  acc 0.8636  auc 0.9486  (3.9s)\n"}
+,{"stream_name":"stdout","time":324.748551025,"data":"[   299s] riemann_lr   rand30   seed 1 subj  3  acc 0.6133  auc 0.7084  (4.0s)\n"}
+,{"stream_name":"stdout","time":328.573104434,"data":"[   303s] riemann_lr   rand30   seed 1 subj  4  acc 0.7770  auc 0.8360  (3.8s)\n"}
+,{"stream_name":"stdout","time":332.40511532,"data":"[   307s] riemann_lr   rand30   seed 1 subj  5  acc 0.8036  auc 0.8948  (3.8s)\n"}
+,{"stream_name":"stdout","time":336.389833689,"data":"[   311s] riemann_lr   rand30   seed 1 subj  6  acc 0.8976  auc 0.9814  (4.0s)\n"}
+,{"stream_name":"stdout","time":340.338615881,"data":"[   314s] riemann_lr   rand30   seed 1 subj  7  acc 0.5882  auc 0.5859  (3.9s)\n"}
+,{"stream_name":"stdout","time":344.134808433,"data":"[   318s] riemann_lr   rand30   seed 1 subj  8  acc 0.7879  auc 0.8504  (3.8s)\n"}
+,{"stream_name":"stdout","time":347.852548243,"data":"[   322s] riemann_lr   rand30   seed 1 subj  9  acc 0.6688  auc 0.6859  (3.7s)\n"}
+,{"stream_name":"stdout","time":351.667453102,"data":"[   326s] riemann_lr   rand30   seed 1 subj 10  acc 0.6389  auc 0.5686  (3.8s)\n"}
+,{"stream_name":"stdout","time":355.353817365,"data":"[   329s] riemann_lr   rand30   seed 1 subj 11  acc 0.3938  auc 0.3818  (3.7s)\n"}
+,{"stream_name":"stdout","time":359.98648074,"data":"[   334s] riemann_lr   rand30   seed 2 subj  1  acc 0.8564  auc 0.9211  (3.9s)\n"}
+,{"stream_name":"stdout","time":363.935707105,"data":"[   338s] riemann_lr   rand30   seed 2 subj  2  acc 0.8636  auc 0.9428  (3.9s)\n"}
+,{"stream_name":"stdout","time":368.03555508,"data":"[   342s] riemann_lr   rand30   seed 2 subj  3  acc 0.5800  auc 0.6942  (4.1s)\n"}
+,{"stream_name":"stdout","time":372.149513746,"data":"[   346s] riemann_lr   rand30   seed 2 subj  4  acc 0.6892  auc 0.7904  (4.1s)\n"}
+,{"stream_name":"stdout","time":376.159558155,"data":"[   350s] riemann_lr   rand30   seed 2 subj  5  acc 0.8438  auc 0.8916  (4.0s)\n"}
+,{"stream_name":"stdout","time":380.033724293,"data":"[   354s] riemann_lr   rand30   seed 2 subj  6  acc 0.9819  auc 0.9991  (3.9s)\n"}
+,{"stream_name":"stdout","time":383.883661255,"data":"[   358s] riemann_lr   rand30   seed 2 subj  7  acc 0.5490  auc 0.5536  (3.8s)\n"}
+,{"stream_name":"stdout","time":387.731032417,"data":"[   362s] riemann_lr   rand30   seed 2 subj  8  acc 0.7008  auc 0.7787  (3.8s)\n"}
+,{"stream_name":"stdout","time":391.573282087,"data":"[   366s] riemann_lr   rand30   seed 2 subj  9  acc 0.6561  auc 0.6567  (3.8s)\n"}
+,{"stream_name":"stdout","time":395.884422851,"data":"[   370s] riemann_lr   rand30   seed 2 subj 10  acc 0.6204  auc 0.5967  (4.3s)\n"}
+,{"stream_name":"stdout","time":399.879470762,"data":"[   374s] riemann_lr   rand30   seed 2 subj 11  acc 0.4071  auc 0.3945  (4.0s)\n"}
+,{"stream_name":"stdout","time":404.219782914,"data":"[   378s] riemann_lr   alert10  seed 0 subj  1  acc 0.7926  auc 0.8731  (4.1s)\n"}
+,{"stream_name":"stdout","time":408.321486054,"data":"[   382s] riemann_lr   alert10  seed 0 subj  2  acc 0.6212  auc 0.7000  (4.1s)\n"}
+,{"stream_name":"stdout","time":412.575930536,"data":"[   387s] riemann_lr   alert10  seed 0 subj  3  acc 0.6200  auc 0.7093  (4.2s)\n"}
+,{"stream_name":"stdout","time":416.799493159,"data":"[   391s] riemann_lr   alert10  seed 0 subj  4  acc 0.5676  auc 0.8101  (4.2s)\n"}
+,{"stream_name":"stdout","time":421.073961624,"data":"[   395s] riemann_lr   alert10  seed 0 subj  5  acc 0.8125  auc 0.8890  (4.3s)\n"}
+,{"stream_name":"stdout","time":425.549717517,"data":"[   400s] riemann_lr   alert10  seed 0 subj  6  acc 0.9458  auc 0.9935  (4.5s)\n"}
+,{"stream_name":"stdout","time":429.915726536,"data":"[   404s] riemann_lr   alert10  seed 0 subj  7  acc 0.4902  auc 0.4579  (4.4s)\n"}
+,{"stream_name":"stdout","time":434.046346788,"data":"[   408s] riemann_lr   alert10  seed 0 subj  8  acc 0.5227  auc 0.7647  (4.1s)\n"}
+,{"stream_name":"stdout","time":438.15656661,"data":"[   412s] riemann_lr   alert10  seed 0 subj  9  acc 0.5510  auc 0.6365  (4.1s)\n"}
+,{"stream_name":"stdout","time":442.440498616,"data":"[   417s] riemann_lr   alert10  seed 0 subj 10  acc 0.6389  auc 0.5700  (4.3s)\n"}
+,{"stream_name":"stdout","time":446.470542825,"data":"[   421s] riemann_lr   alert10  seed 0 subj 11  acc 0.6327  auc 0.6618  (4.0s)\n"}
+,{"stream_name":"stdout","time":451.219982797,"data":"[   425s] riemann_lr   alert30  seed 0 subj  1  acc 0.8085  auc 0.9014  (4.1s)\n"}
+,{"stream_name":"stdout","time":455.505472417,"data":"[   430s] riemann_lr   alert30  seed 0 subj  2  acc 0.5682  auc 0.6901  (4.3s)\n"}
+,{"stream_name":"stdout","time":459.475508825,"data":"[   434s] riemann_lr   alert30  seed 0 subj  3  acc 0.7200  auc 0.7641  (4.0s)\n"}
+,{"stream_name":"stdout","time":463.461443329,"data":"[   438s] riemann_lr   alert30  seed 0 subj  4  acc 0.6419  auc 0.8210  (4.0s)\n"}
+,{"stream_name":"stdout","time":467.576672561,"data":"[   442s] riemann_lr   alert30  seed 0 subj  5  acc 0.8214  auc 0.9138  (4.1s)\n"}
+,{"stream_name":"stdout","time":471.662288671,"data":"[   446s] riemann_lr   alert30  seed 0 subj  6  acc 0.9759  auc 0.9981  (4.1s)\n"}
+,{"stream_name":"stdout","time":475.660960638,"data":"[   450s] riemann_lr   alert30  seed 0 subj  7  acc 0.5196  auc 0.5106  (4.0s)\n"}
+,{"stream_name":"stdout","time":479.534239087,"data":"[   454s] riemann_lr   alert30  seed 0 subj  8  acc 0.6818  auc 0.8155  (3.9s)\n"}
+,{"stream_name":"stdout","time":483.558490751,"data":"[   458s] riemann_lr   alert30  seed 0 subj  9  acc 0.5669  auc 0.6840  (4.0s)\n"}
+,{"stream_name":"stdout","time":487.530489387,"data":"[   462s] riemann_lr   alert30  seed 0 subj 10  acc 0.6574  auc 0.5586  (4.0s)\n"}
+,{"stream_name":"stdout","time":491.609492057,"data":"[   466s] riemann_lr   alert30  seed 0 subj 11  acc 0.5619  auc 0.6778  (4.1s)\n"}
+,{"stream_name":"stdout","time":491.646363122,"data":"| model | mode | seeds | acc | macro-F1 | drowsy-F1 | AUC | acc std (subjects) |\n"}
+,{"stream_name":"stdout","time":491.646387445,"data":"|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":491.646393537,"data":"| bandpower_lr | none | 1 | 67.14 ± 0.00 | 65.50 | 67.70 | 0.743 | 10.55 |\n"}
+,{"stream_name":"stdout","time":491.646399227,"data":"| bandpower_lr | all | 1 | 71.01 ± 0.00 | 70.88 | 71.49 | 0.762 | 11.65 |\n"}
+,{"stream_name":"stdout","time":491.646414711,"data":"| bandpower_lr | rand10 | 3 | 66.52 ± 1.90 | 65.49 | 64.60 | 0.742 | 10.25 |\n"}
+,{"stream_name":"stdout","time":491.646420639,"data":"| bandpower_lr | rand30 | 3 | 69.62 ± 1.57 | 69.41 | 70.13 | 0.756 | 10.74 |\n"}
+,{"stream_name":"stdout","time":491.646425536,"data":"| bandpower_lr | alert10 | 1 | 65.29 ± 0.00 | 63.24 | 58.37 | 0.692 | 13.04 |\n"}
+,{"stream_name":"stdout","time":491.646429659,"data":"| bandpower_lr | alert30 | 1 | 64.83 ± 0.00 | 62.86 | 57.03 | 0.685 | 14.06 |\n"}
+,{"stream_name":"stdout","time":491.64643371,"data":"| riemann_lr | none | 1 | 65.34 ± 0.00 | 62.02 | 61.97 | 0.748 | 15.96 |\n"}
+,{"stream_name":"stdout","time":491.646437993,"data":"| riemann_lr | all | 1 | 72.34 ± 0.00 | 72.21 | 73.04 | 0.759 | 13.76 |\n"}
+,{"stream_name":"stdout","time":491.646443218,"data":"| riemann_lr | rand10 | 3 | 69.79 ± 0.58 | 69.27 | 69.10 | 0.750 | 12.34 |\n"}
+,{"stream_name":"stdout","time":491.646447891,"data":"| riemann_lr | rand30 | 3 | 71.13 ± 0.49 | 70.90 | 70.87 | 0.751 | 14.18 |\n"}
+,{"stream_name":"stdout","time":491.646451798,"data":"| riemann_lr | alert10 | 1 | 65.41 ± 0.00 | 61.23 | 50.04 | 0.733 | 13.30 |\n"}
+,{"stream_name":"stdout","time":491.646456021,"data":"| riemann_lr | alert30 | 1 | 68.40 ± 0.00 | 64.75 | 55.43 | 0.758 | 13.23 |\n"}
+,{"stream_name":"stdout","time":499.625244009,"data":"[   474s] icnn_running none     seed 0 subj  1  acc 0.8457  auc 0.9062  (8.0s)\n"}
+,{"stream_name":"stdout","time":500.327865154,"data":"[   474s] icnn_running none     seed 0 subj  2  acc 0.5985  auc 0.7642  (0.7s)\n"}
+,{"stream_name":"stdout","time":501.052160122,"data":"[   475s] icnn_running none     seed 0 subj  3  acc 0.6733  auc 0.8782  (0.7s)\n"}
+,{"stream_name":"stdout","time":501.780102128,"data":"[   476s] icnn_running none     seed 0 subj  4  acc 0.7162  auc 0.8143  (0.7s)\n"}
+,{"stream_name":"stdout","time":502.443144175,"data":"[   477s] icnn_running none     seed 0 subj  5  acc 0.7723  auc 0.9259  (0.7s)\n"}
+,{"stream_name":"stdout","time":503.1711186,"data":"[   477s] icnn_running none     seed 0 subj  6  acc 0.8072  auc 0.8686  (0.7s)\n"}
+,{"stream_name":"stdout","time":503.904266364,"data":"[   478s] icnn_running none     seed 0 subj  7  acc 0.6569  auc 0.6636  (0.7s)\n"}
+,{"stream_name":"stdout","time":504.579899755,"data":"[   479s] icnn_running none     seed 0 subj  8  acc 0.7424  auc 0.8360  (0.7s)\n"}
+,{"stream_name":"stdout","time":505.22529552,"data":"[   479s] icnn_running none     seed 0 subj  9  acc 0.9013  auc 0.9446  (0.6s)\n"}
+,{"stream_name":"stdout","time":505.968304079,"data":"[   480s] icnn_running none     seed 0 subj 10  acc 0.7870  auc 0.7960  (0.7s)\n"}
+,{"stream_name":"stdout","time":506.631315856,"data":"[   481s] icnn_running none     seed 0 subj 11  acc 0.6549  auc 0.7407  (0.7s)\n"}
+,{"stream_name":"stdout","time":507.310108685,"data":"[   481s] icnn_running none     seed 1 subj  1  acc 0.8883  auc 0.9077  (0.7s)\n"}
+,{"stream_name":"stdout","time":507.997421753,"data":"[   482s] icnn_running none     seed 1 subj  2  acc 0.4924  auc 0.6088  (0.7s)\n"}
+,{"stream_name":"stdout","time":508.710199277,"data":"[   483s] icnn_running none     seed 1 subj  3  acc 0.6600  auc 0.8820  (0.7s)\n"}
+,{"stream_name":"stdout","time":509.501760115,"data":"[   484s] icnn_running none     seed 1 subj  4  acc 0.7432  auc 0.8521  (0.8s)\n"}
+,{"stream_name":"stdout","time":510.223146318,"data":"[   484s] icnn_running none     seed 1 subj  5  acc 0.7679  auc 0.9411  (0.7s)\n"}
+,{"stream_name":"stdout","time":510.924439284,"data":"[   485s] icnn_running none     seed 1 subj  6  acc 0.8253  auc 0.8649  (0.7s)\n"}
+,{"stream_name":"stdout","time":511.719263134,"data":"[   486s] icnn_running none     seed 1 subj  7  acc 0.6373  auc 0.6336  (0.8s)\n"}
+,{"stream_name":"stdout","time":512.409283653,"data":"[   487s] icnn_running none     seed 1 subj  8  acc 0.7841  auc 0.8561  (0.7s)\n"}
+,{"stream_name":"stdout","time":513.092688935,"data":"[   487s] icnn_running none     seed 1 subj  9  acc 0.8790  auc 0.9393  (0.7s)\n"}
+,{"stream_name":"stdout","time":513.844510743,"data":"[   488s] icnn_running none     seed 1 subj 10  acc 0.7963  auc 0.7980  (0.8s)\n"}
+,{"stream_name":"stdout","time":514.604771301,"data":"[   489s] icnn_running none     seed 1 subj 11  acc 0.6858  auc 0.7479  (0.8s)\n"}
+,{"stream_name":"stdout","time":515.379258331,"data":"[   490s] icnn_running none     seed 2 subj  1  acc 0.8830  auc 0.9276  (0.8s)\n"}
+,{"stream_name":"stdout","time":516.080036861,"data":"[   490s] icnn_running none     seed 2 subj  2  acc 0.5000  auc 0.5266  (0.7s)\n"}
+,{"stream_name":"stdout","time":516.808060374,"data":"[   491s] icnn_running none     seed 2 subj  3  acc 0.6133  auc 0.9049  (0.7s)\n"}
+,{"stream_name":"stdout","time":517.534980642,"data":"[   492s] icnn_running none     seed 2 subj  4  acc 0.7568  auc 0.8523  (0.7s)\n"}
+,{"stream_name":"stdout","time":518.217306389,"data":"[   492s] icnn_running none     seed 2 subj  5  acc 0.7232  auc 0.9289  (0.7s)\n"}
+,{"stream_name":"stdout","time":518.93939926,"data":"[   493s] icnn_running none     seed 2 subj  6  acc 0.8494  auc 0.9007  (0.7s)\n"}
+,{"stream_name":"stdout","time":519.678167747,"data":"[   494s] icnn_running none     seed 2 subj  7  acc 0.6176  auc 0.6617  (0.7s)\n"}
+,{"stream_name":"stdout","time":520.334730432,"data":"[   494s] icnn_running none     seed 2 subj  8  acc 0.8068  auc 0.8612  (0.7s)\n"}
+,{"stream_name":"stdout","time":520.981440914,"data":"[   495s] icnn_running none     seed 2 subj  9  acc 0.9076  auc 0.9568  (0.6s)\n"}
+,{"stream_name":"stdout","time":521.756232573,"data":"[   496s] icnn_running none     seed 2 subj 10  acc 0.7593  auc 0.7521  (0.8s)\n"}
+,{"stream_name":"stdout","time":522.449494521,"data":"[   497s] icnn_running none     seed 2 subj 11  acc 0.6726  auc 0.7368  (0.7s)\n"}
+,{"stream_name":"stdout","time":524.268843816,"data":"[   498s] icnn_running all      seed 0 subj  1  acc 0.8245  auc 0.9047  (0.9s)\n"}
+,{"stream_name":"stdout","time":525.206198926,"data":"[   499s] icnn_running all      seed 0 subj  2  acc 0.6970  auc 0.7991  (0.9s)\n"}
+,{"stream_name":"stdout","time":526.130929284,"data":"[   500s] icnn_running all      seed 0 subj  3  acc 0.7333  auc 0.7966  (0.9s)\n"}
+,{"stream_name":"stdout","time":527.057769152,"data":"[   501s] icnn_running all      seed 0 subj  4  acc 0.7635  auc 0.8115  (0.9s)\n"}
+,{"stream_name":"stdout","time":527.92770161,"data":"[   502s] icnn_running all      seed 0 subj  5  acc 0.8705  auc 0.9314  (0.9s)\n"}
+,{"stream_name":"stdout","time":528.880352279,"data":"[   503s] icnn_running all      seed 0 subj  6  acc 0.8434  auc 0.8846  (1.0s)\n"}
+,{"stream_name":"stdout","time":529.868671875,"data":"[   504s] icnn_running all      seed 0 subj  7  acc 0.6471  auc 0.6444  (1.0s)\n"}
+,{"stream_name":"stdout","time":530.759696682,"data":"[   505s] icnn_running all      seed 0 subj  8  acc 0.7614  auc 0.8410  (0.9s)\n"}
+,{"stream_name":"stdout","time":531.680923401,"data":"[   506s] icnn_running all      seed 0 subj  9  acc 0.8758  auc 0.9099  (0.9s)\n"}
+,{"stream_name":"stdout","time":532.659839185,"data":"[   507s] icnn_running all      seed 0 subj 10  acc 0.8241  auc 0.8227  (1.0s)\n"}
+,{"stream_name":"stdout","time":533.589501101,"data":"[   508s] icnn_running all      seed 0 subj 11  acc 0.6947  auc 0.8018  (0.9s)\n"}
+,{"stream_name":"stdout","time":535.378207524,"data":"[   510s] icnn_running all      seed 1 subj  1  acc 0.8085  auc 0.8751  (0.9s)\n"}
+,{"stream_name":"stdout","time":536.298476436,"data":"[   510s] icnn_running all      seed 1 subj  2  acc 0.7045  auc 0.8170  (0.9s)\n"}
+,{"stream_name":"stdout","time":537.230080081,"data":"[   511s] icnn_running all      seed 1 subj  3  acc 0.7667  auc 0.7913  (0.9s)\n"}
+,{"stream_name":"stdout","time":538.139376635,"data":"[   512s] icnn_running all      seed 1 subj  4  acc 0.7838  auc 0.8294  (0.9s)\n"}
+,{"stream_name":"stdout","time":539.016045638,"data":"[   513s] icnn_running all      seed 1 subj  5  acc 0.8661  auc 0.9267  (0.9s)\n"}
+,{"stream_name":"stdout","time":539.932021653,"data":"[   514s] icnn_running all      seed 1 subj  6  acc 0.8494  auc 0.8996  (0.9s)\n"}
+,{"stream_name":"stdout","time":540.864023601,"data":"[   515s] icnn_running all      seed 1 subj  7  acc 0.6471  auc 0.6471  (0.9s)\n"}
+,{"stream_name":"stdout","time":541.767065852,"data":"[   516s] icnn_running all      seed 1 subj  8  acc 0.7955  auc 0.8452  (0.9s)\n"}
+,{"stream_name":"stdout","time":542.607601899,"data":"[   517s] icnn_running all      seed 1 subj  9  acc 0.8917  auc 0.9241  (0.8s)\n"}
+,{"stream_name":"stdout","time":543.530942811,"data":"[   518s] icnn_running all      seed 1 subj 10  acc 0.8333  auc 0.8522  (0.9s)\n"}
+,{"stream_name":"stdout","time":544.418967212,"data":"[   519s] icnn_running all      seed 1 subj 11  acc 0.7212  auc 0.8197  (0.9s)\n"}
+,{"stream_name":"stdout","time":546.183930149,"data":"[   520s] icnn_running all      seed 2 subj  1  acc 0.8511  auc 0.9039  (0.9s)\n"}
+,{"stream_name":"stdout","time":547.126010712,"data":"[   521s] icnn_running all      seed 2 subj  2  acc 0.7424  auc 0.8097  (0.9s)\n"}
+,{"stream_name":"stdout","time":548.025082923,"data":"[   522s] icnn_running all      seed 2 subj  3  acc 0.7600  auc 0.8071  (0.9s)\n"}
+,{"stream_name":"stdout","time":548.922775878,"data":"[   523s] icnn_running all      seed 2 subj  4  acc 0.7770  auc 0.8729  (0.9s)\n"}
+,{"stream_name":"stdout","time":549.786926225,"data":"[   524s] icnn_running all      seed 2 subj  5  acc 0.8705  auc 0.9184  (0.9s)\n"}
+,{"stream_name":"stdout","time":550.685314097,"data":"[   525s] icnn_running all      seed 2 subj  6  acc 0.8675  auc 0.9020  (0.9s)\n"}
+,{"stream_name":"stdout","time":551.64604393,"data":"[   526s] icnn_running all      seed 2 subj  7  acc 0.6569  auc 0.6763  (1.0s)\n"}
+,{"stream_name":"stdout","time":552.542984435,"data":"[   527s] icnn_running all      seed 2 subj  8  acc 0.7765  auc 0.8728  (0.9s)\n"}
+,{"stream_name":"stdout","time":553.402040936,"data":"[   528s] icnn_running all      seed 2 subj  9  acc 0.8822  auc 0.9283  (0.9s)\n"}
+,{"stream_name":"stdout","time":554.338798431,"data":"[   528s] icnn_running all      seed 2 subj 10  acc 0.7870  auc 0.8196  (0.9s)\n"}
+,{"stream_name":"stdout","time":555.217515477,"data":"[   529s] icnn_running all      seed 2 subj 11  acc 0.7434  auc 0.8166  (0.9s)\n"}
+,{"stream_name":"stdout","time":556.66853923,"data":"[   531s] icnn_running rand10   seed 0 subj  1  acc 0.8617  auc 0.9246  (0.9s)\n"}
+,{"stream_name":"stdout","time":557.588661614,"data":"[   532s] icnn_running rand10   seed 0 subj  2  acc 0.7197  auc 0.8425  (0.9s)\n"}
+,{"stream_name":"stdout","time":558.505849055,"data":"[   533s] icnn_running rand10   seed 0 subj  3  acc 0.7133  auc 0.8604  (0.9s)\n"}
+,{"stream_name":"stdout","time":559.413251486,"data":"[   534s] icnn_running rand10   seed 0 subj  4  acc 0.7838  auc 0.8125  (0.9s)\n"}
+,{"stream_name":"stdout","time":560.281088613,"data":"[   534s] icnn_running rand10   seed 0 subj  5  acc 0.8839  auc 0.9515  (0.9s)\n"}
+,{"stream_name":"stdout","time":561.209795392,"data":"[   535s] icnn_running rand10   seed 0 subj  6  acc 0.8795  auc 0.9504  (0.9s)\n"}
+,{"stream_name":"stdout","time":562.208798216,"data":"[   536s] icnn_running rand10   seed 0 subj  7  acc 0.6471  auc 0.6759  (1.0s)\n"}
+,{"stream_name":"stdout","time":563.119798127,"data":"[   537s] icnn_running rand10   seed 0 subj  8  acc 0.7689  auc 0.8564  (0.9s)\n"}
+,{"stream_name":"stdout","time":564.016117337,"data":"[   538s] icnn_running rand10   seed 0 subj  9  acc 0.8503  auc 0.9013  (0.9s)\n"}
+,{"stream_name":"stdout","time":565.019888118,"data":"[   539s] icnn_running rand10   seed 0 subj 10  acc 0.7685  auc 0.8560  (1.0s)\n"}
+,{"stream_name":"stdout","time":565.945426622,"data":"[   540s] icnn_running rand10   seed 0 subj 11  acc 0.6991  auc 0.7925  (0.9s)\n"}
+,{"stream_name":"stdout","time":567.375120132,"data":"[   542s] icnn_running rand10   seed 1 subj  1  acc 0.8298  auc 0.8814  (0.9s)\n"}
+,{"stream_name":"stdout","time":568.306465528,"data":"[   542s] icnn_running rand10   seed 1 subj  2  acc 0.6439  auc 0.7893  (0.9s)\n"}
+,{"stream_name":"stdout","time":569.210550249,"data":"[   543s] icnn_running rand10   seed 1 subj  3  acc 0.7267  auc 0.8169  (0.9s)\n"}
+,{"stream_name":"stdout","time":570.11858021,"data":"[   544s] icnn_running rand10   seed 1 subj  4  acc 0.7973  auc 0.8305  (0.9s)\n"}
+,{"stream_name":"stdout","time":570.996717813,"data":"[   545s] icnn_running rand10   seed 1 subj  5  acc 0.8795  auc 0.9390  (0.9s)\n"}
+,{"stream_name":"stdout","time":571.964277544,"data":"[   546s] icnn_running rand10   seed 1 subj  6  acc 0.7952  auc 0.8730  (1.0s)\n"}
+,{"stream_name":"stdout","time":572.954696807,"data":"[   547s] icnn_running rand10   seed 1 subj  7  acc 0.6471  auc 0.6571  (1.0s)\n"}
+,{"stream_name":"stdout","time":573.865002137,"data":"[   548s] icnn_running rand10   seed 1 subj  8  acc 0.6970  auc 0.8084  (0.9s)\n"}
+,{"stream_name":"stdout","time":574.75152685,"data":"[   549s] icnn_running rand10   seed 1 subj  9  acc 0.8981  auc 0.9223  (0.9s)\n"}
+,{"stream_name":"stdout","time":575.737760929,"data":"[   550s] icnn_running rand10   seed 1 subj 10  acc 0.8333  auc 0.7977  (1.0s)\n"}
+,{"stream_name":"stdout","time":576.655246798,"data":"[   551s] icnn_running rand10   seed 1 subj 11  acc 0.5929  auc 0.7964  (0.9s)\n"}
+,{"stream_name":"stdout","time":578.106961695,"data":"[   552s] icnn_running rand10   seed 2 subj  1  acc 0.8298  auc 0.9125  (0.9s)\n"}
+,{"stream_name":"stdout","time":579.01093734,"data":"[   553s] icnn_running rand10   seed 2 subj  2  acc 0.6364  auc 0.7638  (0.9s)\n"}
+,{"stream_name":"stdout","time":579.917003248,"data":"[   554s] icnn_running rand10   seed 2 subj  3  acc 0.5933  auc 0.7360  (0.9s)\n"}
+,{"stream_name":"stdout","time":580.852184177,"data":"[   555s] icnn_running rand10   seed 2 subj  4  acc 0.8041  auc 0.8366  (0.9s)\n"}
+,{"stream_name":"stdout","time":581.748509666,"data":"[   556s] icnn_running rand10   seed 2 subj  5  acc 0.8795  auc 0.9180  (0.9s)\n"}
+,{"stream_name":"stdout","time":582.65846303,"data":"[   557s] icnn_running rand10   seed 2 subj  6  acc 0.9157  auc 0.9829  (0.9s)\n"}
+,{"stream_name":"stdout","time":583.586018505,"data":"[   558s] icnn_running rand10   seed 2 subj  7  acc 0.6667  auc 0.6459  (0.9s)\n"}
+,{"stream_name":"stdout","time":584.45497876,"data":"[   559s] icnn_running rand10   seed 2 subj  8  acc 0.7538  auc 0.8368  (0.9s)\n"}
+,{"stream_name":"stdout","time":585.308469411,"data":"[   559s] icnn_running rand10   seed 2 subj  9  acc 0.8822  auc 0.9023  (0.9s)\n"}
+,{"stream_name":"stdout","time":586.269037966,"data":"[   560s] icnn_running rand10   seed 2 subj 10  acc 0.6944  auc 0.5796  (1.0s)\n"}
+,{"stream_name":"stdout","time":587.169183053,"data":"[   561s] icnn_running rand10   seed 2 subj 11  acc 0.6504  auc 0.7492  (0.9s)\n"}
+,{"stream_name":"stdout","time":588.646446859,"data":"[   563s] icnn_running rand30   seed 0 subj  1  acc 0.8404  auc 0.9080  (0.9s)\n"}
+,{"stream_name":"stdout","time":589.548061957,"data":"[   564s] icnn_running rand30   seed 0 subj  2  acc 0.6894  auc 0.7831  (0.9s)\n"}
+,{"stream_name":"stdout","time":590.458487516,"data":"[   565s] icnn_running rand30   seed 0 subj  3  acc 0.7067  auc 0.7589  (0.9s)\n"}
+,{"stream_name":"stdout","time":591.442229283,"data":"[   566s] icnn_running rand30   seed 0 subj  4  acc 0.6554  auc 0.8104  (1.0s)\n"}
+,{"stream_name":"stdout","time":592.337851762,"data":"[   566s] icnn_running rand30   seed 0 subj  5  acc 0.8661  auc 0.9365  (0.9s)\n"}
+,{"stream_name":"stdout","time":593.240075652,"data":"[   567s] icnn_running rand30   seed 0 subj  6  acc 0.8434  auc 0.8667  (0.9s)\n"}
+,{"stream_name":"stdout","time":594.170022388,"data":"[   568s] icnn_running rand30   seed 0 subj  7  acc 0.6569  auc 0.6859  (0.9s)\n"}
+,{"stream_name":"stdout","time":595.035980698,"data":"[   569s] icnn_running rand30   seed 0 subj  8  acc 0.7803  auc 0.8714  (0.9s)\n"}
+,{"stream_name":"stdout","time":595.892237288,"data":"[   570s] icnn_running rand30   seed 0 subj  9  acc 0.8662  auc 0.8982  (0.9s)\n"}
+,{"stream_name":"stdout","time":596.848567001,"data":"[   571s] icnn_running rand30   seed 0 subj 10  acc 0.8519  auc 0.8169  (1.0s)\n"}
+,{"stream_name":"stdout","time":597.729156781,"data":"[   572s] icnn_running rand30   seed 0 subj 11  acc 0.7124  auc 0.8284  (0.9s)\n"}
+,{"stream_name":"stdout","time":599.237095162,"data":"[   573s] icnn_running rand30   seed 1 subj  1  acc 0.8298  auc 0.9053  (0.9s)\n"}
+,{"stream_name":"stdout","time":600.157756326,"data":"[   574s] icnn_running rand30   seed 1 subj  2  acc 0.6970  auc 0.7927  (0.9s)\n"}
+,{"stream_name":"stdout","time":601.098723085,"data":"[   575s] icnn_running rand30   seed 1 subj  3  acc 0.7800  auc 0.8085  (0.9s)\n"}
+,{"stream_name":"stdout","time":602.02825159,"data":"[   576s] icnn_running rand30   seed 1 subj  4  acc 0.7635  auc 0.8212  (0.9s)\n"}
+,{"stream_name":"stdout","time":602.931391401,"data":"[   577s] icnn_running rand30   seed 1 subj  5  acc 0.8839  auc 0.9298  (0.9s)\n"}
+,{"stream_name":"stdout","time":603.876813607,"data":"[   578s] icnn_running rand30   seed 1 subj  6  acc 0.8434  auc 0.9318  (0.9s)\n"}
+,{"stream_name":"stdout","time":604.853610169,"data":"[   579s] icnn_running rand30   seed 1 subj  7  acc 0.6667  auc 0.6567  (1.0s)\n"}
+,{"stream_name":"stdout","time":605.717205958,"data":"[   580s] icnn_running rand30   seed 1 subj  8  acc 0.7992  auc 0.8449  (0.9s)\n"}
+,{"stream_name":"stdout","time":606.587119736,"data":"[   581s] icnn_running rand30   seed 1 subj  9  acc 0.8981  auc 0.9288  (0.9s)\n"}
+,{"stream_name":"stdout","time":607.538923765,"data":"[   582s] icnn_running rand30   seed 1 subj 10  acc 0.8148  auc 0.8563  (1.0s)\n"}
+,{"stream_name":"stdout","time":608.422511413,"data":"[   583s] icnn_running rand30   seed 1 subj 11  acc 0.6991  auc 0.7915  (0.9s)\n"}
+,{"stream_name":"stdout","time":609.933013869,"data":"[   584s] icnn_running rand30   seed 2 subj  1  acc 0.8564  auc 0.9080  (0.9s)\n"}
+,{"stream_name":"stdout","time":610.856142017,"data":"[   585s] icnn_running rand30   seed 2 subj  2  acc 0.7500  auc 0.7973  (0.9s)\n"}
+,{"stream_name":"stdout","time":611.794307169,"data":"[   586s] icnn_running rand30   seed 2 subj  3  acc 0.7800  auc 0.8254  (0.9s)\n"}
+,{"stream_name":"stdout","time":612.725346608,"data":"[   587s] icnn_running rand30   seed 2 subj  4  acc 0.7838  auc 0.8696  (0.9s)\n"}
+,{"stream_name":"stdout","time":613.616171406,"data":"[   588s] icnn_running rand30   seed 2 subj  5  acc 0.8929  auc 0.9374  (0.9s)\n"}
+,{"stream_name":"stdout","time":614.520779887,"data":"[   589s] icnn_running rand30   seed 2 subj  6  acc 0.8855  auc 0.9475  (0.9s)\n"}
+,{"stream_name":"stdout","time":615.441971962,"data":"[   590s] icnn_running rand30   seed 2 subj  7  acc 0.6471  auc 0.6517  (0.9s)\n"}
+,{"stream_name":"stdout","time":616.301125895,"data":"[   590s] icnn_running rand30   seed 2 subj  8  acc 0.8030  auc 0.8755  (0.9s)\n"}
+,{"stream_name":"stdout","time":617.141230065,"data":"[   591s] icnn_running rand30   seed 2 subj  9  acc 0.9076  auc 0.9422  (0.8s)\n"}
+,{"stream_name":"stdout","time":618.084890977,"data":"[   592s] icnn_running rand30   seed 2 subj 10  acc 0.8056  auc 0.8073  (0.9s)\n"}
+,{"stream_name":"stdout","time":619.00204373,"data":"[   593s] icnn_running rand30   seed 2 subj 11  acc 0.7257  auc 0.8310  (0.9s)\n"}
+,{"stream_name":"stdout","time":620.418263742,"data":"[   595s] icnn_running alert10  seed 0 subj  1  acc 0.5000  auc 0.8928  (0.9s)\n"}
+,{"stream_name":"stdout","time":621.391606326,"data":"[   596s] icnn_running alert10  seed 0 subj  2  acc 0.5000  auc 0.9672  (1.0s)\n"}
+,{"stream_name":"stdout","time":622.297585792,"data":"[   596s] icnn_running alert10  seed 0 subj  3  acc 0.7667  auc 0.6972  (0.9s)\n"}
+,{"stream_name":"stdout","time":623.198896531,"data":"[   597s] icnn_running alert10  seed 0 subj  4  acc 0.5000  auc 0.6851  (0.9s)\n"}
+,{"stream_name":"stdout","time":624.064781931,"data":"[   598s] icnn_running alert10  seed 0 subj  5  acc 0.5000  auc 0.7791  (0.9s)\n"}
+,{"stream_name":"stdout","time":625.021284678,"data":"[   599s] icnn_running alert10  seed 0 subj  6  acc 0.8373  auc 0.9101  (1.0s)\n"}
+,{"stream_name":"stdout","time":626.013257275,"data":"[   600s] icnn_running alert10  seed 0 subj  7  acc 0.6863  auc 0.6196  (1.0s)\n"}
+,{"stream_name":"stdout","time":626.950030939,"data":"[   601s] icnn_running alert10  seed 0 subj  8  acc 0.5000  auc 0.4865  (0.9s)\n"}
+,{"stream_name":"stdout","time":627.84375156,"data":"[   602s] icnn_running alert10  seed 0 subj  9  acc 0.5000  auc 0.5198  (0.9s)\n"}
+,{"stream_name":"stdout","time":628.871340639,"data":"[   603s] icnn_running alert10  seed 0 subj 10  acc 0.5926  auc 0.9554  (1.0s)\n"}
+,{"stream_name":"stdout","time":629.737853994,"data":"[   604s] icnn_running alert10  seed 0 subj 11  acc 0.8009  auc 0.9281  (0.9s)\n"}
+,{"stream_name":"stdout","time":631.177187141,"data":"[   605s] icnn_running alert10  seed 1 subj  1  acc 0.5000  auc 0.8763  (0.9s)\n"}
+,{"stream_name":"stdout","time":632.132516198,"data":"[   606s] icnn_running alert10  seed 1 subj  2  acc 0.5000  auc 0.9532  (1.0s)\n"}
+,{"stream_name":"stdout","time":633.071453587,"data":"[   607s] icnn_running alert10  seed 1 subj  3  acc 0.7667  auc 0.7008  (0.9s)\n"}
+,{"stream_name":"stdout","time":633.988227687,"data":"[   608s] icnn_running alert10  seed 1 subj  4  acc 0.5000  auc 0.5780  (0.9s)\n"}
+,{"stream_name":"stdout","time":634.869702506,"data":"[   609s] icnn_running alert10  seed 1 subj  5  acc 0.5000  auc 0.5851  (0.9s)\n"}
+,{"stream_name":"stdout","time":635.820281005,"data":"[   610s] icnn_running alert10  seed 1 subj  6  acc 0.8373  auc 0.8614  (0.9s)\n"}
+,{"stream_name":"stdout","time":636.767656049,"data":"[   611s] icnn_running alert10  seed 1 subj  7  acc 0.6863  auc 0.6386  (0.9s)\n"}
+,{"stream_name":"stdout","time":637.644836434,"data":"[   612s] icnn_running alert10  seed 1 subj  8  acc 0.5000  auc 0.5780  (0.9s)\n"}
+,{"stream_name":"stdout","time":638.487083399,"data":"[   613s] icnn_running alert10  seed 1 subj  9  acc 0.5000  auc 0.8903  (0.8s)\n"}
+,{"stream_name":"stdout","time":639.431495846,"data":"[   614s] icnn_running alert10  seed 1 subj 10  acc 0.5463  auc 0.7318  (0.9s)\n"}
+,{"stream_name":"stdout","time":640.318227958,"data":"[   614s] icnn_running alert10  seed 1 subj 11  acc 0.7168  auc 0.8740  (0.9s)\n"}
+,{"stream_name":"stdout","time":641.819571064,"data":"[   616s] icnn_running alert10  seed 2 subj  1  acc 0.5000  auc 0.7525  (1.0s)\n"}
+,{"stream_name":"stdout","time":642.774899727,"data":"[   617s] icnn_running alert10  seed 2 subj  2  acc 0.5000  auc 0.9534  (1.0s)\n"}
+,{"stream_name":"stdout","time":643.684313843,"data":"[   618s] icnn_running alert10  seed 2 subj  3  acc 0.7667  auc 0.7205  (0.9s)\n"}
+,{"stream_name":"stdout","time":644.622801582,"data":"[   619s] icnn_running alert10  seed 2 subj  4  acc 0.5000  auc 0.5770  (0.9s)\n"}
+,{"stream_name":"stdout","time":645.495924283,"data":"[   620s] icnn_running alert10  seed 2 subj  5  acc 0.5000  auc 0.6394  (0.9s)\n"}
+,{"stream_name":"stdout","time":646.418373649,"data":"[   621s] icnn_running alert10  seed 2 subj  6  acc 0.8313  auc 0.9149  (0.9s)\n"}
+,{"stream_name":"stdout","time":647.363862185,"data":"[   621s] icnn_running alert10  seed 2 subj  7  acc 0.6863  auc 0.6063  (0.9s)\n"}
+,{"stream_name":"stdout","time":648.214103193,"data":"[   622s] icnn_running alert10  seed 2 subj  8  acc 0.5000  auc 0.4542  (0.8s)\n"}
+,{"stream_name":"stdout","time":649.044470463,"data":"[   623s] icnn_running alert10  seed 2 subj  9  acc 0.5000  auc 0.7212  (0.8s)\n"}
+,{"stream_name":"stdout","time":649.983552294,"data":"[   624s] icnn_running alert10  seed 2 subj 10  acc 0.5648  auc 0.6152  (0.9s)\n"}
+,{"stream_name":"stdout","time":650.890288206,"data":"[   625s] icnn_running alert10  seed 2 subj 11  acc 0.7257  auc 0.9163  (0.9s)\n"}
+,{"stream_name":"stdout","time":652.35426295,"data":"[   626s] icnn_running alert30  seed 0 subj  1  acc 0.5000  auc 0.5157  (0.9s)\n"}
+,{"stream_name":"stdout","time":653.254717492,"data":"[   627s] icnn_running alert30  seed 0 subj  2  acc 0.5000  auc 0.7127  (0.9s)\n"}
+,{"stream_name":"stdout","time":654.16227819,"data":"[   628s] icnn_running alert30  seed 0 subj  3  acc 0.7467  auc 0.6832  (0.9s)\n"}
+,{"stream_name":"stdout","time":655.075334512,"data":"[   629s] icnn_running alert30  seed 0 subj  4  acc 0.5000  auc 0.5555  (0.9s)\n"}
+,{"stream_name":"stdout","time":655.957138626,"data":"[   630s] icnn_running alert30  seed 0 subj  5  acc 0.5000  auc 0.5898  (0.9s)\n"}
+,{"stream_name":"stdout","time":656.879489314,"data":"[   631s] icnn_running alert30  seed 0 subj  6  acc 0.8373  auc 0.9149  (0.9s)\n"}
+,{"stream_name":"stdout","time":657.802151697,"data":"[   632s] icnn_running alert30  seed 0 subj  7  acc 0.5000  auc 0.3948  (0.9s)\n"}
+,{"stream_name":"stdout","time":658.694613803,"data":"[   633s] icnn_running alert30  seed 0 subj  8  acc 0.5000  auc 0.4029  (0.9s)\n"}
+,{"stream_name":"stdout","time":659.529792561,"data":"[   634s] icnn_running alert30  seed 0 subj  9  acc 0.5000  auc 0.5575  (0.8s)\n"}
+,{"stream_name":"stdout","time":660.484768297,"data":"[   635s] icnn_running alert30  seed 0 subj 10  acc 0.5463  auc 0.4309  (1.0s)\n"}
+,{"stream_name":"stdout","time":661.399182394,"data":"[   636s] icnn_running alert30  seed 0 subj 11  acc 0.7257  auc 0.9127  (0.9s)\n"}
+,{"stream_name":"stdout","time":662.885021895,"data":"[   637s] icnn_running alert30  seed 1 subj  1  acc 0.5000  auc 0.5018  (0.9s)\n"}
+,{"stream_name":"stdout","time":663.85597542,"data":"[   638s] icnn_running alert30  seed 1 subj  2  acc 0.5000  auc 0.8484  (1.0s)\n"}
+,{"stream_name":"stdout","time":664.818492523,"data":"[   639s] icnn_running alert30  seed 1 subj  3  acc 0.7667  auc 0.6700  (1.0s)\n"}
+,{"stream_name":"stdout","time":665.764973055,"data":"[   640s] icnn_running alert30  seed 1 subj  4  acc 0.5000  auc 0.6087  (0.9s)\n"}
+,{"stream_name":"stdout","time":666.681820512,"data":"[   641s] icnn_running alert30  seed 1 subj  5  acc 0.5000  auc 0.6538  (0.9s)\n"}
+,{"stream_name":"stdout","time":667.605101308,"data":"[   642s] icnn_running alert30  seed 1 subj  6  acc 0.8373  auc 0.8800  (0.9s)\n"}
+,{"stream_name":"stdout","time":668.541837467,"data":"[   643s] icnn_running alert30  seed 1 subj  7  acc 0.5000  auc 0.4764  (0.9s)\n"}
+,{"stream_name":"stdout","time":669.394083607,"data":"[   644s] icnn_running alert30  seed 1 subj  8  acc 0.5000  auc 0.5201  (0.9s)\n"}
+,{"stream_name":"stdout","time":670.267533612,"data":"[   644s] icnn_running alert30  seed 1 subj  9  acc 0.5000  auc 0.6128  (0.9s)\n"}
+,{"stream_name":"stdout","time":671.264995631,"data":"[   645s] icnn_running alert30  seed 1 subj 10  acc 0.5093  auc 0.6288  (1.0s)\n"}
+,{"stream_name":"stdout","time":672.180822084,"data":"[   646s] icnn_running alert30  seed 1 subj 11  acc 0.7257  auc 0.8967  (0.9s)\n"}
+,{"stream_name":"stdout","time":673.659241264,"data":"[   648s] icnn_running alert30  seed 2 subj  1  acc 0.5000  auc 0.5401  (0.9s)\n"}
+,{"stream_name":"stdout","time":674.591473111,"data":"[   649s] icnn_running alert30  seed 2 subj  2  acc 0.5000  auc 0.5583  (0.9s)\n"}
+,{"stream_name":"stdout","time":675.512789792,"data":"[   650s] icnn_running alert30  seed 2 subj  3  acc 0.7667  auc 0.7578  (0.9s)\n"}
+,{"stream_name":"stdout","time":676.406826558,"data":"[   651s] icnn_running alert30  seed 2 subj  4  acc 0.5000  auc 0.3670  (0.9s)\n"}
+,{"stream_name":"stdout","time":677.264358312,"data":"[   651s] icnn_running alert30  seed 2 subj  5  acc 0.5000  auc 0.6362  (0.9s)\n"}
+,{"stream_name":"stdout","time":678.180067248,"data":"[   652s] icnn_running alert30  seed 2 subj  6  acc 0.8373  auc 0.8972  (0.9s)\n"}
+,{"stream_name":"stdout","time":679.118654165,"data":"[   653s] icnn_running alert30  seed 2 subj  7  acc 0.5000  auc 0.4952  (0.9s)\n"}
+,{"stream_name":"stdout","time":680.015149725,"data":"[   654s] icnn_running alert30  seed 2 subj  8  acc 0.5000  auc 0.4888  (0.9s)\n"}
+,{"stream_name":"stdout","time":680.89295447,"data":"[   655s] icnn_running alert30  seed 2 subj  9  acc 0.5000  auc 0.5213  (0.9s)\n"}
+,{"stream_name":"stdout","time":681.846240889,"data":"[   656s] icnn_running alert30  seed 2 subj 10  acc 0.5000  auc 0.4899  (1.0s)\n"}
+,{"stream_name":"stdout","time":682.744021438,"data":"[   657s] icnn_running alert30  seed 2 subj 11  acc 0.7257  auc 0.9167  (0.9s)\n"}
+,{"stream_name":"stdout","time":682.786661449,"data":"| model | mode | seeds | acc | macro-F1 | drowsy-F1 | AUC | acc std (subjects) |\n"}
+,{"stream_name":"stdout","time":682.786680882,"data":"|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":682.78668519,"data":"| bandpower_lr | none | 1 | 67.14 ± 0.00 | 65.50 | 67.70 | 0.743 | 10.55 |\n"}
+,{"stream_name":"stdout","time":682.786689857,"data":"| bandpower_lr | all | 1 | 71.01 ± 0.00 | 70.88 | 71.49 | 0.762 | 11.65 |\n"}
+,{"stream_name":"stdout","time":682.786693444,"data":"| bandpower_lr | rand10 | 3 | 66.52 ± 1.90 | 65.49 | 64.60 | 0.742 | 10.25 |\n"}
+,{"stream_name":"stdout","time":682.786721549,"data":"| bandpower_lr | rand30 | 3 | 69.62 ± 1.57 | 69.41 | 70.13 | 0.756 | 10.74 |\n"}
+,{"stream_name":"stdout","time":682.786726016,"data":"| bandpower_lr | alert10 | 1 | 65.29 ± 0.00 | 63.24 | 58.37 | 0.692 | 13.04 |\n"}
+,{"stream_name":"stdout","time":682.786730523,"data":"| bandpower_lr | alert30 | 1 | 64.83 ± 0.00 | 62.86 | 57.03 | 0.685 | 14.06 |\n"}
+,{"stream_name":"stdout","time":682.786734917,"data":"| riemann_lr | none | 1 | 65.34 ± 0.00 | 62.02 | 61.97 | 0.748 | 15.96 |\n"}
+,{"stream_name":"stdout","time":682.786739152,"data":"| riemann_lr | all | 1 | 72.34 ± 0.00 | 72.21 | 73.04 | 0.759 | 13.76 |\n"}
+,{"stream_name":"stdout","time":682.786743322,"data":"| riemann_lr | rand10 | 3 | 69.79 ± 0.58 | 69.27 | 69.10 | 0.750 | 12.34 |\n"}
+,{"stream_name":"stdout","time":682.786747445,"data":"| riemann_lr | rand30 | 3 | 71.13 ± 0.49 | 70.90 | 70.87 | 0.751 | 14.18 |\n"}
+,{"stream_name":"stdout","time":682.786751928,"data":"| riemann_lr | alert10 | 1 | 65.41 ± 0.00 | 61.23 | 50.04 | 0.733 | 13.30 |\n"}
+,{"stream_name":"stdout","time":682.78675599,"data":"| riemann_lr | alert30 | 1 | 68.40 ± 0.00 | 64.75 | 55.43 | 0.758 | 13.23 |\n"}
+,{"stream_name":"stdout","time":682.78676011,"data":"| icnn_running | none | 3 | 73.95 ± 0.29 | 72.81 | 72.65 | 0.824 | 10.46 |\n"}
+,{"stream_name":"stdout","time":682.786764753,"data":"| icnn_running | all | 3 | 78.54 ± 0.69 | 78.37 | 77.94 | 0.839 | 6.92 |\n"}
+,{"stream_name":"stdout","time":682.786768817,"data":"| icnn_running | rand10 | 3 | 76.43 ± 1.09 | 75.76 | 74.26 | 0.830 | 8.86 |\n"}
+,{"stream_name":"stdout","time":682.786772942,"data":"| icnn_running | rand30 | 3 | 78.73 ± 1.37 | 78.51 | 77.78 | 0.843 | 7.44 |\n"}
+,{"stream_name":"stdout","time":682.786777388,"data":"| icnn_running | alert10 | 3 | 60.04 ± 0.52 | 49.49 | 31.42 | 0.745 | 12.56 |\n"}
+,{"stream_name":"stdout","time":682.78678164,"data":"| icnn_running | alert30 | 3 | 57.65 ± 0.10 | 45.35 | 22.89 | 0.625 | 12.37 |\n"}
+,{"stream_name":"stdout","time":682.786796433,"data":"done in 657s\n"}
+,{"stream_name":"stderr","time":689.564897424,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":689.564932004,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":689.862272829,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":689.862309245,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":690.689003399,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":691.75953445,"data":"[NbConvertApp] Writing 293599 bytes to __results__.html\n"}
+]

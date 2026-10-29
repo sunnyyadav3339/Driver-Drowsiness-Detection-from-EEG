@@ -1,0 +1,281 @@
+[{"stream_name":"stdout","time":20.593116651,"data":"device=cuda data=/kaggle/input/datasets/sunnyydv602/eeg-dataset/dataset.mat N=2022 models=['icnn_batch', 'icnn_running', 'eegnet', 'bandpower_lr', 'riemann_lr'] seeds=[0, 1, 2, 3, 4] subjects=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10), np.int64(11)]\n"}
+,{"stream_name":"stdout","time":28.964795381,"data":"[      8s] icnn_batch    streaming    seed 0 subj  1  acc 0.5000  f1 0.3333  auc 0.4954  (8s, best ep 11)\n"}
+,{"stream_name":"stdout","time":28.970607062,"data":"[      8s] icnn_batch    transductive seed 0 subj  1  acc 0.8298  f1 0.8296  auc 0.8998  (8s, best ep 11)\n"}
+,{"stream_name":"stdout","time":29.699991195,"data":"[      9s] icnn_batch    streaming    seed 0 subj  2  acc 0.5000  f1 0.3333  auc 0.5112  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":29.705051941,"data":"[      9s] icnn_batch    transductive seed 0 subj  2  acc 0.7500  f1 0.7496  auc 0.8035  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":30.467211427,"data":"[     10s] icnn_batch    streaming    seed 0 subj  3  acc 0.5000  f1 0.3333  auc 0.4802  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":30.472273119,"data":"[     10s] icnn_batch    transductive seed 0 subj  3  acc 0.8333  f1 0.8333  auc 0.8690  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":31.235808804,"data":"[     10s] icnn_batch    streaming    seed 0 subj  4  acc 0.5000  f1 0.3333  auc 0.4871  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":31.240899379,"data":"[     10s] icnn_batch    transductive seed 0 subj  4  acc 0.7635  f1 0.7635  auc 0.8126  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":31.968329525,"data":"[     11s] icnn_batch    streaming    seed 0 subj  5  acc 0.5000  f1 0.3333  auc 0.4697  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":31.973886299,"data":"[     11s] icnn_batch    transductive seed 0 subj  5  acc 0.8750  f1 0.8748  auc 0.9381  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":32.799190026,"data":"[     12s] icnn_batch    streaming    seed 0 subj  6  acc 0.5000  f1 0.3333  auc 0.4975  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":32.80625731,"data":"[     12s] icnn_batch    transductive seed 0 subj  6  acc 0.8494  f1 0.8474  auc 0.8814  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":33.617745833,"data":"[     13s] icnn_batch    streaming    seed 0 subj  7  acc 0.5000  f1 0.3333  auc 0.3827  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":33.622776852,"data":"[     13s] icnn_batch    transductive seed 0 subj  7  acc 0.6667  f1 0.6655  auc 0.6594  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":34.35486322,"data":"[     13s] icnn_batch    streaming    seed 0 subj  8  acc 0.5000  f1 0.3333  auc 0.4862  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":34.361614798,"data":"[     13s] icnn_batch    transductive seed 0 subj  8  acc 0.7841  f1 0.7838  auc 0.8562  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":35.123164441,"data":"[     14s] icnn_batch    streaming    seed 0 subj  9  acc 0.5000  f1 0.3333  auc 0.5379  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":35.129085247,"data":"[     14s] icnn_batch    transductive seed 0 subj  9  acc 0.8981  f1 0.8978  auc 0.9463  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":35.852511597,"data":"[     15s] icnn_batch    streaming    seed 0 subj 10  acc 0.5000  f1 0.3333  auc 0.5051  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":35.857371484,"data":"[     15s] icnn_batch    transductive seed 0 subj 10  acc 0.7778  f1 0.7714  auc 0.8025  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":36.607675842,"data":"[     16s] icnn_batch    streaming    seed 0 subj 11  acc 0.5000  f1 0.3333  auc 0.4957  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":36.612749134,"data":"[     16s] icnn_batch    transductive seed 0 subj 11  acc 0.7168  f1 0.7167  auc 0.7576  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":37.400070137,"data":"[     16s] icnn_batch    streaming    seed 1 subj  1  acc 0.5000  f1 0.3333  auc 0.4937  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":37.405644923,"data":"[     16s] icnn_batch    transductive seed 1 subj  1  acc 0.8404  f1 0.8403  auc 0.9055  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":38.159832519,"data":"[     17s] icnn_batch    streaming    seed 1 subj  2  acc 0.5000  f1 0.3333  auc 0.5449  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":38.165187635,"data":"[     17s] icnn_batch    transductive seed 1 subj  2  acc 0.7045  f1 0.7041  auc 0.7328  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":38.895803456,"data":"[     18s] icnn_batch    streaming    seed 1 subj  3  acc 0.5000  f1 0.3333  auc 0.5535  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":38.901342258,"data":"[     18s] icnn_batch    transductive seed 1 subj  3  acc 0.8267  f1 0.8267  auc 0.8695  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":39.662795326,"data":"[     19s] icnn_batch    streaming    seed 1 subj  4  acc 0.5000  f1 0.3333  auc 0.5036  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":39.66778882,"data":"[     19s] icnn_batch    transductive seed 1 subj  4  acc 0.7770  f1 0.7768  auc 0.8446  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":40.392178843,"data":"[     19s] icnn_batch    streaming    seed 1 subj  5  acc 0.5000  f1 0.3333  auc 0.5080  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":40.397428267,"data":"[     19s] icnn_batch    transductive seed 1 subj  5  acc 0.8750  f1 0.8748  auc 0.9370  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":41.168670865,"data":"[     20s] icnn_batch    streaming    seed 1 subj  6  acc 0.5000  f1 0.3333  auc 0.5158  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":41.174370115,"data":"[     20s] icnn_batch    transductive seed 1 subj  6  acc 0.8373  f1 0.8352  auc 0.8595  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":41.924876994,"data":"[     21s] icnn_batch    streaming    seed 1 subj  7  acc 0.5000  f1 0.3333  auc 0.4379  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":41.930032486,"data":"[     21s] icnn_batch    transductive seed 1 subj  7  acc 0.6471  f1 0.6465  auc 0.6348  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":42.682576489,"data":"[     22s] icnn_batch    streaming    seed 1 subj  8  acc 0.5000  f1 0.3333  auc 0.5365  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":42.688180781,"data":"[     22s] icnn_batch    transductive seed 1 subj  8  acc 0.8144  f1 0.8141  auc 0.8786  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":43.483126253,"data":"[     23s] icnn_batch    streaming    seed 1 subj  9  acc 0.5000  f1 0.3333  auc 0.4772  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":43.488718089,"data":"[     23s] icnn_batch    transductive seed 1 subj  9  acc 0.8726  f1 0.8723  auc 0.9373  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":44.246553056,"data":"[     23s] icnn_batch    streaming    seed 1 subj 10  acc 0.5000  f1 0.3333  auc 0.5554  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":44.251704519,"data":"[     23s] icnn_batch    transductive seed 1 subj 10  acc 0.6389  f1 0.5847  auc 0.8241  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":44.982752644,"data":"[     24s] icnn_batch    streaming    seed 1 subj 11  acc 0.5000  f1 0.3333  auc 0.4932  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":44.989226675,"data":"[     24s] icnn_batch    transductive seed 1 subj 11  acc 0.7301  f1 0.7301  auc 0.7707  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":45.727128172,"data":"[     25s] icnn_batch    streaming    seed 2 subj  1  acc 0.5000  f1 0.3333  auc 0.4587  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":45.732481135,"data":"[     25s] icnn_batch    transductive seed 2 subj  1  acc 0.8511  f1 0.8508  auc 0.9224  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":46.475478303,"data":"[     26s] icnn_batch    streaming    seed 2 subj  2  acc 0.5000  f1 0.3333  auc 0.5099  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":46.481033541,"data":"[     26s] icnn_batch    transductive seed 2 subj  2  acc 0.7273  f1 0.7267  auc 0.7787  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":47.232557391,"data":"[     26s] icnn_batch    streaming    seed 2 subj  3  acc 0.5000  f1 0.3333  auc 0.4877  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":47.238378439,"data":"[     26s] icnn_batch    transductive seed 2 subj  3  acc 0.8333  f1 0.8333  auc 0.8951  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":47.975841525,"data":"[     27s] icnn_batch    streaming    seed 2 subj  4  acc 0.5000  f1 0.3333  auc 0.5227  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":47.981009629,"data":"[     27s] icnn_batch    transductive seed 2 subj  4  acc 0.7500  f1 0.7499  auc 0.8267  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":48.708154517,"data":"[     28s] icnn_batch    streaming    seed 2 subj  5  acc 0.5000  f1 0.3333  auc 0.4623  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":48.713616536,"data":"[     28s] icnn_batch    transductive seed 2 subj  5  acc 0.8795  f1 0.8793  auc 0.9266  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":49.452631599,"data":"[     29s] icnn_batch    streaming    seed 2 subj  6  acc 0.5000  f1 0.3333  auc 0.5979  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":49.458085878,"data":"[     29s] icnn_batch    transductive seed 2 subj  6  acc 0.8373  f1 0.8356  auc 0.9085  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":50.201829662,"data":"[     29s] icnn_batch    streaming    seed 2 subj  7  acc 0.5000  f1 0.3333  auc 0.4592  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":50.208105099,"data":"[     29s] icnn_batch    transductive seed 2 subj  7  acc 0.6667  f1 0.6655  auc 0.6597  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":50.954013256,"data":"[     30s] icnn_batch    streaming    seed 2 subj  8  acc 0.5000  f1 0.3333  auc 0.4540  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":50.959067667,"data":"[     30s] icnn_batch    transductive seed 2 subj  8  acc 0.8030  f1 0.8025  auc 0.8883  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":51.71684478,"data":"[     31s] icnn_batch    streaming    seed 2 subj  9  acc 0.5000  f1 0.3333  auc 0.5028  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":51.722174607,"data":"[     31s] icnn_batch    transductive seed 2 subj  9  acc 0.8981  f1 0.8979  auc 0.9598  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":52.487051169,"data":"[     32s] icnn_batch    streaming    seed 2 subj 10  acc 0.5000  f1 0.3333  auc 0.5360  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":52.492233503,"data":"[     32s] icnn_batch    transductive seed 2 subj 10  acc 0.7778  f1 0.7662  auc 0.8323  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":53.27507275,"data":"[     32s] icnn_batch    streaming    seed 2 subj 11  acc 0.5000  f1 0.3333  auc 0.4675  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":53.280577598,"data":"[     32s] icnn_batch    transductive seed 2 subj 11  acc 0.7035  f1 0.7035  auc 0.7615  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":54.046820767,"data":"[     33s] icnn_batch    streaming    seed 3 subj  1  acc 0.5000  f1 0.3333  auc 0.4402  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":54.052218437,"data":"[     33s] icnn_batch    transductive seed 3 subj  1  acc 0.8617  f1 0.8616  auc 0.9138  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":54.829334143,"data":"[     34s] icnn_batch    streaming    seed 3 subj  2  acc 0.5000  f1 0.3333  auc 0.4533  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":54.834642702,"data":"[     34s] icnn_batch    transductive seed 3 subj  2  acc 0.7197  f1 0.7193  auc 0.8051  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":55.627620467,"data":"[     35s] icnn_batch    streaming    seed 3 subj  3  acc 0.5000  f1 0.3333  auc 0.5747  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":55.634439951,"data":"[     35s] icnn_batch    transductive seed 3 subj  3  acc 0.7533  f1 0.7532  auc 0.8233  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":56.403980691,"data":"[     35s] icnn_batch    streaming    seed 3 subj  4  acc 0.5000  f1 0.3333  auc 0.4397  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":56.409416218,"data":"[     35s] icnn_batch    transductive seed 3 subj  4  acc 0.7973  f1 0.7970  auc 0.8608  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":57.216951758,"data":"[     36s] icnn_batch    streaming    seed 3 subj  5  acc 0.5000  f1 0.3333  auc 0.5143  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":57.223022962,"data":"[     36s] icnn_batch    transductive seed 3 subj  5  acc 0.8705  f1 0.8702  auc 0.9458  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":57.99691253,"data":"[     37s] icnn_batch    streaming    seed 3 subj  6  acc 0.5000  f1 0.3333  auc 0.5675  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":58.002582884,"data":"[     37s] icnn_batch    transductive seed 3 subj  6  acc 0.8313  f1 0.8301  auc 0.8755  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":58.738728633,"data":"[     38s] icnn_batch    streaming    seed 3 subj  7  acc 0.5000  f1 0.3333  auc 0.4744  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":58.743741976,"data":"[     38s] icnn_batch    transductive seed 3 subj  7  acc 0.6863  f1 0.6852  auc 0.6555  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":59.485700692,"data":"[     39s] icnn_batch    streaming    seed 3 subj  8  acc 0.5000  f1 0.3333  auc 0.4490  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":59.491149644,"data":"[     39s] icnn_batch    transductive seed 3 subj  8  acc 0.7614  f1 0.7608  auc 0.8296  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":60.243447021,"data":"[     39s] icnn_batch    streaming    seed 3 subj  9  acc 0.5000  f1 0.3333  auc 0.5025  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":60.249584654,"data":"[     39s] icnn_batch    transductive seed 3 subj  9  acc 0.8822  f1 0.8818  auc 0.9461  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":60.990040082,"data":"[     40s] icnn_batch    streaming    seed 3 subj 10  acc 0.5000  f1 0.3333  auc 0.5295  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":60.996843592,"data":"[     40s] icnn_batch    transductive seed 3 subj 10  acc 0.6111  f1 0.5418  auc 0.7538  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":61.749840808,"data":"[     41s] icnn_batch    streaming    seed 3 subj 11  acc 0.5000  f1 0.3333  auc 0.4683  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":61.755225307,"data":"[     41s] icnn_batch    transductive seed 3 subj 11  acc 0.6814  f1 0.6812  auc 0.7445  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":62.549450555,"data":"[     42s] icnn_batch    streaming    seed 4 subj  1  acc 0.5000  f1 0.3333  auc 0.4694  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":62.55450333,"data":"[     42s] icnn_batch    transductive seed 4 subj  1  acc 0.8085  f1 0.8077  auc 0.8871  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":63.32712644,"data":"[     42s] icnn_batch    streaming    seed 4 subj  2  acc 0.5000  f1 0.3333  auc 0.5510  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":63.331925292,"data":"[     42s] icnn_batch    transductive seed 4 subj  2  acc 0.5682  f1 0.5680  auc 0.5792  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":64.064509415,"data":"[     43s] icnn_batch    streaming    seed 4 subj  3  acc 0.5000  f1 0.3333  auc 0.4836  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":64.06984028,"data":"[     43s] icnn_batch    transductive seed 4 subj  3  acc 0.7667  f1 0.7667  auc 0.8203  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":64.791428106,"data":"[     44s] icnn_batch    streaming    seed 4 subj  4  acc 0.5000  f1 0.3333  auc 0.5517  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":64.796601797,"data":"[     44s] icnn_batch    transductive seed 4 subj  4  acc 0.7905  f1 0.7905  auc 0.8212  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":65.521389936,"data":"[     45s] icnn_batch    streaming    seed 4 subj  5  acc 0.5000  f1 0.3333  auc 0.4986  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":65.527024439,"data":"[     45s] icnn_batch    transductive seed 4 subj  5  acc 0.8839  f1 0.8835  auc 0.9452  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":66.318431586,"data":"[     45s] icnn_batch    streaming    seed 4 subj  6  acc 0.5000  f1 0.3333  auc 0.4901  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":66.325064576,"data":"[     45s] icnn_batch    transductive seed 4 subj  6  acc 0.8434  f1 0.8419  auc 0.8827  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":67.140910244,"data":"[     46s] icnn_batch    streaming    seed 4 subj  7  acc 0.5000  f1 0.3333  auc 0.4683  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":67.1459901,"data":"[     46s] icnn_batch    transductive seed 4 subj  7  acc 0.6863  f1 0.6858  auc 0.6613  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":67.888060826,"data":"[     47s] icnn_batch    streaming    seed 4 subj  8  acc 0.5000  f1 0.3333  auc 0.4630  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":67.893713233,"data":"[     47s] icnn_batch    transductive seed 4 subj  8  acc 0.7652  f1 0.7651  auc 0.8440  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":68.627826175,"data":"[     48s] icnn_batch    streaming    seed 4 subj  9  acc 0.5000  f1 0.3333  auc 0.5470  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":68.633195908,"data":"[     48s] icnn_batch    transductive seed 4 subj  9  acc 0.9204  f1 0.9203  auc 0.9541  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":69.375016929,"data":"[     48s] icnn_batch    streaming    seed 4 subj 10  acc 0.5000  f1 0.3333  auc 0.4949  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":69.380317127,"data":"[     48s] icnn_batch    transductive seed 4 subj 10  acc 0.6019  f1 0.5268  auc 0.7908  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":70.113180659,"data":"[     49s] icnn_batch    streaming    seed 4 subj 11  acc 0.5000  f1 0.3333  auc 0.5157  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":70.119922197,"data":"[     49s] icnn_batch    transductive seed 4 subj 11  acc 0.7345  f1 0.7344  auc 0.8012  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":70.183587337,"data":"| model | mode | seeds | acc | macro-F1 | drowsy-F1 | AUC | acc std (subjects) |\n"}
+,{"stream_name":"stdout","time":70.183618452,"data":"|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":70.183622469,"data":"| icnn_batch | streaming | 5 | 50.00 ± 0.00 | 33.33 | 66.67 | 0.498 | 0.00 |\n"}
+,{"stream_name":"stdout","time":70.183625644,"data":"| icnn_batch | transductive | 5 | 77.93 ± 1.34 | 77.50 | 76.22 | 0.835 | 7.60 |\n"}
+,{"stream_name":"stdout","time":70.898196578,"data":"[     50s] icnn_running  streaming    seed 0 subj  1  acc 0.8457  f1 0.8457  auc 0.9062  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":71.60901849,"data":"[     51s] icnn_running  streaming    seed 0 subj  2  acc 0.5985  f1 0.5642  auc 0.7642  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":72.336591762,"data":"[     51s] icnn_running  streaming    seed 0 subj  3  acc 0.6733  f1 0.6378  auc 0.8782  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":73.065888996,"data":"[     52s] icnn_running  streaming    seed 0 subj  4  acc 0.7162  f1 0.7057  auc 0.8143  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":73.756946046,"data":"[     53s] icnn_running  streaming    seed 0 subj  5  acc 0.7723  f1 0.7627  auc 0.9259  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":74.458808453,"data":"[     54s] icnn_running  streaming    seed 0 subj  6  acc 0.8072  f1 0.8007  auc 0.8686  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":75.165574943,"data":"[     54s] icnn_running  streaming    seed 0 subj  7  acc 0.6569  f1 0.6512  auc 0.6636  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":75.882385888,"data":"[     55s] icnn_running  streaming    seed 0 subj  8  acc 0.7424  f1 0.7391  auc 0.8360  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":76.549782832,"data":"[     56s] icnn_running  streaming    seed 0 subj  9  acc 0.9013  f1 0.9010  auc 0.9446  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":77.279178304,"data":"[     56s] icnn_running  streaming    seed 0 subj 10  acc 0.7870  f1 0.7769  auc 0.7960  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":78.002784145,"data":"[     57s] icnn_running  streaming    seed 0 subj 11  acc 0.6549  f1 0.6413  auc 0.7407  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":78.687150063,"data":"[     58s] icnn_running  streaming    seed 1 subj  1  acc 0.8883  f1 0.8880  auc 0.9077  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":79.384796699,"data":"[     58s] icnn_running  streaming    seed 1 subj  2  acc 0.4924  f1 0.4667  auc 0.6088  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":80.096139887,"data":"[     59s] icnn_running  streaming    seed 1 subj  3  acc 0.6600  f1 0.6194  auc 0.8820  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":80.833816711,"data":"[     60s] icnn_running  streaming    seed 1 subj  4  acc 0.7432  f1 0.7307  auc 0.8521  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":81.523515873,"data":"[     61s] icnn_running  streaming    seed 1 subj  5  acc 0.7679  f1 0.7546  auc 0.9411  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":82.267069384,"data":"[     61s] icnn_running  streaming    seed 1 subj  6  acc 0.8253  f1 0.8212  auc 0.8649  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":83.043343682,"data":"[     62s] icnn_running  streaming    seed 1 subj  7  acc 0.6373  f1 0.6344  auc 0.6336  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":83.705621709,"data":"[     63s] icnn_running  streaming    seed 1 subj  8  acc 0.7841  f1 0.7839  auc 0.8561  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":84.35508535,"data":"[     63s] icnn_running  streaming    seed 1 subj  9  acc 0.8790  f1 0.8784  auc 0.9393  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":85.11838006,"data":"[     64s] icnn_running  streaming    seed 1 subj 10  acc 0.7963  f1 0.7875  auc 0.7980  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":85.814316071,"data":"[     65s] icnn_running  streaming    seed 1 subj 11  acc 0.6858  f1 0.6806  auc 0.7479  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":86.48949892,"data":"[     66s] icnn_running  streaming    seed 2 subj  1  acc 0.8830  f1 0.8828  auc 0.9276  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":87.212564347,"data":"[     66s] icnn_running  streaming    seed 2 subj  2  acc 0.5000  f1 0.4982  auc 0.5266  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":87.905891363,"data":"[     67s] icnn_running  streaming    seed 2 subj  3  acc 0.6133  f1 0.5454  auc 0.9049  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":88.63020846,"data":"[     68s] icnn_running  streaming    seed 2 subj  4  acc 0.7568  f1 0.7477  auc 0.8523  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":89.309554086,"data":"[     68s] icnn_running  streaming    seed 2 subj  5  acc 0.7232  f1 0.7048  auc 0.9289  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":90.042848501,"data":"[     69s] icnn_running  streaming    seed 2 subj  6  acc 0.8494  f1 0.8478  auc 0.9007  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":90.859680372,"data":"[     70s] icnn_running  streaming    seed 2 subj  7  acc 0.6176  f1 0.6067  auc 0.6617  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":91.585008153,"data":"[     71s] icnn_running  streaming    seed 2 subj  8  acc 0.8068  f1 0.8067  auc 0.8612  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":92.287337486,"data":"[     71s] icnn_running  streaming    seed 2 subj  9  acc 0.9076  f1 0.9075  auc 0.9568  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":93.054598743,"data":"[     72s] icnn_running  streaming    seed 2 subj 10  acc 0.7593  f1 0.7444  auc 0.7521  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":93.7439409,"data":"[     73s] icnn_running  streaming    seed 2 subj 11  acc 0.6726  f1 0.6650  auc 0.7368  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":94.471045969,"data":"[     74s] icnn_running  streaming    seed 3 subj  1  acc 0.8564  f1 0.8564  auc 0.9082  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":95.238015453,"data":"[     74s] icnn_running  streaming    seed 3 subj  2  acc 0.6439  f1 0.6259  auc 0.7899  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":95.97024818,"data":"[     75s] icnn_running  streaming    seed 3 subj  3  acc 0.6333  f1 0.5810  auc 0.8306  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":96.691410309,"data":"[     76s] icnn_running  streaming    seed 3 subj  4  acc 0.7500  f1 0.7414  auc 0.8614  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":97.407513874,"data":"[     76s] icnn_running  streaming    seed 3 subj  5  acc 0.7545  f1 0.7410  auc 0.9361  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":98.169359967,"data":"[     77s] icnn_running  streaming    seed 3 subj  6  acc 0.8133  f1 0.8082  auc 0.8672  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":98.889707834,"data":"[     78s] icnn_running  streaming    seed 3 subj  7  acc 0.5392  f1 0.5098  auc 0.6467  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":99.535198659,"data":"[     79s] icnn_running  streaming    seed 3 subj  8  acc 0.7652  f1 0.7645  auc 0.8290  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":100.179709053,"data":"[     79s] icnn_running  streaming    seed 3 subj  9  acc 0.8854  f1 0.8851  auc 0.9355  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":100.922997411,"data":"[     80s] icnn_running  streaming    seed 3 subj 10  acc 0.7130  f1 0.6872  auc 0.6211  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":101.586911066,"data":"[     81s] icnn_running  streaming    seed 3 subj 11  acc 0.6726  f1 0.6659  auc 0.7229  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":102.289079339,"data":"[     81s] icnn_running  streaming    seed 4 subj  1  acc 0.7926  f1 0.7912  auc 0.8653  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":103.065208242,"data":"[     82s] icnn_running  streaming    seed 4 subj  2  acc 0.5303  f1 0.5299  auc 0.5620  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":103.754232198,"data":"[     83s] icnn_running  streaming    seed 4 subj  3  acc 0.7067  f1 0.6866  auc 0.8135  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":104.482966109,"data":"[     84s] icnn_running  streaming    seed 4 subj  4  acc 0.7162  f1 0.7041  auc 0.8240  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":105.137673976,"data":"[     84s] icnn_running  streaming    seed 4 subj  5  acc 0.7902  f1 0.7814  auc 0.9398  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":105.826952761,"data":"[     85s] icnn_running  streaming    seed 4 subj  6  acc 0.8133  f1 0.8096  auc 0.8614  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":106.560744887,"data":"[     86s] icnn_running  streaming    seed 4 subj  7  acc 0.6176  f1 0.6067  auc 0.6624  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":107.244737157,"data":"[     86s] icnn_running  streaming    seed 4 subj  8  acc 0.7538  f1 0.7534  auc 0.8109  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":107.908174015,"data":"[     87s] icnn_running  streaming    seed 4 subj  9  acc 0.8790  f1 0.8781  auc 0.9482  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":108.663629456,"data":"[     88s] icnn_running  streaming    seed 4 subj 10  acc 0.7870  f1 0.7769  auc 0.7870  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":109.357261764,"data":"[     88s] icnn_running  streaming    seed 4 subj 11  acc 0.7035  f1 0.6986  auc 0.7853  (1s, best ep 11)\n"}
+,{"stream_name":"stdout","time":109.370260265,"data":"| model | mode | seeds | acc | macro-F1 | drowsy-F1 | AUC | acc std (subjects) |\n"}
+,{"stream_name":"stdout","time":109.37028037,"data":"|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":109.370305395,"data":"| icnn_batch | streaming | 5 | 50.00 ± 0.00 | 33.33 | 66.67 | 0.498 | 0.00 |\n"}
+,{"stream_name":"stdout","time":109.370311873,"data":"| icnn_batch | transductive | 5 | 77.93 ± 1.34 | 77.50 | 76.22 | 0.835 | 7.60 |\n"}
+,{"stream_name":"stdout","time":109.370316653,"data":"| icnn_running | streaming | 5 | 73.68 ± 0.45 | 72.57 | 72.36 | 0.818 | 9.81 |\n"}
+,{"stream_name":"stdout","time":133.772907439,"data":"[    113s] eegnet        streaming    seed 0 subj  1  acc 0.6277  f1 0.5885  auc 0.8007  (24s, best ep 2)\n"}
+,{"stream_name":"stdout","time":155.877832527,"data":"[    135s] eegnet        streaming    seed 0 subj  2  acc 0.4545  f1 0.3864  auc 0.1632  (22s, best ep 41)\n"}
+,{"stream_name":"stdout","time":177.594180158,"data":"[    157s] eegnet        streaming    seed 0 subj  3  acc 0.5333  f1 0.4849  auc 0.7070  (22s, best ep 14)\n"}
+,{"stream_name":"stdout","time":199.824044137,"data":"[    179s] eegnet        streaming    seed 0 subj  4  acc 0.5270  f1 0.4264  auc 0.7838  (22s, best ep 2)\n"}
+,{"stream_name":"stdout","time":222.178436881,"data":"[    201s] eegnet        streaming    seed 0 subj  5  acc 0.7054  f1 0.6842  auc 0.9273  (22s, best ep 3)\n"}
+,{"stream_name":"stdout","time":245.676969567,"data":"[    225s] eegnet        streaming    seed 0 subj  6  acc 0.5723  f1 0.4765  auc 0.8014  (23s, best ep 2)\n"}
+,{"stream_name":"stdout","time":269.633757248,"data":"[    249s] eegnet        streaming    seed 0 subj  7  acc 0.5980  f1 0.5933  auc 0.6271  (24s, best ep 3)\n"}
+,{"stream_name":"stdout","time":292.655330973,"data":"[    272s] eegnet        streaming    seed 0 subj  8  acc 0.5417  f1 0.4940  auc 0.6730  (23s, best ep 2)\n"}
+,{"stream_name":"stdout","time":314.845589928,"data":"[    294s] eegnet        streaming    seed 0 subj  9  acc 0.7580  f1 0.7531  auc 0.8721  (22s, best ep 2)\n"}
+,{"stream_name":"stdout","time":339.285739296,"data":"[    318s] eegnet        streaming    seed 0 subj 10  acc 0.8241  f1 0.8206  auc 0.9136  (24s, best ep 1)\n"}
+,{"stream_name":"stdout","time":362.98940186,"data":"[    342s] eegnet        streaming    seed 0 subj 11  acc 0.6283  f1 0.6207  auc 0.6679  (24s, best ep 1)\n"}
+,{"stream_name":"stdout","time":385.853197268,"data":"[    365s] eegnet        streaming    seed 1 subj  1  acc 0.8032  f1 0.8016  auc 0.8797  (23s, best ep 5)\n"}
+,{"stream_name":"stdout","time":409.988770389,"data":"[    389s] eegnet        streaming    seed 1 subj  2  acc 0.6818  f1 0.6806  auc 0.7348  (24s, best ep 1)\n"}
+,{"stream_name":"stdout","time":434.345582405,"data":"[    413s] eegnet        streaming    seed 1 subj  3  acc 0.5133  f1 0.3623  auc 0.7508  (24s, best ep 3)\n"}
+,{"stream_name":"stdout","time":456.90554047,"data":"[    436s] eegnet        streaming    seed 1 subj  4  acc 0.4865  f1 0.3385  auc 0.6972  (23s, best ep 1)\n"}
+,{"stream_name":"stdout","time":479.562535333,"data":"[    459s] eegnet        streaming    seed 1 subj  5  acc 0.5312  f1 0.4056  auc 0.9169  (23s, best ep 6)\n"}
+,{"stream_name":"stdout","time":502.660815035,"data":"[    482s] eegnet        streaming    seed 1 subj  6  acc 0.8012  f1 0.7930  auc 0.9289  (23s, best ep 90)\n"}
+,{"stream_name":"stdout","time":526.247258874,"data":"[    505s] eegnet        streaming    seed 1 subj  7  acc 0.6667  f1 0.6662  auc 0.6851  (24s, best ep 5)\n"}
+,{"stream_name":"stdout","time":548.865861148,"data":"[    528s] eegnet        streaming    seed 1 subj  8  acc 0.5758  f1 0.5757  auc 0.6039  (23s, best ep 1)\n"}
+,{"stream_name":"stdout","time":570.666171516,"data":"[    550s] eegnet        streaming    seed 1 subj  9  acc 0.5541  f1 0.4779  auc 0.7298  (22s, best ep 1)\n"}
+,{"stream_name":"stdout","time":595.439997039,"data":"[    575s] eegnet        streaming    seed 1 subj 10  acc 0.8148  f1 0.8082  auc 0.7781  (25s, best ep 4)\n"}
+,{"stream_name":"stdout","time":618.831723134,"data":"[    598s] eegnet        streaming    seed 1 subj 11  acc 0.6239  f1 0.6212  auc 0.6883  (23s, best ep 2)\n"}
+,{"stream_name":"stdout","time":642.370397534,"data":"[    621s] eegnet        streaming    seed 2 subj  1  acc 0.6436  f1 0.6017  auc 0.8675  (24s, best ep 2)\n"}
+,{"stream_name":"stdout","time":665.365768258,"data":"[    644s] eegnet        streaming    seed 2 subj  2  acc 0.6212  f1 0.5908  auc 0.7314  (23s, best ep 2)\n"}
+,{"stream_name":"stdout","time":687.642189564,"data":"[    667s] eegnet        streaming    seed 2 subj  3  acc 0.5133  f1 0.3728  auc 0.7381  (22s, best ep 6)\n"}
+,{"stream_name":"stdout","time":709.728694999,"data":"[    689s] eegnet        streaming    seed 2 subj  4  acc 0.5068  f1 0.3698  auc 0.7193  (22s, best ep 1)\n"}
+,{"stream_name":"stdout","time":730.9320319,"data":"[    710s] eegnet        streaming    seed 2 subj  5  acc 0.6786  f1 0.6438  auc 0.8937  (21s, best ep 51)\n"}
+,{"stream_name":"stdout","time":755.336194578,"data":"[    734s] eegnet        streaming    seed 2 subj  6  acc 0.8434  f1 0.8400  auc 0.8993  (24s, best ep 2)\n"}
+,{"stream_name":"stdout","time":778.350273872,"data":"[    757s] eegnet        streaming    seed 2 subj  7  acc 0.5392  f1 0.4987  auc 0.5236  (23s, best ep 52)\n"}
+,{"stream_name":"stdout","time":801.728029409,"data":"[    781s] eegnet        streaming    seed 2 subj  8  acc 0.6515  f1 0.6515  auc 0.6918  (23s, best ep 2)\n"}
+,{"stream_name":"stdout","time":823.87480874,"data":"[    803s] eegnet        streaming    seed 2 subj  9  acc 0.7962  f1 0.7935  auc 0.9108  (22s, best ep 3)\n"}
+,{"stream_name":"stdout","time":849.057359465,"data":"[    828s] eegnet        streaming    seed 2 subj 10  acc 0.8056  f1 0.8006  auc 0.8690  (25s, best ep 1)\n"}
+,{"stream_name":"stdout","time":871.296489758,"data":"[    850s] eegnet        streaming    seed 2 subj 11  acc 0.5531  f1 0.4522  auc 0.6394  (22s, best ep 1)\n"}
+,{"stream_name":"stdout","time":894.049727784,"data":"[    873s] eegnet        streaming    seed 3 subj  1  acc 0.7766  f1 0.7729  auc 0.9124  (23s, best ep 13)\n"}
+,{"stream_name":"stdout","time":918.280376447,"data":"[    897s] eegnet        streaming    seed 3 subj  2  acc 0.4697  f1 0.4161  auc 0.2429  (24s, best ep 92)\n"}
+,{"stream_name":"stdout","time":942.513642432,"data":"[    922s] eegnet        streaming    seed 3 subj  3  acc 0.4800  f1 0.3958  auc 0.6642  (24s, best ep 2)\n"}
+,{"stream_name":"stdout","time":967.199163052,"data":"[    946s] eegnet        streaming    seed 3 subj  4  acc 0.8176  f1 0.8169  auc 0.8599  (25s, best ep 3)\n"}
+,{"stream_name":"stdout","time":990.329892643,"data":"[    969s] eegnet        streaming    seed 3 subj  5  acc 0.5893  f1 0.5059  auc 0.9511  (23s, best ep 10)\n"}
+,{"stream_name":"stdout","time":1013.933531166,"data":"[    993s] eegnet        streaming    seed 3 subj  6  acc 0.5964  f1 0.5178  auc 0.9039  (24s, best ep 3)\n"}
+,{"stream_name":"stdout","time":1038.34205156,"data":"[   1017s] eegnet        streaming    seed 3 subj  7  acc 0.5588  f1 0.5306  auc 0.5928  (24s, best ep 2)\n"}
+,{"stream_name":"stdout","time":1059.515637995,"data":"[   1039s] eegnet        streaming    seed 3 subj  8  acc 0.7121  f1 0.7005  auc 0.7607  (21s, best ep 51)\n"}
+,{"stream_name":"stdout","time":1081.712265567,"data":"[   1061s] eegnet        streaming    seed 3 subj  9  acc 0.8089  f1 0.8072  auc 0.8935  (22s, best ep 3)\n"}
+,{"stream_name":"stdout","time":1104.864833944,"data":"[   1084s] eegnet        streaming    seed 3 subj 10  acc 0.7130  f1 0.6907  auc 0.7181  (23s, best ep 2)\n"}
+,{"stream_name":"stdout","time":1126.59128472,"data":"[   1106s] eegnet        streaming    seed 3 subj 11  acc 0.6150  f1 0.6117  auc 0.6650  (22s, best ep 2)\n"}
+,{"stream_name":"stdout","time":1150.834394733,"data":"[   1130s] eegnet        streaming    seed 4 subj  1  acc 0.7447  f1 0.7440  auc 0.8173  (24s, best ep 1)\n"}
+,{"stream_name":"stdout","time":1175.310878701,"data":"[   1154s] eegnet        streaming    seed 4 subj  2  acc 0.5076  f1 0.5073  auc 0.4995  (24s, best ep 17)\n"}
+,{"stream_name":"stdout","time":1198.856242178,"data":"[   1178s] eegnet        streaming    seed 4 subj  3  acc 0.4533  f1 0.3492  auc 0.6304  (24s, best ep 1)\n"}
+,{"stream_name":"stdout","time":1222.235870871,"data":"[   1201s] eegnet        streaming    seed 4 subj  4  acc 0.8176  f1 0.8157  auc 0.8831  (23s, best ep 6)\n"}
+,{"stream_name":"stdout","time":1244.881659609,"data":"[   1224s] eegnet        streaming    seed 4 subj  5  acc 0.7366  f1 0.7234  auc 0.9156  (23s, best ep 2)\n"}
+,{"stream_name":"stdout","time":1268.211054054,"data":"[   1247s] eegnet        streaming    seed 4 subj  6  acc 0.5723  f1 0.4830  auc 0.7153  (23s, best ep 1)\n"}
+,{"stream_name":"stdout","time":1291.03238711,"data":"[   1270s] eegnet        streaming    seed 4 subj  7  acc 0.5686  f1 0.5686  auc 0.6451  (23s, best ep 72)\n"}
+,{"stream_name":"stdout","time":1313.285140634,"data":"[   1292s] eegnet        streaming    seed 4 subj  8  acc 0.5417  f1 0.4667  auc 0.7461  (22s, best ep 3)\n"}
+,{"stream_name":"stdout","time":1335.503665887,"data":"[   1315s] eegnet        streaming    seed 4 subj  9  acc 0.5637  f1 0.4846  auc 0.8837  (22s, best ep 4)\n"}
+,{"stream_name":"stdout","time":1360.495030905,"data":"[   1340s] eegnet        streaming    seed 4 subj 10  acc 0.8333  f1 0.8319  auc 0.8810  (25s, best ep 1)\n"}
+,{"stream_name":"stdout","time":1382.387450714,"data":"[   1361s] eegnet        streaming    seed 4 subj 11  acc 0.6681  f1 0.6544  auc 0.7655  (22s, best ep 38)\n"}
+,{"stream_name":"stdout","time":1382.402590288,"data":"| model | mode | seeds | acc | macro-F1 | drowsy-F1 | AUC | acc std (subjects) |\n"}
+,{"stream_name":"stdout","time":1382.402610178,"data":"|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":1382.402613918,"data":"| icnn_batch | streaming | 5 | 50.00 ± 0.00 | 33.33 | 66.67 | 0.498 | 0.00 |\n"}
+,{"stream_name":"stdout","time":1382.402617426,"data":"| icnn_batch | transductive | 5 | 77.93 ± 1.34 | 77.50 | 76.22 | 0.835 | 7.60 |\n"}
+,{"stream_name":"stdout","time":1382.402620459,"data":"| icnn_running | streaming | 5 | 73.68 ± 0.45 | 72.57 | 72.36 | 0.818 | 9.81 |\n"}
+,{"stream_name":"stdout","time":1382.402630013,"data":"| eegnet | streaming | 5 | 63.85 ± 1.25 | 59.76 | 50.25 | 0.752 | 7.93 |\n"}
+,{"stream_name":"stdout","time":1383.655387193,"data":"[   1363s] bandpower_lr  streaming    seed 0 subj  1  acc 0.4840  f1 0.4464  auc 0.4164  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1384.775434691,"data":"[   1364s] bandpower_lr  streaming    seed 0 subj  2  acc 0.6136  f1 0.5940  auc 0.6834  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1385.924179842,"data":"[   1365s] bandpower_lr  streaming    seed 0 subj  3  acc 0.7333  f1 0.7310  auc 0.8089  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1387.061930388,"data":"[   1366s] bandpower_lr  streaming    seed 0 subj  4  acc 0.6351  f1 0.6351  auc 0.7043  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1388.210014368,"data":"[   1367s] bandpower_lr  streaming    seed 0 subj  5  acc 0.7589  f1 0.7580  auc 0.8236  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1389.319355909,"data":"[   1368s] bandpower_lr  streaming    seed 0 subj  6  acc 0.8253  f1 0.8242  auc 0.8897  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1390.473800781,"data":"[   1370s] bandpower_lr  streaming    seed 0 subj  7  acc 0.5196  f1 0.4834  auc 0.6013  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1391.654846495,"data":"[   1371s] bandpower_lr  streaming    seed 0 subj  8  acc 0.6818  f1 0.6547  auc 0.8101  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1392.7378293,"data":"[   1372s] bandpower_lr  streaming    seed 0 subj  9  acc 0.8248  f1 0.8242  auc 0.9004  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1393.866856217,"data":"[   1373s] bandpower_lr  streaming    seed 0 subj 10  acc 0.6667  f1 0.6250  auc 0.8714  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1395.000557376,"data":"[   1374s] bandpower_lr  streaming    seed 0 subj 11  acc 0.6416  f1 0.6294  auc 0.6625  (1s, best ep )\n"}
+,{"stream_name":"stdout","time":1395.02036323,"data":"| model | mode | seeds | acc | macro-F1 | drowsy-F1 | AUC | acc std (subjects) |\n"}
+,{"stream_name":"stdout","time":1395.020387432,"data":"|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":1395.020390652,"data":"| icnn_batch | streaming | 5 | 50.00 ± 0.00 | 33.33 | 66.67 | 0.498 | 0.00 |\n"}
+,{"stream_name":"stdout","time":1395.020393832,"data":"| icnn_batch | transductive | 5 | 77.93 ± 1.34 | 77.50 | 76.22 | 0.835 | 7.60 |\n"}
+,{"stream_name":"stdout","time":1395.020396749,"data":"| icnn_running | streaming | 5 | 73.68 ± 0.45 | 72.57 | 72.36 | 0.818 | 9.81 |\n"}
+,{"stream_name":"stdout","time":1395.020427727,"data":"| eegnet | streaming | 5 | 63.85 ± 1.25 | 59.76 | 50.25 | 0.752 | 7.93 |\n"}
+,{"stream_name":"stdout","time":1395.020432682,"data":"| bandpower_lr | streaming | 1 | 67.14 ± 0.00 | 65.50 | 67.70 | 0.743 | 10.55 |\n"}
+,{"stream_name":"stdout","time":1401.130854269,"data":"[   1380s] riemann_lr    streaming    seed 0 subj  1  acc 0.6064  f1 0.5430  auc 0.8055  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1407.502509988,"data":"[   1387s] riemann_lr    streaming    seed 0 subj  2  acc 0.9242  f1 0.9238  auc 0.9387  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1414.396490256,"data":"[   1393s] riemann_lr    streaming    seed 0 subj  3  acc 0.5867  f1 0.5438  auc 0.7348  (7s, best ep )\n"}
+,{"stream_name":"stdout","time":1420.649035919,"data":"[   1400s] riemann_lr    streaming    seed 0 subj  4  acc 0.7162  f1 0.7137  auc 0.7739  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1426.778750699,"data":"[   1406s] riemann_lr    streaming    seed 0 subj  5  acc 0.8616  f1 0.8616  auc 0.9141  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1433.018827274,"data":"[   1412s] riemann_lr    streaming    seed 0 subj  6  acc 0.8735  f1 0.8718  auc 0.9541  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1439.122773856,"data":"[   1418s] riemann_lr    streaming    seed 0 subj  7  acc 0.4608  f1 0.3888  auc 0.6105  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1445.04481362,"data":"[   1424s] riemann_lr    streaming    seed 0 subj  8  acc 0.5682  f1 0.5292  auc 0.7511  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1451.14736435,"data":"[   1430s] riemann_lr    streaming    seed 0 subj  9  acc 0.6051  f1 0.5819  auc 0.7431  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1457.331361465,"data":"[   1436s] riemann_lr    streaming    seed 0 subj 10  acc 0.5463  f1 0.4287  auc 0.5768  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1463.657008128,"data":"[   1443s] riemann_lr    streaming    seed 0 subj 11  acc 0.4381  f1 0.4362  auc 0.4210  (6s, best ep )\n"}
+,{"stream_name":"stdout","time":1463.676251701,"data":"| model | mode | seeds | acc | macro-F1 | drowsy-F1 | AUC | acc std (subjects) |\n"}
+,{"stream_name":"stdout","time":1463.67627201,"data":"|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":1463.676278315,"data":"| icnn_batch | streaming | 5 | 50.00 ± 0.00 | 33.33 | 66.67 | 0.498 | 0.00 |\n"}
+,{"stream_name":"stdout","time":1463.676284696,"data":"| icnn_batch | transductive | 5 | 77.93 ± 1.34 | 77.50 | 76.22 | 0.835 | 7.60 |\n"}
+,{"stream_name":"stdout","time":1463.676303302,"data":"| icnn_running | streaming | 5 | 73.68 ± 0.45 | 72.57 | 72.36 | 0.818 | 9.81 |\n"}
+,{"stream_name":"stdout","time":1463.676309611,"data":"| eegnet | streaming | 5 | 63.85 ± 1.25 | 59.76 | 50.25 | 0.752 | 7.93 |\n"}
+,{"stream_name":"stdout","time":1463.676314285,"data":"| bandpower_lr | streaming | 1 | 67.14 ± 0.00 | 65.50 | 67.70 | 0.743 | 10.55 |\n"}
+,{"stream_name":"stdout","time":1463.676318989,"data":"| riemann_lr | streaming | 1 | 65.34 ± 0.00 | 62.02 | 61.97 | 0.748 | 15.96 |\n"}
+,{"stream_name":"stdout","time":1463.676328465,"data":"done in 1443s\n"}
+,{"stream_name":"stderr","time":1470.867618117,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1470.86764451,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1471.179727309,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1471.179752803,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1472.027324893,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1473.070407277,"data":"[NbConvertApp] Writing 287594 bytes to __results__.html\n"}
+]

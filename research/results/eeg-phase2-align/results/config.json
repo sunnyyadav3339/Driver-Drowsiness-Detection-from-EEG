@@ -1,0 +1,22 @@
+{
+  "data": null,
+  "out": "/kaggle/working/results",
+  "models": "bandpower_lr,riemann_lr,icnn_running",
+  "refs": "none,all,rand10,rand30,alert10,alert30",
+  "seeds": "0,1,2",
+  "subjects": "all",
+  "epoch_scale": 1.0,
+  "data_path": "/kaggle/input/datasets/sunnyydv602/eeg-dataset/dataset.mat",
+  "n_samples": 2022,
+  "protocol": "LOSO",
+  "reference_rule_rng": "numpy default_rng(10000*seed + subject)",
+  "icnn_recipe": {
+    "opt": "adam",
+    "lr": 0.001,
+    "wd": 0.0,
+    "batch": 50,
+    "epochs": 11,
+    "n_val": 0,
+    "source": "Cui et al. 2022 recipe with running-stats BN (streaming-valid)"
+  }
+}
