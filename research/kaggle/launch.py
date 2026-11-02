@@ -74,7 +74,7 @@ def build(a):
         code=code, commit=git_commit(), sha=sha, module=a.module, run_args=shlex.split(a.args), pip=a.pip), encoding="utf-8")
     meta = dict(id=f"{USER}/{a.slug}", title=a.slug, code_file="run.py", language="python", kernel_type="script",
                 is_private=True, enable_gpu=a.accelerator != "none", enable_internet=True, dataset_sources=DATASETS,
-                competition_sources=[], kernel_sources=[])
+                competition_sources=[], kernel_sources=a.kernel_sources.split(",") if a.kernel_sources else [])
     (folder / "kernel-metadata.json").write_text(json.dumps(meta, indent=2))
     print(f"built {folder} (code sha256 {sha[:12]}, commit {git_commit()})")
     return folder
@@ -87,6 +87,7 @@ def main():
     p.add_argument("--args", default="", help="arguments passed to the module (besides --out)")
     p.add_argument("--pip", default="pyriemann", help="extra pip package installed on Kaggle")
     p.add_argument("--accelerator", default="NvidiaTeslaT4", help='"none" runs on a CPU machine (no GPU quota)')
+    p.add_argument("--kernel-sources", default="", help="comma-separated kernels whose outputs are mounted as inputs, e.g. sunnyydv602/eeg-phase1-convert")
     p.add_argument("--push", action="store_true")
     p.add_argument("--status", action="store_true")
     p.add_argument("--fetch", action="store_true")

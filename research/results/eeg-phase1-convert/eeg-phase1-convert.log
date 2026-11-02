@@ -1,0 +1,76 @@
+[{"stream_name":"stdout","time":9.164754749,"data":"62 sessions to convert\n"}
+,{"stream_name":"stdout","time":18.234295862,"data":"[     9s] s01_051017m: 60.4 min, 199 trials, alert 31, drowsy 35, alert_rt 0.634s\n"}
+,{"stream_name":"stdout","time":27.702324231,"data":"[    19s] s01_060227n: 59.3 min, 265 trials, alert 54, drowsy 77, alert_rt 0.836s\n"}
+,{"stream_name":"stdout","time":38.211909452,"data":"[    29s] s01_060926_1n: 72.7 min, 303 trials, alert 81, drowsy 35, alert_rt 0.802s\n"}
+,{"stream_name":"stdout","time":47.819040633,"data":"[    39s] s01_060926_2n: 64.2 min, 309 trials, alert 116, drowsy 17, alert_rt 0.819s\n"}
+,{"stream_name":"stdout","time":62.52117651,"data":"[    53s] s01_061102n: 105.1 min, 533 trials, alert 97, drowsy 96, alert_rt 0.904s\n"}
+,{"stream_name":"stdout","time":71.792117418,"data":"[    63s] s02_050921m: 60.5 min, 332 trials, alert 138, drowsy 2, alert_rt 0.536s\n"}
+,{"stream_name":"stdout","time":81.488158386,"data":"[    72s] s02_051115m: 63.9 min, 344 trials, alert 151, drowsy 10, alert_rt 0.568s\n"}
+,{"stream_name":"stdout","time":91.058657537,"data":"[    82s] s04_051130m: 62.6 min, 361 trials, alert 36, drowsy 83, alert_rt 0.784s\n"}
+,{"stream_name":"stdout","time":100.619032541,"data":"[    91s] s05_051120m: 62.6 min, 361 trials, alert 36, drowsy 83, alert_rt 0.784s\n"}
+,{"stream_name":"stdout","time":109.8973403,"data":"[   101s] s05_060308n: 61.6 min, 366 trials, alert 126, drowsy 30, alert_rt 0.688s\n"}
+,{"stream_name":"stdout","time":125.191202965,"data":"[   116s] s05_061019m: 105.3 min, 683 trials, alert 250, drowsy 53, alert_rt 0.652s\n"}
+,{"stream_name":"stdout","time":140.709099743,"data":"[   132s] s05_061101n: 109.9 min, 716 trials, alert 362, drowsy 66, alert_rt 0.656s\n"}
+,{"stream_name":"stdout","time":149.910048728,"data":"[   141s] s06_051119m: 61.2 min, 359 trials, alert 100, drowsy 10, alert_rt 0.752s\n"}
+,{"stream_name":"stdout","time":159.419363879,"data":"[   150s] s09_060313n: 64.9 min, 262 trials, alert 44, drowsy 38, alert_rt 0.652s\n"}
+,{"stream_name":"stdout","time":166.668773055,"data":"[   158s] s09_060317n: 43.6 min, 188 trials, alert 86, drowsy 25, alert_rt 0.736s\n"}
+,{"stream_name":"stdout","time":175.306522868,"data":"[   166s] s09_060720_1n: 58.0 min, 254 trials, alert 54, drowsy 48, alert_rt 0.796s\n"}
+,{"stream_name":"stdout","time":185.337935465,"data":"[   176s] s11_060920_1n: 64.5 min, 430 trials, alert 234, drowsy 32, alert_rt 0.517s\n"}
+,{"stream_name":"stdout","time":195.891650601,"data":"[   187s] s12_060710_1m: 70.6 min, 351 trials, alert 24, drowsy 142, alert_rt 1.122s\n"}
+,{"stream_name":"stdout","time":206.143305525,"data":"[   197s] s12_060710_2m: 70.2 min, 272 trials, alert 10, drowsy 66, alert_rt 2.172s\n"}
+,{"stream_name":"stdout","time":216.85930889,"data":"[   208s] s13_060213m: 63.9 min, 479 trials, alert 339, drowsy 0, alert_rt 0.471s\n"}
+,{"stream_name":"stdout","time":225.896453518,"data":"[   217s] s13_060217m: 59.0 min, 269 trials, alert 63, drowsy 30, alert_rt 0.652s\n"}
+,{"stream_name":"stdout","time":233.808800198,"data":"[   225s] s14_060319m: 47.6 min, 333 trials, alert 298, drowsy 0, alert_rt 0.484s\n"}
+,{"stream_name":"stdout","time":242.586536182,"data":"[   233s] s14_060319n: 54.6 min, 394 trials, alert 301, drowsy 0, alert_rt 0.452s\n"}
+,{"stream_name":"stdout","time":252.193934162,"data":"[   243s] s22_080513m: 65.0 min, 333 trials, alert 17, drowsy 94, alert_rt 0.568s\n"}
+,{"stream_name":"stdout","time":265.937718907,"data":"[   257s] s22_090825n: 96.1 min, 509 trials, alert 75, drowsy 180, alert_rt 0.716s\n"}
+,{"stream_name":"stdout","time":278.787547437,"data":"[   270s] s22_090922m: 91.7 min, 317 trials, alert 26, drowsy 131, alert_rt 0.646s\n"}
+,{"stream_name":"stdout","time":291.798602481,"data":"[   283s] s22_091006m: 90.5 min, 515 trials, alert 53, drowsy 160, alert_rt 0.620s\n"}
+,{"stream_name":"stdout","time":302.582486588,"data":"[   293s] s23_060711_1m: 70.3 min, 439 trials, alert 128, drowsy 10, alert_rt 0.700s\n"}
+,{"stream_name":"stdout","time":319.029940057,"data":"[   310s] s31_061020m: 117.7 min, 640 trials, alert 148, drowsy 9, alert_rt 0.820s\n"}
+,{"stream_name":"stdout","time":333.795863759,"data":"[   325s] s31_061103n: 103.9 min, 566 trials, alert 136, drowsy 67, alert_rt 0.888s\n"}
+,{"stream_name":"stdout","time":349.057894444,"data":"[   340s] s35_070115m: 108.6 min, 540 trials, alert 98, drowsy 92, alert_rt 0.552s\n"}
+,{"stream_name":"stdout","time":363.492170356,"data":"[   354s] s35_070322n: 99.5 min, 555 trials, alert 167, drowsy 105, alert_rt 0.600s\n"}
+,{"stream_name":"stdout","time":378.426494767,"data":"[   369s] s40_070124n: 107.8 min, 675 trials, alert 170, drowsy 39, alert_rt 0.810s\n"}
+,{"stream_name":"stdout","time":395.073889429,"data":"[   386s] s40_070131m: 109.4 min, 632 trials, alert 11, drowsy 88, alert_rt 0.536s\n"}
+,{"stream_name":"stdout","time":410.32462682,"data":"[   401s] s41_061225n: 105.9 min, 670 trials, alert 295, drowsy 26, alert_rt 0.820s\n"}
+,{"stream_name":"stdout","time":419.623534852,"data":"[   410s] s41_080520m: 63.7 min, 317 trials, alert 83, drowsy 116, alert_rt 0.452s\n"}
+,{"stream_name":"stdout","time":428.871914964,"data":"[   420s] s41_080530n: 62.9 min, 322 trials, alert 45, drowsy 162, alert_rt 0.600s\n"}
+,{"stream_name":"stdout","time":442.868327117,"data":"[   434s] s41_090813m: 95.8 min, 527 trials, alert 52, drowsy 206, alert_rt 0.536s\n"}
+,{"stream_name":"stdout","time":455.974302701,"data":"[   447s] s41_091104n: 90.7 min, 413 trials, alert 60, drowsy 99, alert_rt 0.652s\n"}
+,{"stream_name":"stdout","time":463.102446687,"data":"[   454s] s42_061229n: 44.8 min, 262 trials, alert 62, drowsy 25, alert_rt 0.973s\n"}
+,{"stream_name":"stdout","time":480.210351198,"data":"[   471s] s42_070105n: 108.6 min, 548 trials, alert 51, drowsy 103, alert_rt 0.968s\n"}
+,{"stream_name":"stdout","time":496.033236853,"data":"[   487s] s43_070202m: 108.9 min, 711 trials, alert 234, drowsy 70, alert_rt 0.484s\n"}
+,{"stream_name":"stdout","time":511.409793889,"data":"[   502s] s43_070205n: 109.6 min, 564 trials, alert 235, drowsy 132, alert_rt 0.836s\n"}
+,{"stream_name":"stdout","time":525.81443349,"data":"[   517s] s43_070208n: 97.1 min, 628 trials, alert 260, drowsy 50, alert_rt 0.588s\n"}
+,{"stream_name":"stdout","time":540.552968652,"data":"[   531s] s44_070126m: 104.1 min, 672 trials, alert 275, drowsy 70, alert_rt 0.468s\n"}
+,{"stream_name":"stdout","time":555.880353043,"data":"[   547s] s44_070205n: 106.7 min, 521 trials, alert 268, drowsy 103, alert_rt 0.855s\n"}
+,{"stream_name":"stdout","time":572.111783572,"data":"[   563s] s44_070209m: 113.6 min, 662 trials, alert 245, drowsy 115, alert_rt 0.552s\n"}
+,{"stream_name":"stdout","time":586.727922616,"data":"[   578s] s44_070325n: 103.4 min, 568 trials, alert 251, drowsy 156, alert_rt 0.636s\n"}
+,{"stream_name":"stdout","time":602.014600537,"data":"[   593s] s45_070307n: 108.9 min, 688 trials, alert 192, drowsy 54, alert_rt 0.600s\n"}
+,{"stream_name":"stdout","time":616.709417145,"data":"[   608s] s45_070321n: 99.8 min, 653 trials, alert 226, drowsy 21, alert_rt 0.620s\n"}
+,{"stream_name":"stdout","time":625.858898422,"data":"[   617s] s48_080501n: 60.3 min, 350 trials, alert 214, drowsy 31, alert_rt 0.584s\n"}
+,{"stream_name":"stdout","time":633.83444459,"data":"[   625s] s49_080522n: 50.4 min, 343 trials, alert 249, drowsy 0, alert_rt 0.484s\n"}
+,{"stream_name":"stdout","time":643.525530543,"data":"[   634s] s49_080527n: 63.8 min, 362 trials, alert 123, drowsy 29, alert_rt 0.584s\n"}
+,{"stream_name":"stdout","time":653.090185889,"data":"[   644s] s49_080602m: 60.5 min, 329 trials, alert 77, drowsy 37, alert_rt 0.533s\n"}
+,{"stream_name":"stdout","time":662.376134312,"data":"[   653s] s50_080725n: 61.6 min, 361 trials, alert 182, drowsy 32, alert_rt 0.632s\n"}
+,{"stream_name":"stdout","time":671.576922855,"data":"[   662s] s50_080731m: 60.5 min, 334 trials, alert 193, drowsy 14, alert_rt 0.784s\n"}
+,{"stream_name":"stdout","time":679.999272233,"data":"[   671s] s52_081017n: 56.2 min, 239 trials, alert 56, drowsy 44, alert_rt 0.582s\n"}
+,{"stream_name":"stdout","time":689.30060204,"data":"[   680s] s53_081018n: 61.3 min, 244 trials, alert 87, drowsy 44, alert_rt 0.633s\n"}
+,{"stream_name":"stdout","time":702.356958056,"data":"[   693s] s53_090918n: 90.7 min, 510 trials, alert 124, drowsy 129, alert_rt 0.652s\n"}
+,{"stream_name":"stdout","time":715.709266071,"data":"[   707s] s53_090925m: 90.3 min, 464 trials, alert 75, drowsy 70, alert_rt 0.752s\n"}
+,{"stream_name":"stdout","time":722.370062894,"data":"[   713s] s54_081226m: 41.0 min, 205 trials, alert 49, drowsy 56, alert_rt 0.767s\n"}
+,{"stream_name":"stdout","time":735.669797368,"data":"[   727s] s55_090930n: 90.2 min, 641 trials, alert 618, drowsy 0, alert_rt 0.600s\n"}
+,{"stream_name":"stdout","time":755.512941053,"data":"SADT epochs matched (corr \u003e 0.99): 3/2022; label agreement on matches: 1.000\n"}
+,{"stream_name":"stdout","time":755.517513119,"data":"sadt_subject  session    \n"}
+,{"stream_name":"stdout","time":755.517537493,"data":"2             s05_061101n    1\n"}
+,{"stream_name":"stdout","time":755.517544181,"data":"5             s35_070322n    1\n"}
+,{"stream_name":"stdout","time":755.517784251,"data":"9             s44_070325n    1\n"}
+,{"stream_name":"stdout","time":755.528575478,"data":"done in 746s\n"}
+,{"stream_name":"stderr","time":757.998802995,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":757.99882744,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":758.366296943,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":758.366333391,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":759.537184372,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":760.606675871,"data":"[NbConvertApp] Writing 305566 bytes to __results__.html\n"}
+]

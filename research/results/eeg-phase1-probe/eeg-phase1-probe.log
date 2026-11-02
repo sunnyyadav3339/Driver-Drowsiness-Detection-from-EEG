@@ -1,0 +1,137 @@
+[{"stream_name":"stdout","time":7.27615274,"data":"64 files, 16.61 GB\n"}
+,{"stream_name":"stdout","time":7.276268845,"data":"  s01_051017m.set.zip  204 MB\n"}
+,{"stream_name":"stdout","time":7.27627549,"data":"  s01_060227n.set.zip  200 MB\n"}
+,{"stream_name":"stdout","time":7.27627987,"data":"  s01_060926_1n.set.zip  245 MB\n"}
+,{"stream_name":"stdout","time":7.276284303,"data":"  s01_060926_2n.set.zip  217 MB\n"}
+,{"stream_name":"stdout","time":7.276288671,"data":"  s01_061102n.set.zip  355 MB\n"}
+,{"stream_name":"stdout","time":7.276292918,"data":"  s02_050921m.set.zip  204 MB\n"}
+,{"stream_name":"stdout","time":7.276297121,"data":"  s02_051115m.set.zip  215 MB\n"}
+,{"stream_name":"stdout","time":7.276301318,"data":"  s04_051130m.set.zip  211 MB\n"}
+,{"stream_name":"stdout","time":7.276305572,"data":"  s05_051120m.set.zip  211 MB\n"}
+,{"stream_name":"stdout","time":7.276309783,"data":"  s05_060308n.set.zip  208 MB\n"}
+,{"stream_name":"stdout","time":7.276313984,"data":"  s05_061019m.set.zip  355 MB\n"}
+,{"stream_name":"stdout","time":7.276318259,"data":"  s05_061101n.set.zip  371 MB\n"}
+,{"stream_name":"stdout","time":7.276322774,"data":"  s06_051119m.set.zip  206 MB\n"}
+,{"stream_name":"stdout","time":7.276327347,"data":"  s09_060313n.set.zip  219 MB\n"}
+,{"stream_name":"stdout","time":7.276331562,"data":"  s09_060317n.set.zip  147 MB\n"}
+,{"stream_name":"stdout","time":7.276335516,"data":"  s09_060720_1n.set.zip  196 MB\n"}
+,{"stream_name":"stdout","time":7.276340066,"data":"  s11_060920_1n.set.zip  218 MB\n"}
+,{"stream_name":"stdout","time":7.276344656,"data":"  s12_060710_1m.set.zip  238 MB\n"}
+,{"stream_name":"stdout","time":7.276348859,"data":"  s12_060710_2m.set.zip  237 MB\n"}
+,{"stream_name":"stdout","time":7.276353604,"data":"  s13_060213m.set.zip  215 MB\n"}
+,{"stream_name":"stdout","time":7.27635816,"data":"  s13_060217m.set.zip  199 MB\n"}
+,{"stream_name":"stdout","time":7.276362742,"data":"  s14_060319m.set.zip  161 MB\n"}
+,{"stream_name":"stdout","time":7.276367289,"data":"  s14_060319n.set.zip  184 MB\n"}
+,{"stream_name":"stdout","time":7.27637181,"data":"  s22_080513m.set.zip  219 MB\n"}
+,{"stream_name":"stdout","time":7.276382229,"data":"  s22_090825n.set.zip  325 MB\n"}
+,{"stream_name":"stdout","time":7.2763856350000005,"data":"  s22_090922m.set.zip  309 MB\n"}
+,{"stream_name":"stdout","time":7.276388762,"data":"  s22_091006m.set.zip  306 MB\n"}
+,{"stream_name":"stdout","time":7.276392795,"data":"  s23_060711_1m.set.zip  237 MB\n"}
+,{"stream_name":"stdout","time":7.276397153,"data":"  s31_061020m.set.zip  396 MB\n"}
+,{"stream_name":"stdout","time":7.276402003,"data":"  s31_061103n.set.zip  350 MB\n"}
+,{"stream_name":"stdout","time":7.27640657,"data":"  s35_070115m.set.zip  366 MB\n"}
+,{"stream_name":"stdout","time":7.2764109900000005,"data":"  s35_070322n.set.zip  336 MB\n"}
+,{"stream_name":"stdout","time":7.276415487,"data":"  s40_070124n.set.zip  364 MB\n"}
+,{"stream_name":"stdout","time":7.276419906,"data":"  s40_070131m.set.zip  369 MB\n"}
+,{"stream_name":"stdout","time":7.2764239459999995,"data":"  s41_061225n.set.zip  357 MB\n"}
+,{"stream_name":"stdout","time":7.276428214,"data":"  s41_080520m.set.zip  215 MB\n"}
+,{"stream_name":"stdout","time":7.27643305,"data":"  s41_080530n.set.zip  212 MB\n"}
+,{"stream_name":"stdout","time":7.276441805,"data":"  s41_090813m.set.zip  323 MB\n"}
+,{"stream_name":"stdout","time":7.276446742,"data":"  s41_091104n.set.zip  306 MB\n"}
+,{"stream_name":"stdout","time":7.276450842,"data":"  s42_061229n.set.zip  151 MB\n"}
+,{"stream_name":"stdout","time":7.276463013,"data":"  s42_070105n.set.zip  366 MB\n"}
+,{"stream_name":"stdout","time":7.276467914,"data":"  s43_070202m.set.zip  366 MB\n"}
+,{"stream_name":"stdout","time":7.276472441,"data":"  s43_070205n.set.zip  368 MB\n"}
+,{"stream_name":"stdout","time":7.276477191,"data":"  s43_070208n.set.zip  327 MB\n"}
+,{"stream_name":"stdout","time":7.276481793,"data":"  s44_070126m.set.zip  350 MB\n"}
+,{"stream_name":"stdout","time":7.276486343,"data":"  s44_070205n.set.zip  360 MB\n"}
+,{"stream_name":"stdout","time":7.276491179,"data":"  s44_070209m.set.zip  383 MB\n"}
+,{"stream_name":"stdout","time":7.27649568,"data":"  s44_070325n.set.zip  348 MB\n"}
+,{"stream_name":"stdout","time":7.276500189,"data":"  s45_070307n.set.zip  367 MB\n"}
+,{"stream_name":"stdout","time":7.276504664,"data":"  s45_070321n.set.zip  337 MB\n"}
+,{"stream_name":"stdout","time":7.27650951,"data":"  s48_080501n.set.zip  204 MB\n"}
+,{"stream_name":"stdout","time":7.276513925,"data":"  s49_080522n.set.zip  170 MB\n"}
+,{"stream_name":"stdout","time":7.27651838,"data":"  s49_080527n.set.zip  215 MB\n"}
+,{"stream_name":"stdout","time":7.276522847,"data":"  s49_080602m.set.zip  204 MB\n"}
+,{"stream_name":"stdout","time":7.27662315,"data":"  s50_080725n.set.zip  208 MB\n"}
+,{"stream_name":"stdout","time":7.276630023,"data":"  s50_080731m.set.zip  204 MB\n"}
+,{"stream_name":"stdout","time":7.27663446,"data":"  s52_081017n.set.zip  189 MB\n"}
+,{"stream_name":"stdout","time":7.276639612,"data":"  s53_081018n.set.zip  206 MB\n"}
+,{"stream_name":"stdout","time":7.276644222,"data":"  s53_090918n.set.zip  306 MB\n"}
+,{"stream_name":"stdout","time":7.276648769,"data":"  s53_090925m.set.zip  304 MB\n"}
+,{"stream_name":"stdout","time":7.276653391,"data":"  s54_081226m.set.zip  138 MB\n"}
+,{"stream_name":"stdout","time":7.276657876,"data":"  s55_090930n.set.zip  305 MB\n"}
+,{"stream_name":"stdout","time":7.276662933,"data":"  code availability.zip  25 MB\n"}
+,{"stream_name":"stdout","time":7.27666818,"data":"  Tutorial Data Analysis for Multi-channel EEG Recordings during a Sustained-attention Driving Task.pdf  4 MB\n"}
+,{"stream_name":"stdout","time":9.543641786,"data":"zip contents: [('s01_051017m.set/', 0), ('s01_051017m.set/s01_051017m.fdt', 217363200), ('s01_051017m.set/s01_051017m.set', 7641816)]\n"}
+,{"stream_name":"stdout","time":11.599639986,"data":"loading /kaggle/working/results/s01_051017m.set/s01_051017m.set\n"}
+,{"stream_name":"stdout","time":11.640632882,"data":"EEG fields: ['chaninfo', 'chanlocs', 'comments', 'condition', 'data', 'datfile', 'dipfit', 'epoch', 'epochdescription', 'etc', 'event', 'eventdescription', 'filename', 'filepath', 'group', 'history', 'icaact', 'icachansind', 'icasphere', 'icasplinefile', 'icaweights', 'icawinv', 'nbchan', 'pnts', 'ref', 'reject', 'saved', 'session', 'setname', 'specdata', 'specicaact', 'splinefile', 'srate', 'stats', 'subject', 'times', 'trials', 'urchanlocs', 'urevent', 'xmax', 'xmin']\n"}
+,{"stream_name":"stdout","time":11.640675594,"data":"  nbchan = 30\n"}
+,{"stream_name":"stdout","time":11.64068124,"data":"  pnts = 1811360\n"}
+,{"stream_name":"stdout","time":11.640685991,"data":"  srate = 500\n"}
+,{"stream_name":"stdout","time":11.640690739,"data":"  trials = 1\n"}
+,{"stream_name":"stdout","time":11.640695598,"data":"  xmin = 0\n"}
+,{"stream_name":"stdout","time":11.640700459,"data":"  xmax = 3622.718\n"}
+,{"stream_name":"stdout","time":11.640705358,"data":"  ref = common\n"}
+,{"stream_name":"stdout","time":11.640709975,"data":"data: \u003cclass 'str'\u003e s01_051017m.fdt\n"}
+,{"stream_name":"stdout","time":11.640715731,"data":"channels: ['FP1', 'FP2', 'F7', 'F3', 'FZ', 'F4', 'F8', 'FT7', 'FC3', 'FCZ', 'FC4', 'FT8', 'T3', 'C3', 'CZ', 'C4', 'T4', 'TP7', 'CP3', 'CPZ', 'CP4', 'TP8', 'T5', 'P3', 'PZ', 'P4', 'T6', 'O1', 'OZ', 'O2']\n"}
+,{"stream_name":"stdout","time":11.640736882,"data":"n events: 597\n"}
+,{"stream_name":"stdout","time":11.640742052,"data":"event fields: ['index', 'init_index', 'init_time', 'latency', 'type', 'urevent']\n"}
+,{"stream_name":"stdout","time":11.641128778,"data":"event type counts: [('253', 199), ('254', 199), ('252', 104), ('251', 95)]\n"}
+,{"stream_name":"stdout","time":11.641143516,"data":"   {'index': 355, 'init_index': 1, 'init_time': 13.544, 'latency': 6773, 'type': 252, 'urevent': 1}\n"}
+,{"stream_name":"stdout","time":11.641149179,"data":"   {'index': 404, 'init_index': 2, 'init_time': 14.364, 'latency': 7183, 'type': 253, 'urevent': 2}\n"}
+,{"stream_name":"stdout","time":11.641154444,"data":"   {'index': 570, 'init_index': 3, 'init_time': 17.14, 'latency': 8571, 'type': 254, 'urevent': 3}\n"}
+,{"stream_name":"stdout","time":11.64117091,"data":"   {'index': 870, 'init_index': 4, 'init_time': 22.156, 'latency': 11079, 'type': 251, 'urevent': 4}\n"}
+,{"stream_name":"stdout","time":11.641188826,"data":"   {'index': 938, 'init_index': 5, 'init_time': 23.292, 'latency': 11647, 'type': 253, 'urevent': 5}\n"}
+,{"stream_name":"stdout","time":11.641379841,"data":"   {'index': 1151, 'init_index': 6, 'init_time': 26.852, 'latency': 13427, 'type': 254, 'urevent': 6}\n"}
+,{"stream_name":"stdout","time":11.641399123,"data":"   {'index': 1578, 'init_index': 7, 'init_time': 33.992, 'latency': 16997, 'type': 252, 'urevent': 7}\n"}
+,{"stream_name":"stdout","time":11.641404677,"data":"   {'index': 1640, 'init_index': 8, 'init_time': 35.028, 'latency': 17515, 'type': 253, 'urevent': 8}\n"}
+,{"stream_name":"stdout","time":11.641447974,"data":"   {'index': 1747, 'init_index': 9, 'init_time': 36.816, 'latency': 18409, 'type': 254, 'urevent': 9}\n"}
+,{"stream_name":"stdout","time":11.64145824,"data":"   {'index': 2192, 'init_index': 10, 'init_time': 44.256, 'latency': 22129, 'type': 252, 'urevent': 10}\n"}
+,{"stream_name":"stdout","time":11.641509767,"data":"   {'index': 2239, 'init_index': 11, 'init_time': 45.04, 'latency': 22521, 'type': 253, 'urevent': 11}\n"}
+,{"stream_name":"stdout","time":11.641588637,"data":"   {'index': 2360, 'init_index': 12, 'init_time': 47.064, 'latency': 23533, 'type': 254, 'urevent': 12}\n"}
+,{"stream_name":"stdout","time":11.641596337,"data":"   {'index': 2675, 'init_index': 13, 'init_time': 52.328, 'latency': 26165, 'type': 252, 'urevent': 13}\n"}
+,{"stream_name":"stdout","time":11.641601443999999,"data":"   {'index': 2726, 'init_index': 14, 'init_time': 53.18, 'latency': 26591, 'type': 253, 'urevent': 14}\n"}
+,{"stream_name":"stdout","time":11.641606508,"data":"   {'index': 3210, 'init_index': 15, 'init_time': 61.272, 'latency': 30637, 'type': 254, 'urevent': 15}\n"}
+,{"stream_name":"stdout","time":11.641633967,"data":"   {'index': 3277, 'init_index': 16, 'init_time': 62.392, 'latency': 31197, 'type': 251, 'urevent': 16}\n"}
+,{"stream_name":"stdout","time":11.641719386,"data":"   {'index': 3394, 'init_index': 17, 'init_time': 64.33200000000001, 'latency': 32167, 'type': 253, 'urevent': 17}\n"}
+,{"stream_name":"stdout","time":11.641728239999999,"data":"   {'index': 3706, 'init_index': 18, 'init_time': 69.548, 'latency': 34775, 'type': 254, 'urevent': 18}\n"}
+,{"stream_name":"stdout","time":11.641741327,"data":"   {'index': 4123, 'init_index': 19, 'init_time': 76.52, 'latency': 38261, 'type': 251, 'urevent': 19}\n"}
+,{"stream_name":"stdout","time":11.641794509,"data":"   {'index': 4166, 'init_index': 20, 'init_time': 77.236, 'latency': 38619, 'type': 253, 'urevent': 20}\n"}
+,{"stream_name":"stdout","time":11.641863464,"data":"   {'index': 4263, 'init_index': 21, 'init_time': 78.86, 'latency': 39431, 'type': 254, 'urevent': 21}\n"}
+,{"stream_name":"stdout","time":11.64202223,"data":"   {'index': 4639, 'init_index': 22, 'init_time': 85.144, 'latency': 42573, 'type': 251, 'urevent': 22}\n"}
+,{"stream_name":"stdout","time":11.642038197,"data":"   {'index': 4686, 'init_index': 23, 'init_time': 85.928, 'latency': 42965, 'type': 253, 'urevent': 23}\n"}
+,{"stream_name":"stdout","time":11.642042870000001,"data":"   {'index': 4802, 'init_index': 24, 'init_time': 87.868, 'latency': 43935, 'type': 254, 'urevent': 24}\n"}
+,{"stream_name":"stdout","time":11.64204919,"data":"   {'index': 5055, 'init_index': 25, 'init_time': 92.10000000000001, 'latency': 46051, 'type': 251, 'urevent': 25}\n"}
+,{"stream_name":"stdout","time":11.64212282,"data":"comments: Original file: /home/michael/ARL (fixed behavior)/s01_051017m/s01_051017m.cnt\n"}
+,{"stream_name":"stdout","time":11.642193762,"data":"epoch: []\n"}
+,{"stream_name":"stdout","time":11.642201377,"data":"etc: \u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e86090a8fc0\u003e\n"}
+,{"stream_name":"stdout","time":11.642207686,"data":"history: \n"}
+,{"stream_name":"stdout","time":11.642212273,"data":"EEG.setname='s01_051017m';\n"}
+,{"stream_name":"stdout","time":11.642217086,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.642221587,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.642226626,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.642231277,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.642235955,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.642240682,"data":"EEG.etc.eeglabvers = '14.1.1'; % this tracks which version of EEGLAB is being used, you may ignore it\n"}
+,{"stream_name":"stdout","time":11.64224579,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.642250462,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.642254942,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.642259497,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.642264566,"data":"EEG = eeg_checkset( EEG );\n"}
+,{"stream_name":"stdout","time":11.644529082,"data":"urevent: [\u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e8609923bb0\u003e\n"}
+,{"stream_name":"stdout","time":11.644563439,"data":" \u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e8609923ce0\u003e\n"}
+,{"stream_name":"stdout","time":11.644569279,"data":" \u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e8609923e10\u003e\n"}
+,{"stream_name":"stdout","time":11.644574125,"data":" \u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e8609048050\u003e\n"}
+,{"stream_name":"stdout","time":11.644578908,"data":" \u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e8609048180\u003e\n"}
+,{"stream_name":"stdout","time":11.644583725,"data":" \u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e86090482b0\u003e\n"}
+,{"stream_name":"stdout","time":11.644588548,"data":" \u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e86090483e0\u003e\n"}
+,{"stream_name":"stdout","time":11.644593284,"data":" \u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e8609048510\u003e\n"}
+,{"stream_name":"stdout","time":11.644600947,"data":" \u003cscipy.io.matlab._mio5_params.mat_struct object at 0x7e\n"}
+,{"stream_name":"stderr","time":14.810023235,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":14.810062472,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":15.224089913,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":15.224123682,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":16.443709247,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":17.862047783,"data":"[NbConvertApp] Writing 300283 bytes to __results__.html\n"}
+]

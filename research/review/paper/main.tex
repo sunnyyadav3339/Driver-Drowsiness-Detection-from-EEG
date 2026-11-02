@@ -1,0 +1,47 @@
+% XAI drowsiness review. Compile on Overleaf: pdfLaTeX, then BibTeX, then pdfLaTeX twice.
+% Upload this whole folder (main.tex, references.bib, sections/, figures/). IEEEtran is built into Overleaf.
+\documentclass[journal]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figures/}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+% Visible reminders for the team. Search for \todo before submitting.
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+
+\begin{document}
+
+\title{Explainable and Interpretable AI for Drowsiness Detection: A Cross-Modal Review and Critical Appraisal}
+
+\author{Sunny Yadav, Akshay \todo{surname}, and Aryan \todo{surname}%
+\thanks{The authors are with the Indian Institute of Technology Roorkee, India. \todo{department, supervisor, e-mail}}}
+
+\maketitle
+
+\input{sections/00_abstract}
+\input{sections/01_introduction}
+\input{sections/02_background}
+\input{sections/03_taxonomy}
+\input{sections/04_modalities}
+\input{sections/05_datasets}
+\input{sections/06_evaluation}
+\input{sections/07_challenges}
+\input{sections/08_conclusion}
+
+\section*{Acknowledgment}
+\todo{Thank the supervisor and TA.}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

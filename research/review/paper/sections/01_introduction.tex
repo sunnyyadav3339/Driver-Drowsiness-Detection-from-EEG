@@ -1,0 +1,25 @@
+\section{Introduction}
+\IEEEPARstart{D}{rowsy} driving remains a major road-safety problem. One recent survey cites a United States estimate attributing up to 20\% of annual traffic deaths in 2016 to driver drowsiness \cite{fu2024survey}. Automated detectors now use brain signals, heart signals, cameras and vehicle data, and reported accuracies often exceed 95\% under controlled conditions \cite{ajayi2025multimodal}.
+
+High accuracy is not enough for a safety system. A driver, a manufacturer or a regulator needs to know why an alarm fired and whether the model relies on drowsiness itself or on an accident of the training data. Interpretable models and explainable artificial intelligence (XAI) methods aim to answer those questions. How well their explanations hold up has received little attention.
+
+Existing reviews leave this gap open. Fu \textit{et al.}~\cite{fu2024survey} survey applications, sensors and methods across modalities, and Ali \textit{et al.}~\cite{ali2026intelligent} systematically review brain-imaging detectors; neither has a section on explanation. Ajayi \textit{et al.}~\cite{ajayi2025multimodal} reviewed 78 fatigue-detection studies and found explainability in only 19.2\% of them, but they did not examine what those explanations showed or whether they were valid. Recent multimodal surveys treat explainability as a future direction or a supporting tool \cite{multimodal2026review,dms2026survey}. Presacan \textit{et al.}~\cite{xaieeg2026review} review XAI for EEG across many applications through 2023, but drowsiness receives one paragraph, covering one research group, and modalities other than EEG are out of scope. To our knowledge, no review has focused on interpretability and explainability in drowsiness detection across modalities. \todo{Keep this claim only after the Scopus check. IEEE Xplore and web searches on 2026-11-02 found no such review.}
+
+We address four research questions:
+\begin{itemize}
+\item \textbf{RQ1:} Which interpretable-by-design and post-hoc methods are used for drowsiness detection, and in which modalities?
+\item \textbf{RQ2:} What do the explanations reveal, and do they agree with known physiology?
+\item \textbf{RQ3:} How often are explanations tested for faithfulness, and how often are models tested on unseen drivers?
+\item \textbf{RQ4:} What stands in the way of trustworthy explanations in vehicles, and what should future studies report?
+\end{itemize}
+
+Our contributions are:
+\begin{enumerate}
+\item a review dedicated to interpretability and explainability in drowsiness detection, covering EEG, cardiac, vision, vehicle and multimodal systems;
+\item a taxonomy that classifies each study by the mechanism of its explanation, not the authors' wording, and by what the explanation refers to;
+\item a critical appraisal of 27 detection studies on four checks, with the counts reported per study so that others can verify them;
+\item an empirical case study on a published interpretable model, testing its explanations for faithfulness, sanity and stability on every held-out window, and measuring how far its decisions depend on the test protocol; and
+\item a reporting checklist for future studies.
+\end{enumerate}
+
+Section~\ref{sec:background} gives the background and our review method. Section~\ref{sec:taxonomy} presents the taxonomy, Section~\ref{sec:modalities} reviews each modality, and Section~\ref{sec:datasets} summarises the datasets. Section~\ref{sec:evaluation} appraises the evidence and presents the case study. Section~\ref{sec:challenges} discusses challenges and the checklist, and Section~\ref{sec:conclusion} concludes.

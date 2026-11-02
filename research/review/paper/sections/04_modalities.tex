@@ -1,0 +1,111 @@
+\section{Explanations by Modality}
+\label{sec:modalities}
+
+Tables~\ref{tab:eeg}--\ref{tab:vision} summarise each study. The last column gives the four appraisal ratings: P, explanation agrees with known physiology; E, explanation evaluated; S, tested on unseen drivers; C, code public.
+
+\subsection{EEG and EOG}
+EEG holds the richest explanation work, and one pattern runs through it: the two classes are explained by different kinds of evidence. From inspecting selected samples, Cui \textit{et al.} read drowsy decisions as resting on theta bursts and alpha spindles, which match the literature, and alert decisions as resting largely on muscle activity at peripheral channels, eye movements and slow sensor drift \cite{cui2022eeg,cui2022compact,cui2021subject}. ID3RSNet shows the same split, although its explanations rely less on single blink-like peaks than an earlier compact model \cite{feng2025id3rsnet}. The authors of these studies treat this as a finding and suggest that artefact handling should be a deliberate design choice. If correct, it is also a warning, because artefacts that help on one recording setup may not transfer to other hardware. Section~\ref{sec:casestudy} tests this reading across all windows and supports it only in part.
+
+Seo \textit{et al.}~\cite{seo2025driver}, who removed eye and muscle artefacts with independent component analysis, obtained cortical explanations: LRP on source-space band power highlighted frontal theta and parieto-occipital alpha, and group statistics confirmed the alpha increase. Their model reached 96.9\% after fine-tuning on each driver but stayed near chance (50.8\%) on unseen drivers. Plausible explanations and cross-subject generalisation are therefore separate properties.
+
+Other studies complicate the theta and alpha story. An \textit{et al.}~\cite{an2024attention} read band importance from attention scores: theta and alpha exceeded beta for the three best-predicted subjects, but not consistently for the three worst, and no other subjects were analysed. Jiang \textit{et al.}~\cite{jiang2026eeg} used a transparent selection pipeline, nested inside leave-one-subject-out folds, and found eight features selected in every fold. These were amplitude statistics plus beta and gamma power; theta and alpha power were not retained. The labels were task stages in a laboratory task, so a stable feature may track time on task rather than fatigue. Zhou \textit{et al.}~\cite{zhou2026sedriven} applied no formal XAI method but probed the model through band masking and channel removal; theta and alpha were the strongest narrow bands, although every single band still gave 83--92\%. Gao \textit{et al.}~\cite{gao2025idsrn} state that recurrent-matrix poles reveal 6~Hz theta activity, but they report no pole values, and the recurrence runs over 8-s feature windows rather than raw samples, which makes that reading hard to reconcile.
+
+Explanations also help audit data. Cui \textit{et al.} traced errors to sensor noise and to alert-labelled samples full of alpha spindles, which suggests label noise in reaction-time labels \cite{cui2022eeg,cui2022compact}.
+
+\begin{table*}[!t]
+\centering
+\caption{EEG and EOG Studies. Ratings P/E/S/C: Y yes; P partly; N no or not shown; F faithfulness tested; p partial check only; s stated, not verifiable. LOSO: Leave-One-Subject-Out; RT: Reaction Time}
+\label{tab:eeg}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{@{}L{1.5cm}L{2.7cm}L{2.3cm}L{2.2cm}YL{3.1cm}L{0.95cm}@{}}
+\toprule
+\textbf{Study} & \textbf{Data; labels} & \textbf{Model} & \textbf{Explanation} & \textbf{What it showed} & \textbf{Result (test scheme)} & \textbf{P/E/S/C} \\
+\midrule
+Cui 2023 \cite{cui2022eeg} & Cao subset, 11 subj.; RT & InterpretableCNN, 30 channels & CAM + CNN-Fixation (post-hoc) & Drowsy: theta bursts, alpha spindles, central sites. Alert: EMG at peripheral channels, eye activity & 78.35\% balanced, 77.70\% unbalanced (LOSO) & P/N/Y/Y \\
+Cui 2022 \cite{cui2022compact} & Cao subset, 11 subj.; RT & Compact CNN, Oz only & CAM (post-hoc) & Drowsy: alpha spindles, theta--delta bursts. Alert: EMG, sensor drift. Exposes probable mislabelled samples & 73.22\% balanced (LOSO) & P/N/Y/Y \\
+Cui 2021 \cite{cui2021subject} & Cao subset, 11 subj.; RT & CNN-LSTM, Oz only & LSTM hidden states (intrinsic) & Decision builds over time; alpha spindles for drowsy, EMG and drift for alert & 72.97\% balanced (LOSO) & P/N/Y/Y \\
+Feng 2025 \cite{feng2025id3rsnet} & Cao subset, 11 subj.; RT & ID3RSNet, Oz only & EEG CAM (post-hoc) & Same split; more spindle regions and fewer single blink-like peaks than the compact CNN & 77.16\% balanced, 74.72\% unbalanced (LOSO) & P/F/Y/N \\
+Seo 2025 \cite{seo2025driver} & Private, 21 subj.; video-rated KSS & 3D CNN on source-space band power & LRP (post-hoc) & Frontal theta, parieto-occipital alpha; alpha confirmed by group statistics & 96.9\% within-subject; 50.8\% on unseen drivers & Y/N/N/N \\
+An 2024 \cite{an2024attention} & Cao, 27 subj.; RT regression & ACF-GCN & Attention scores (intrinsic) & Theta, alpha above beta in three best subjects; mixed in three worst & RMSE 0.788 s, $r = 0.313$ (LOSO) & P/N/Y/N \\
+Jiang 2026 \cite{jiang2026eeg} & Private, 16 subj., lab task; task stage & EfficientLSTM, 3 classes & Feature selection + SHAP (combined) & Stable features: amplitude statistics, beta, gamma; theta and alpha not retained & 74.54\% (nested LOSO) & N/p/Y/N \\
+Zhou 2026 \cite{zhou2026sedriven} & SEED-VIG, 21 subj., PERCLOS; Cao subset, RT & DCAMNet & Kernel weights, band masking, channel removal (combined) & Theta and alpha strongest narrow bands; all bands 83--92\% & 85.43\% SEED-VIG, 79\% Cao (LOSO); 97.47\% mixed & P/N/Y/N \\
+Gao 2025 \cite{gao2025idsrn} & SEED-VIG; PERCLOS & IDSRN polynomial recurrent & Recurrent poles (intrinsic) & States a 6 Hz theta pole; values not shown & 97.06\% (pooled 10-fold) & N/N/N/N \\
+\midrule
+Cui 2023 \cite{cui2023towards}$^{\dagger}$ & Three EEG datasets, incl. Cao subset & EEGNet, InterpretableCNN & Seven attribution methods compared & Gradient$\times$input, DeepLIFT, integrated gradients, LRP beat random maps; saliency, deconvolution, guided backpropagation mostly do not & Methods study (LOSO on drowsiness data) & Y/F/Y/Y \\
+\bottomrule
+\multicolumn{7}{@{}l}{$^{\dagger}$Methods study, excluded from the appraisal counts.}
+\end{tabularx}
+\end{table*}
+
+\subsection{ECG and HRV}
+Explanation work on cardiac signals consists almost entirely of SHAP on classical models over hand-crafted HRV features. We found no ECG drowsiness model explained by attribution on the raw signal. Vitorino \textit{et al.}~\cite{vitorino2023adversarial} ranked SD2/SD1, a nonlinear HRV measure, as the most consistently important feature, and showed that plausible adversarial perturbations of HRV features sharply degrade most models. They tested the robustness of predictions, not of explanations, which remains open.
+
+Puspasari \textit{et al.}~\cite{puspasari2026predicting} used subject-grouped validation and report SHAP rankings led by mean RR interval and mean heart rate. Their summary plot illustrates a problem with redundant inputs. The two features are mathematical inverses, yet high values of both push the prediction away from the late-session class, assuming the plotted values refer to that class. High RMSSD also pushes towards it, against the text's account of reduced HRV. Correlated features can thus produce rankings that are hard to read physiologically. In addition, the label is session order, so the explanation describes time on task as much as fatigue.
+
+AlArnaout \textit{et al.}~\cite{alarnaout2025exploiting} describe their tree models as easy to interpret but show no explanation. They also label windows from heart-rate thresholds while mean RR is an input feature, although the paper states that labels and inputs are independent.
+
+\subsection{Vision}
+Vision studies mostly show Grad-CAM heatmaps of eyes and mouth, and the usual evidence is a few images judged by eye. Saxena \textit{et al.}~\cite{saxena2026lowlight} apply five methods to one model and report how well the maps overlap detected eye and mouth regions, which measures plausibility; their limitations section acknowledges that the explanations were evaluated only qualitatively, with no faithfulness assessment. Rafy \textit{et al.}~\cite{rafy2026domain} give the most instructive result: heatmaps on the realistic UTA-RLDD data partly fall on background regions, and focus metrics drop as recording conditions become less controlled, so the explanation exposes a dataset effect that accuracy conceals. Oise \textit{et al.}~\cite{oise2026enhancing} name Grad-CAM++ and uncertainty as ensuring transparency, but the paper contains no explanation output, and its figures do not match its headline metrics.
+
+Florez \textit{et al.}~\cite{florez2023cnn,florez2024realtime} use Grad-CAM on a handful of images to choose between networks of almost equal accuracy, even though many maps fall on the nose, cheek or forehead. Explanations here steer model selection without having been tested. Nomura \textit{et al.}~\cite{nomura2025drowsiness} use near-infrared face images and find activation mainly around the eyes, with additional responses along the nose, mouth and forehead, which they link to blood-flow changes. They note that eye activation may reflect blinking; masking the eyes would test this, but was not done.
+
+A subtler issue is that many vision labels are really eye-state labels. When the class is simply open versus closed, as in Hassan \textit{et al.}~\cite{hassan2025realtime} and the Florez studies, a heatmap on the eyelid confirms the label definition and says little about drowsiness. Rule-based alternatives avoid opacity \cite{albadawi2023realtime,ersoy2026improving}, and personalising thresholds narrowed part of the gap to a CNN in one preprint \cite{ersoy2026improving}, but these too need independent labels. In the study of Albadawi \textit{et al.}, the labels are generated from thresholds on the same features the classifier receives.
+
+\begin{table*}[!t]
+\centering
+\caption{ECG/HRV, Vehicle-Based and Multimodal Studies. Ratings as in Table~\ref{tab:eeg}}
+\label{tab:cardiac}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{@{}L{1.7cm}L{2.7cm}L{2.2cm}L{2.2cm}YL{3cm}L{1.05cm}@{}}
+\toprule
+\textbf{Study} & \textbf{Signals; data; labels} & \textbf{Model} & \textbf{Explanation} & \textbf{What it showed} & \textbf{Result (test scheme)} & \textbf{P/E/S/C} \\
+\midrule
+Vitorino 2023 \cite{vitorino2023adversarial} & HRV; DROZY, 14 subj.; PVT & SVM, KNN, XGBoost, LightGBM & SHAP & SD2/SD1 most consistent; top 18 features match the full set's F1 & Macro-F1 81.58\% (random split of overlapping windows) & N/p/N/N \\
+Puspasari 2026 \cite{puspasari2026predicting} & HRV; private, 40 subj.; session order or sleep condition & XGBoost, RF, LR & SHAP & Mean RR, mean HR, LF lead; redundant features with conflicting directions & 77.0\%, AUC 0.785 (grouped 5-fold) & Y/p/Y/N \\
+AlArnaout 2025 \cite{alarnaout2025exploiting} & PPG-HRV; 10 subj. + 3 drivers; heart-rate rule & Six classifiers, RF best & Claimed, none shown & No explanation output & 86.05\% (window-level 4-fold) & N/N/N/N \\
+McDonald 2014 \cite{mcdonald2014steering} & Steering angle; NADS simulator, 72 drivers; observer rating & Random forest & Example traces & ``Steering holds'' read as drowsy; authors state the features used are unclear & Accuracy 0.79, AUC 0.70 (10-fold, not by driver) & Y/N/N/N \\
+Zhou 2021 \cite{zhou2021predicting} & Heart, breathing, steering; simulator, 20 subj.; PERCLOS & XGBoost regression & SHAP (global, local) & Heart rate and breathing lead; steering matters less & Adj.\ $R^2$ 0.996 (random 10-fold over 1-s samples) & Y/p/N/N \\
+Hasan 2024 \cite{hasan2024validation} & EEG, EOG, ECG; lab vigilance task, 26 subj.; KSS & KNN, SVM, RF & SHAP, partial dependence & Blink duration, AVR, central theta, occipital alpha lead; HRV low; methods agree ($r = 0.849$) & 80.1\% (leave-one-participant-out) & Y/p/Y/N \\
+Zhang 2024 \cite{zhang2024multimodal} & EEG, EOG; SEED-VIG, 21 subj.; PERCLOS & CNN + transformer fusion & Band correlation, t-SNE & Theta, alpha correlate best; modality contribution not attributed & $r = 0.887$ (LOSO) & Y/N/Y/N \\
+Beles 2024 \cite{beles2024driver} & EOG/EEG, eye images; lab and road, apparently one driver & ANN + fuzzy fusion & Fuzzy rules (intrinsic) & Decision logic readable; dominant input not analysed & No system-level evaluation & Y/N/N/N \\
+Jha 2025 \cite{jha2025realtime} & Eye, head, steering; data not named & Described only & SHAP, counterfactuals & No concrete output reported & Claims without supporting data & N/N/N/N \\
+\midrule
+Askari 2026 \cite{askari2026physiologically}$^{\dagger}$ & EEG, EMG, GSR; MPDB, 30 subj.; manoeuvre & XGBoost + LightGBM & SHAP & Used to argue plausibility; EEG share of SHAP partly reflects feature count & 80.91\% (random window split) & Y/N/N/N \\
+\bottomrule
+\multicolumn{7}{@{}l}{$^{\dagger}$Classifies manoeuvres, not drowsiness; excluded from the appraisal counts. Zhou 2021 and Askari 2026 are preprints.}
+\end{tabularx}
+\end{table*}
+
+\subsection{Vehicle-based signals}
+Vehicle signals are the least explored. McDonald \textit{et al.}~\cite{mcdonald2014steering} explain a steering-based random forest by inspecting example traces: low-variability ``steering holds'' count as drowsy, and ordinary low-activity driving causes false alarms. The authors acknowledge that it is unclear which features the forest uses, and variable importance was not reported. Zhou \textit{et al.}~\cite{zhou2021predicting} include steering among SHAP-ranked features, where it ranks below heart and breathing measures, although random splitting of one-second samples makes their accuracy hard to interpret. We found no vehicle-only deep model with formal attribution in our set.
+
+\subsection{Multimodal fusion}
+Fusion raises a question that single-signal work does not: how much does each modality contribute? The studies here rarely answer it. Hasan \textit{et al.}~\cite{hasan2024validation} come closest, finding that blink features and central theta outrank HRV under SHAP and partial dependence, and they report the strongest validation in this group, comparing six schemes on the same data and arguing that leave-one-participant-out gives the most general results. Zhang \textit{et al.}~\cite{zhang2024multimodal} interpret a deep EEG--EOG model through band correlations and t-SNE but do not attribute the fused prediction; because EOG measures blinks directly and the label is eye-tracker PERCLOS, the EOG branch may sit close to the label itself. Summing SHAP values by modality is also misleading when modalities differ in feature count, as Askari \textit{et al.}~\cite{askari2026physiologically} partly concede. Beles \textit{et al.}~\cite{beles2024driver} offer readable rules but no quantitative test on synchronised data, and Jha \textit{et al.}~\cite{jha2025realtime} propose counterfactual advice without reported data.
+
+\begin{table*}[!t]
+\centering
+\caption{Vision Studies. Ratings as in Table~\ref{tab:eeg}}
+\label{tab:vision}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{@{}L{1.6cm}L{2.8cm}L{2.3cm}L{2.1cm}YL{3cm}L{1.15cm}@{}}
+\toprule
+\textbf{Study} & \textbf{Data; labels} & \textbf{Model} & \textbf{Explanation} & \textbf{What it showed} & \textbf{Result (test scheme)} & \textbf{P/E/S/C} \\
+\midrule
+Saxena 2026 \cite{saxena2026lowlight} & Six public datasets; dataset labels mapped to three classes & InceptionV3 + dual attention & Grad-CAM, IG, LRP, occlusion, LIME & Authors report eyes and mouth; localisation scores for all methods, no faithfulness test & 96.2--98.5\% per dataset (subject split stated) & Y/p/s/N \\
+Rafy 2026 \cite{rafy2026domain} & MRL Eye, NTHU-DDD, UTA-RLDD; dataset labels & Swin-based ViT & Grad-CAM & Periocular focus; background attention on UTA-RLDD; IoU above 0.71 with annotations & 97.2--98.7\% random split; 92--94.5\% cross-dataset & P/p/s/N \\
+Oise 2026 \cite{oise2026enhancing} & Six datasets; mixed labelling & MobileNetV2 + ViT & Grad-CAM++, MC dropout & Described in text only; no map shown & 99.27\% claimed; figures disagree & N/N/s/N \\
+Nomura 2025 \cite{nomura2025drowsiness} & Private NIR, 10 subj.; observer rating & Small CNN & Grad-CAM & Mainly around the eyes, also nose, mouth, forehead & 90.7\% $\pm$ 16.9, worst subject 47.3\% (LOSO) & P/N/Y/N \\
+Florez 2023 \cite{florez2023cnn} & NITYMED, 6 videos; eye state & Three CNN backbones & Grad-CAM & Used to choose a model; many maps off the eyes & 99.71\% (random frame split) & P/N/N/N \\
+Florez 2024 \cite{florez2024realtime} & NITYMED, 6 videos; eye state & DD-AI CNN + MAR rule & Grad-CAM + rule (combined) & Proposed CNN on the eyes in five images; yawn rule transparent & 99.88\% frame split; 96.55\% in-car demo & P/N/N/N \\
+Hassan 2025 \cite{hassan2025realtime} & MRL Eye, NTHU-DDD, CEW; eye state & ViT, Swin, CNNs & CAM on two images & Eyelid or eye area, which is what the label defines & 99.15\% (random image split) & P/N/N/N \\
+Albadawi 2023 \cite{albadawi2023realtime} & NTHU-DDD, 23 subj.; threshold-generated & RF, NN, SVM on EAR, MAR, head pose & Transparent features (intrinsic) & Alarm traceable to eyes, yawn, nod; importance not measured & 99\% (random 70/30 after oversampling) & Y/N/N/N \\
+Ersoy 2026 \cite{ersoy2026improving} & MRL Eye, Yawn, custom; eye, yawn state & Personal thresholds vs CNN & Rules (intrinsic) & Personal thresholds raise accuracy, remain readable & Eye state 93.2\% rules, 99.1\% CNN (random split) & Y/N/N/N \\
+\midrule
+Ghoddoosian 2019 \cite{ghoddoosian2019realistic}$^{\dagger}$ & UTA-RLDD, 60 subj.; KSS self-report & Blink features + HM-LSTM & None & Alert and drowsy separable; humans reach 57.8\% & 65.2\% video-level (subject-independent 5-fold) & --/N/Y/Y \\
+\bottomrule
+\multicolumn{7}{@{}l}{$^{\dagger}$Dataset paper with no explanation method; a baseline for comparison, excluded from the appraisal counts. Ersoy 2026 is a preprint.}
+\end{tabularx}
+\end{table*}

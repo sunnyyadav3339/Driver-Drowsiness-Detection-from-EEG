@@ -33,3 +33,27 @@ def load_sadt(path):
     y = mat["substate"].flatten().astype(np.int64)
     subj = mat["subindex"].flatten().astype(np.int64)
     return x, y, subj
+
+
+def find_cao(path=None):
+    """Folder holding the converted Cao et al. sessions (*.npz from convert_cao.py)."""
+    if path:
+        return path
+    for c in glob.glob("/kaggle/input/**/sessions", recursive=True):
+        if glob.glob(os.path.join(c, "*.npz")):
+            return c
+    raise FileNotFoundError("converted Cao sessions not found; pass --data")
+
+
+def load_cao(folder):
+    """Returns x (N, 30, 384) float32 and a DataFrame of per-trial metadata, sorted by session then onset time."""
+    import pandas as pd
+
+    xs, metas = [], []
+    for f in sorted(glob.glob(os.path.join(folder, "*.npz"))):
+        d = np.load(f, allow_pickle=True)
+        xs.append(d["x"])
+        metas.append(pd.DataFrame({k: d[k] for k in d.files if k != "x"}))
+    meta = pd.concat(metas, ignore_index=True)
+    order = np.lexsort((meta.onset_s.values, meta.session.values))
+    return np.concatenate(xs)[order], meta.iloc[order].reset_index(drop=True)

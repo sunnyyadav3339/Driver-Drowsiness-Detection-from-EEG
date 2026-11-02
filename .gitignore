@@ -14,3 +14,6 @@ dataset/*.mat
 Thumbs.db
 # Research: generated Kaggle kernels
 research/kaggle/build/
+
+# Per-window attribution maps from run_xai.py (about 12 MB each); regenerate with research/src/run_xai.py
+research/results/**/maps_*.npz

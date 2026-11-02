@@ -1,0 +1,61 @@
+\section{A Taxonomy of Explanation Methods}
+\label{sec:taxonomy}
+
+Fig.~\ref{fig:taxonomy} organises the methods along two axes: how the explanation is produced and what it refers to. Table~\ref{tab:taxonomy} places the reviewed studies in it. Of the 27 appraised studies, 17 rely on post-hoc methods, six are intrinsic, three combine the two, and one claims interpretability without showing any explanation.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig1_taxonomy}
+\caption{Taxonomy used in this review. The upper part groups methods by how the explanation is produced; the lower band lists what an explanation can refer to. EAR: eye aspect ratio; MAR: mouth aspect ratio; ICE: individual conditional expectation.}
+\label{fig:taxonomy}
+\end{figure*}
+
+\subsection{Intrinsic methods}
+Rule-based systems make every decision traceable. Beles \textit{et al.}~\cite{beles2024driver} fuse physiological and camera cues with fuzzy rules, and Ersoy \textit{et al.}~\cite{ersoy2026improving} calibrate eye and mouth thresholds to each driver. Transparent features work similarly: Albadawi \textit{et al.}~\cite{albadawi2023realtime} feed eye aspect ratio, mouth aspect ratio and head position to simple classifiers. Other studies read explanations from model internals, such as LSTM hidden states \cite{cui2021subject}, attention scores \cite{an2024attention} or the eigenvalues of a recurrent weight matrix \cite{gao2025idsrn}. Internal states are built in, but that does not establish that they explain the decision; attention in particular is often assumed to be an explanation without being tested as one.
+
+\subsection{Post-hoc, model-specific methods}
+Class activation mapping (CAM) \cite{zhou2016cam} weights the last convolutional feature maps by the class weights of a global-average-pooling network. Grad-CAM \cite{selvaraju2017gradcam} extends the idea to other architectures using gradients, and Grad-CAM++ \cite{chattopadhay2018gradcampp} uses higher-order gradient terms. This family dominates the vision studies. Layer-wise relevance propagation (LRP) \cite{bach2015lrp} passes the output score backwards layer by layer, and integrated gradients \cite{sundararajan2017axiomatic} accumulate gradients along a path from a baseline to the input. These produce finer-grained maps, and the integrated-gradients result depends on the chosen baseline.
+
+\subsection{Post-hoc, model-agnostic methods}
+SHAP \cite{lundberg2017shap} assigns each feature a Shapley value and, in the studies reviewed, is applied mostly to classical models on hand-crafted features. LIME \cite{ribeiro2016lime} fits a simple local surrogate, and occlusion \cite{zeiler2014visualizing} measures the score drop when part of the input is hidden. Partial dependence \cite{friedman2001greedy} and individual conditional expectation plots \cite{goldstein2015ice} show how predictions change with a feature, but they assume the feature varies independently of the others, which is doubtful for correlated physiological measures.
+
+\subsection{Beyond attribution}
+Three other forms appear rarely. McDonald \textit{et al.}~\cite{mcdonald2014steering} explain a model by inspecting example inputs from each cell of the confusion matrix. Counterfactual explanations \cite{wachter2017counterfactual}, the smallest change that would flip a decision, have been proposed for drowsiness alarms \cite{jha2025realtime} but not evaluated. Uncertainty estimates \cite{oise2026enhancing} complement an explanation but do not attribute a decision.
+
+\begin{table}[!t]
+\centering
+\caption{Placement of the Reviewed Studies in the Taxonomy}
+\label{tab:taxonomy}
+\footnotesize
+\begin{tabularx}{\columnwidth}{@{}L{0.33\columnwidth}Y@{}}
+\toprule
+\textbf{Method family} & \textbf{Studies} \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Intrinsic}} \\
+Rules, fuzzy logic & \cite{beles2024driver,ersoy2026improving} \\
+Transparent features & \cite{albadawi2023realtime} \\
+Model internals & \cite{cui2021subject,an2024attention,gao2025idsrn} \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Post-hoc, model-specific}} \\
+CAM family & \cite{cui2022eeg,cui2022compact,feng2025id3rsnet,saxena2026lowlight,rafy2026domain,oise2026enhancing,nomura2025drowsiness,florez2023cnn,hassan2025realtime} \\
+LRP, integrated gradients & \cite{seo2025driver,saxena2026lowlight} \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Post-hoc, model-agnostic}} \\
+SHAP & \cite{hasan2024validation,vitorino2023adversarial,puspasari2026predicting,zhou2021predicting,jha2025realtime} \\
+LIME, occlusion & \cite{saxena2026lowlight} \\
+Partial dependence, ICE & \cite{hasan2024validation} \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Combined}} \\
+Selection pipeline + SHAP & \cite{jiang2026eeg} \\
+Kernel weights + masking & \cite{zhou2026sedriven} \\
+Rule + Grad-CAM & \cite{florez2024realtime} \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Other}} \\
+Example inspection & \cite{mcdonald2014steering} \\
+Band correlation, t-SNE & \cite{zhang2024multimodal} \\
+Counterfactuals & \cite{jha2025realtime} \\
+Uncertainty & \cite{oise2026enhancing} \\
+Claimed, none shown & \cite{alarnaout2025exploiting} \\
+\bottomrule
+\end{tabularx}
+\end{table}

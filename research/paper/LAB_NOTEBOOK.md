@@ -119,3 +119,70 @@ Entry format: **date — title**, then *Goal*, *Setup* (run id, commit, config),
   3. With an alert-only window, AUC rises slightly (0.820 → 0.836) while balanced accuracy falls: ranking is kept and the threshold moves. A post-hoc alert-anchored threshold (quantile of the window's scores; `analyze_threshold.py`, [tables/phase2b_threshold.md](tables/phase2b_threshold.md)) did **not** fix it (best +3.1 at q = 0.8, p = 0.24).
   4. Methodological note: the Phase 2 numbers (F6) included the calibration epochs in scoring. On non-calibration epochs, train+test rand30 still gives +4.63 (p = 0.019), so F6 stands.
 - *Implication / decision:* the deployable version is **online (cumulative) alignment**: re-estimate the reference from every epoch seen so far. Over a real drive with drowsiness episodes, it gradually acquires a mixed reference. Testing that needs true time order and natural state proportions, which the 11-subject release lacks. → **Phase 1 (original Cao et al. dataset with timestamps and RT) is now the critical path.** The paper's angle: when does unsupervised alignment help streaming drowsiness detection, and what does the calibration window need to contain?
+
+## 2026-10-30 — Phase 1: converting the original Cao et al. 2019 dataset
+- *User choices:* the pre-processed full release (figshare 7666055, CC BY 4.0, 16.6 GB, 62 sessions / 27 subjects), downloaded by Kaggle directly; keep per-trial RT, trial timing, Cui-style labels, 30 ch × 128 Hz × 3 s windows; long RTs kept and flagged.
+- *Format (probe `eeg-phase1-probe`):* EEGLAB .set + .fdt, 30 channels in the same order as SADT-2022, 500 Hz, ~60 min per session (s01_051017m: 3,623 s, 199 trials). Events: 251/252 deviation onset (left/right), 253 response onset, 254 response offset.
+- *Converter:* `research/src/convert_cao.py`. Window = 3 s before deviation onset, resampled 500 → 128 Hz (resample_poly 32/125). RT = 253 − 251/252. global RT = mean of valid RTs in the preceding 90 s (inclusive). alert RT = 5th percentile of the session's valid RTs. Labels per Wei et al. 2018 / Cui et al. 2022 (1.5× / 2.5×).
+- *Issue found in test (`eeg-phase1-convert-test`):* 45/199 trials in s01 had RT = 0.016 s, which made alert RT 0.016 s and labelled 155 trials drowsy. The dataset tutorial (figshare file "Tutorial Data Analysis…", §III.6) says: "Reject trials with extremely short RT (RT < 0.3 sec)". Applied: such trials get `valid=False` and label −1, and are excluded from alert/global RT. The tutorial's trajectory-based "zigzag" rejection cannot be reproduced (no trajectory in the release); this is a limitation. Trials with RT > 10 s get `long_rt=True` and are kept.
+- *Test caveat:* s01 is not one of Cui's 11 subjects (best correlation with any SADT epoch 0.59), so the full run's SADT match check is what validates the converter.
+- *Full run:* `eeg-phase1-convert` launched on a T4 at the user's request (code sha256 `c086e2c20102…`).
+
+## 2026-10-30 — Phase 1 results: full Cao et al. dataset converted (`eeg-phase1-convert`)
+- *Run:* Kaggle T4, 746 s for all 62 sessions. Metadata in `research/results/eeg-phase1-convert/results/` (`sessions.csv`, `trials.csv`, `sadt_match.csv`). The windows themselves (`sessions/*.npz`, about 1.2 GB) stay on Kaggle as the output of kernel `sunnyydv602/eeg-phase1-convert`, which later kernels read as an input.
+- *Totals:* 62 sessions, 27 subjects, sessions 41–118 min; **27,192 trials**: 8,941 alert, 3,947 drowsy, about 13.5k transitional, 800 invalid (RT < 0.3 s), 711 with RT > 10 s. Per-session alert RT 0.45–0.97 s. Some sessions have almost no drowsy trials (s49_080522n: 0, s55_090930n: 0), so the class balance is far from SADT's 50/50.
+- *Validation against SADT-2022:* every SADT subject's epochs map almost entirely onto **one** converted session (share 94–100%):
+
+  | SADT subject | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
+  |---|---|---|---|---|---|---|---|---|---|---|---|
+  | Cao session | s01_061102n | s05_061101n | s22_090825n | s31_061103n | s35_070322n | s41_080520m | s42_070105n | s43_070205n | s44_070325n | s45_070307n | s53_090918n |
+
+  Our labels agree with SADT's on **98.7%** of matched epochs (correlation > 0.8, n = 1,130). The waveforms are not identical, though: median best correlation is 0.82 and only 3 epochs exceed 0.99. Random cross-trial pairs give about 0.2–0.6 (s01 test), so these are the same trials with a processing difference. Likely causes: a small window offset or a different resampling filter in Cui's pipeline.
+- *Conclusion:* the converter identifies the same sessions and reproduces the labels, but not Cui's exact samples. For the paper, SADT-2022 results and full-dataset results are reported as separate benchmarks.
+- *Open item:* estimate the time lag between matched windows (cross-correlation) to explain the 0.82.
+
+## 2026-10-30 — Phase 3 launched: full dataset with online alignment (`eeg-phase3-online`)
+- *Goal:* the deployable version of F6/F8. Align the held-out driver online, from the EEG seen so far, on real drive timelines.
+- *Code:* `research/src/run_phase3.py` (loader `load_cao` in `data.py`; the launcher gained `--kernel-sources`, so the kernel reads the `eeg-phase1-convert` output directly). Code sha256 `c020676f47a7…`, Kaggle T4.
+- *Protocol:* LOSO over 27 subjects (all of a subject's sessions held out). Training uses alert/drowsy trials of the other subjects, each session aligned with its whole session. Held-out sessions are aligned per session with: none / first30 (fixed calibration) / **cum** (all windows so far) / **slide100** (last 100) / all (transductive). References are label-free and include transitional trials. Scoring covers labelled trials from the 31st trial of each session on, identical for every variant. Primary metric: balanced accuracy (classes are unbalanced); also AUC.
+- *Models:* InterpretableCNN (running BN) + EA, 5 seeds; Riemannian LR + re-centring and band-power LR + baseline subtraction (deterministic, seed 0). The reference is the arithmetic mean of sample covariances for every family.
+- *Checks:* the online reference computations were unit-tested (cumulative, sliding and first-30 means equal the explicit means). A local smoke test on 4 sessions ran end to end.
+- *Estimated cost:* 45–60 min on the T4.
+
+## 2026-10-30 — Phase 3 results: online alignment on the full dataset (`eeg-phase3-online`)
+- *Run:* Kaggle T4, 3,708 s (62 min; estimate was 45–60). Outputs in `research/results/eeg-phase3-online/` (per_subject, predictions, summary, config, env, log). Analysis: `research/src/analyze_phase3.py` → [tables/phase3_online.md](tables/phase3_online.md) (+ `_per_subject.csv`, `_time.csv`). 27 subjects, 12,888 labelled trials; scored trials start at the 31st trial of each session.
+- *Main numbers (balanced accuracy %, subject AUC; Δ vs none, W/L over 27 subjects, Wilcoxon p):*
+
+  | model | none | first30 | cum | slide100 | all (transductive) |
+  |---|---|---|---|---|---|
+  | ICNN (5 seeds) | 73.59 / 0.828 | 52.55 / 0.533 (−21.0, 3/24, p<1e-4) | 75.26 / 0.802 (+1.7, 13/14, p = 0.66) | 71.76 / 0.765 (−1.8, p = 0.17) | **77.85** / 0.834 (**+4.3, 19/8, p = 0.019**) |
+  | Riemann LR | 64.92 / 0.739 | 57.27 (−7.7, p = 0.020) | 64.95 (+0.0) | 61.16 (−3.8) | 68.51 (+3.6, p = 0.077) |
+  | Band-power LR | 68.30 / 0.757 | **71.23** (+2.9, p = 0.30) | 67.17 (−1.1) | 64.45 (−3.9, p = 0.10) | 69.61 (+1.3) |
+
+- *Observations:*
+  1. **Whole-session alignment reproduces F6 on the full dataset:** ICNN +4.3 bal-acc points (p = 0.019), same size as on SADT-2022. But AUC does not change (0.828 → 0.834, p = 0.85): the gain is calibration (where the threshold falls for a new driver), not ranking.
+  2. **Online alignment (`cum`, `slide100`) did not help** in this run: `cum` +1.7 n.s., `slide100` −1.8 and lower AUC for every model. The time course table shows `cum` is weakest early in the session (Riemann: 56.0 vs 62.5 for none in trials 31–100) and catches up later.
+  3. **`first30` collapses ICNN to chance** (AUC 0.53; 95% of outputs saturated at < 0.02 or > 0.98, vs 19% for none).
+- *Diagnosis of 2–3 (4 sessions checked locally: s05, s35, s44, s45):* the pre-processed Cao EEG is rank-deficient (per-trial covariances have near-zero eigenvalues, consistent with ICA component removal), and the null directions change over the session. The whole-session mean covariance is well conditioned (cond 2e3–6e5), but the mean of the first 30 trials is not (cond 1e13–3e15; 1–3 eigenvalues < 1e-7 of the largest). `inv_sqrtm` only floors eigenvalues at 1e-10 × max, so R^{-1/2} amplifies those directions by ~1e5, and later trials, which carry real power there, blow up (aligned std 2.8e3–3.5e4 vs 1.0 with the whole-session reference). `cum` at trial 31 is exactly this first-30 mean, and `slide100` keeps re-estimating from 100 trials, so both inherit the problem early on. Band-power baseline subtraction inverts no matrix and is unaffected; there `first30` is the *best* variant (the first 30 trials are 69% alert, 2% drowsy, 28% unlabelled vs 30/15/54% for the rest), i.e. a clean alert baseline does help band power.
+- *Is F7 (SADT, alert-only reference collapses ICNN) the same artefact?* No. On SADT the first-30-alert reference is singular for subjects 3, 6, 11 only (cond 1e12–1e15), and those are exactly the subjects that did *not* collapse (0.76, 0.84, 0.73); the 8 well-conditioned subjects fell to a constant 0.50. F7 stands as a separate effect (there, training subjects were also aligned with alert-only windows).
+- *Conclusion:* the Phase 3 online result is **confounded by an unregularised whitener** and is not yet a test of online alignment. The transductive result (+4.3) is valid. Next: rerun with a shrinkage-regularised reference (R ← (1−α)R + α·tr(R)/C·I, α fixed in advance, applied to every reference including training), and log each reference's condition number.
+
+## 2026-11-02 — XAI case study launched for the review (`eeg-xai-case`)
+- *Goal:* quantitative evidence for the review's case study: are explanations of InterpretableCNN faithful, and does a window's decision depend on the rest of the session? Asked for by the user on a T4.
+- *Code:* `research/src/run_xai.py`. Same LOSO, seeds and recipe as Phase 0 on the 2,022-window subset, so accuracy should reproduce 77.93% (`icnn_batch`, whole-subject statistics) and 73.68% (`icnn_running`).
+- *Tests:* point and channel deletion against a random baseline for saliency, gradient x input, integrated gradients and the published CAM + CNN-Fixation tracing; model-randomisation sanity check; band and channel-group perturbation per true class; normalisation context (all, 30 random, alert only, drowsy only).
+- *Decided before seeing results:* peripheral channels = FP1, FP2, F7, F8, FT7, FT8, T3, T4, TP7, TP8, T5, T6, O1, OZ, O2; the other 15 are central. Bands: delta 1-4, theta 4-8, alpha 8-13, beta 13-30, gamma 30-50 Hz.
+- *Local smoke test:* 2 subjects, reduced epochs, ran end to end; frozen statistics reproduce whole-subject batch norm (assertion in the code).
+- *Estimated cost:* 20-40 min on the T4.
+- *Version 1 failed at once* (subject ids passed as numpy integers to a torch generator; only the `--subjects all` path, which the smoke test had not used). Fixed in `run_xai.py`, retested locally on all 11 subjects at reduced settings, and pushed as version 2. One fold had finished (subject 1, accuracy 83.0%, in line with Phase 0).
+- *Version 1 failed at once* (subject ids passed as numpy integers to a torch generator; only the `--subjects all` path, which the smoke test had not used). Fixed in `run_xai.py`, retested locally on all 11 subjects at reduced settings, and pushed as version 2. One fold had finished (subject 1, accuracy 83.0%, in line with Phase 0).
+
+## 2026-11-02 — XAI case study results (`eeg-xai-case`, version 2)
+- *Run:* Kaggle T4, 351 s for all 110 folds (estimate was 20-40 min; attribution is much cheaper than expected). Outputs in `research/results/eeg-xai-case/results/`; analysis `research/src/analyze_xai.py` -> [tables/xai_case.md](tables/xai_case.md).
+- *Check:* accuracy reproduces Phase 0 exactly: 77.93% / AUC 0.835 (whole-subject) and 73.68% / 0.818 (running).
+- *Context:* same windows and weights, statistics from alert windows only change 24.55% of predictions, predicted drowsy 45.59 -> 68.21%, map similarity 0.502. Drowsy only: 14.59%, 31.02%, 0.694. 30 random windows: 4.80%, acc 77.55%.
+- *Deletion (whole-subject, AUC; random 0.667 points, 0.707 channels):* tracing 0.542 / 0.561, saliency 0.580 / 0.641, gradient x input 0.185 / 0.501, IG 0.178 / 0.500. All beat random on at least 10 of 11 subjects (p <= 0.002). Point deletion for gradient x input is close to tautological in a nearly piecewise-linear network.
+- *Sanity (Spearman with randomised model):* saliency 0.13, tracing 0.17, gradient x input and IG 0.51. Methods strongest on deletion are weakest here.
+- *Stability across seeds:* tracing 0.56 (min 0.08), others 0.72-0.75.
+- *All-window use (whole-subject):* removing theta / alpha / delta lowers P(drowsy) by 0.24 / 0.17 / 0.09 (all 11 subjects, p = 0.001). Tracing puts 64.0% of alert relevance on peripheral channels vs 45.6% drowsy (p = 0.007), peaks F7 (alert), PZ and CPZ (drowsy).
+- *Did not go as expected:* zeroing peripheral channels barely changes P(alert) (-0.007, p = 0.58); removing beta does nothing significant (+0.008, p = 0.28); gamma removal lowers P(alert) slightly (-0.036, p = 0.001). So the published "alert = artefacts" reading is supported spatially by the maps but not confirmed by perturbation. Caveats: removal lowers energy, which may favour alert; EMG is broadband; averages can hide individual windows; no multiple-comparison correction. The review draft was reworded accordingly.
