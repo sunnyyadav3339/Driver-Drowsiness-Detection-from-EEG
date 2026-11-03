@@ -1,7 +1,7 @@
 \section{Challenges and Future Directions}
 \label{sec:challenges}
 
-\textit{Artefacts and shortcuts.} In the EEG studies we examined, authors repeatedly read alert decisions as muscle, eye and drift signals, and our all-window tests support this only in part (Section~\ref{sec:casestudy}). Future work should test whether a model survives artefact removal, a different sensor or a new site, and should state which signals it is meant to use. Comparing explanations with and without artefact removal would be a direct test.
+\textit{Artefacts and shortcuts.} In the EEG studies we examined, authors repeatedly read alert decisions as muscle, eye and drift signals, and our all-window tests give weak support on the 11-subject subset and clearer support on all 27 subjects (Section~\ref{sec:casestudy}). Future work should test whether a model survives artefact removal, a different sensor or a new site, and should state which signals it is meant to use. Comparing explanations with and without artefact removal would be a direct test.
 
 \textit{Better tests for each modality.} Deletion by zeroing pushes EEG out of its normal distribution, and baselines for integrated gradients are a design choice. Vision has a cheap test that none of the reviewed papers ran: mask the eyes and check whether accuracy holds, which would directly test claims of a physiological signal beyond eye closure \cite{nomura2025drowsiness}. Randomisation sanity checks \cite{adebayo2018sanity} are also cheap and were absent from every reviewed study. Our case study shows that deletion and sanity checks can rank methods in opposite order, so more than one test should be reported.
 

@@ -3,7 +3,7 @@
 
 This review examined interpretable and explainable drowsiness detection across modalities. On RQ1, post-hoc methods dominate: the CAM family in vision and single-channel EEG, and SHAP on hand-crafted features in cardiac and multimodal work. Intrinsic approaches exist but are less common.
 
-On RQ2, explanations often recover known signs of drowsiness, such as theta and alpha activity, eye closure and reduced steering activity. They also point to possible shortcuts: muscle and eye artefacts in EEG, a reading our all-window tests support only in part, and background regions in vision. In several studies, what the explanation shows follows from how the label was defined.
+On RQ2, explanations often recover known signs of drowsiness, such as theta and alpha activity, eye closure and reduced steering activity. They also point to possible shortcuts: muscle and eye artefacts in EEG, a reading our all-window tests support more clearly on all 27 subjects than on the 11-subject subset, and background regions in vision. In several studies, what the explanation shows follows from how the label was defined.
 
 On RQ3, testing is rare. Of the 27 detection studies we appraised, one tested faithfulness quantitatively, seven applied a partial check and 19 did not evaluate the explanation, while 11 clearly tested on unseen drivers. Our case study adds that a test protocol can decide whether a published interpretable model works at all when scored live, that changing only normalisation statistics can alter a quarter of its decisions, and that deletion and sanity checks can rank the same methods in opposite order.
 
