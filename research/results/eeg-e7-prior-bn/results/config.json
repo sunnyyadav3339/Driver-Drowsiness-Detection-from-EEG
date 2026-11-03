@@ -1,0 +1,18 @@
+{
+  "data": "/kaggle/input/notebooks/sunnyydv602/eeg-phase1-convert/results/sessions",
+  "out": "/kaggle/working/results",
+  "seeds": "0,1,2,3,4",
+  "subjects": "all",
+  "epoch_scale": 1.0,
+  "n_trials": 27192,
+  "primary": "prior30_bnema07 vs prior30, from the 31st trial",
+  "icnn_recipe": {
+    "opt": "adam",
+    "lr": 0.001,
+    "wd": 0.0,
+    "batch": 50,
+    "epochs": 11,
+    "n_val": 0,
+    "source": "Cui et al. 2022 recipe with running-stats BN (streaming-valid)"
+  }
+}

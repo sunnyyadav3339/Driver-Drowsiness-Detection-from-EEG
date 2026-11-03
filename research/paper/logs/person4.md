@@ -19,3 +19,15 @@
 - *Faithfulness weakens under alignment:* gradient x input point deletion AUC 0.635 vs random 0.671 (none: 0.511 vs 0.789), still 27/0 subjects. Random deletion also hurts more (0.671 vs 0.789), so the aligned model is more sensitive to input zeroing.
 - *Sanity worsens:* correlation with a randomised model rises, saliency 0.117 -> 0.366, gradient x input 0.503 -> 0.599, because a fixed whitener shapes the maps whatever the weights.
 - *Review paper impact:* on all 27 subjects unaligned, zeroing peripheral channels lowers P(alert) by 0.110 (p < 0.001) and gamma removal by 0.074 (p < 0.001). The review's 11-subject case study found -0.007 (p = 0.58) and -0.036. The artefact reading has more support on the full dataset, in our own conversion with natural class balance.
+
+## 2026-11-03 — Novelty search outcome
+- *Search:* team sheet of 28 papers (`novelty_search.csv`, Downloads). Read directly: Duan et al. 2025 (arXiv:2509.19403) full text, Gao & Lv 2026 (Frontiers) page, arXiv metadata for six others. The attached PDFs could not be read here (no longer in Downloads).
+- *Point 1 is not new:* Duan et al. Eq. 8: R_0 = R_train; R_i = (n_(i-1) R_(i-1) + w cov_i) / (n_(i-1) + w), n counting training plus processed trials. Same form as our prior. It is an arXiv preprint on MI and SSVEP, no drowsiness data, no XAI, no state-mix analysis.
+- *Decision:* do not claim prior-regularised alignment as a new method. Per the plan's decision table, the paper reproduces it under strict LOSO on driving data and leads with what is new: state mix on real drives, BN adaptation harming here, short-reference singularity, explanations under alignment.
+
+## 2026-11-03 — Team PDFs read (`papers ieee` folder; abstract and keyword-level, plus closer reading of one)
+- *Closest:* Li, ..., Wu 2026 (IEEE JBHI, backpropagation-free TTA): integrates online EA (online-updated target reference) and BN-adapt into all TTA methods, on driver-drowsiness regression (Driving, 15 subjects; SEED-VIG, 23). So "first online EA on drowsiness" cannot be claimed. It treats EA and BN-adapt as tools; a keyword search of the PDF finds no state-mix or short-reference conditioning analysis. It calls BN-adapt effective, against our E6 on classification with an unaligned model.
+- *Drowsiness, no alignment found:* domain generalisation via style mixing (77.26%, 11 subjects); manifold-level augmentation (best baseline F1 64.67%); SPARK black-box adaptation (SADT); EDJAN cross-dataset (83.3%, SADT to SEED-VIG). Useful for related work.
+- *Motor imagery (Euclidean-alignment style transfer, continual decoding, ReCIL):* background only.
+- *Not readable:* Hasan et al. comparative paper; its PDF text layer is garbled.
+- *Decision unchanged:* no new-method claim. State mix on real drives stays the main contribution. No paper here analyses it for drowsiness, but this is not an exhaustive search. E7 now matters more, since EA plus BN is the published combination.
