@@ -49,4 +49,4 @@ for f, t in txt.items():
     for g in re.findall(r"\\includegraphics(?:\[[^\]]*\])?\{([^}]*)\}", t):
         print("figure", g, "exists" if os.path.exists(os.path.join(R, "figures", g + ".pdf")) else "MISSING")
 print("approx. words:", sum(len(re.sub(r"\\[a-zA-Z]+|[{}$&]", " ", t).split()) for t in txt.values()))
-print("red TODO markers:", sum(t.count("\\todo{") for t in txt.values()) - 1)
+print("red TODO markers:", sum(t.count("\\todo{") for t in txt.values()))
