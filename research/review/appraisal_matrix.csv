@@ -9,6 +9,11 @@ A7,jiang2026eeg,A,2026,EEG,1,hybrid,no,partial,yes,no
 A8,zhou2026sedriven,A,2026,EEG,1,hybrid,yes,no,yes,no
 A9,cui2023towards,A,2023,EEG,0,methods-study,yes,faithfulness,yes,yes
 A10,gao2025idsrn,A,2025,EEG,1,intrinsic,not-shown,no,no,no
+A11,zhuang2024connectivity,A,2024,EEG,1,hybrid,yes,partial,yes,yes
+A12,wu2024driver,A,2024,EEG,1,post-hoc,yes,no,no,no
+A13,gao2025comprehensive,A,2025,EEG,1,intrinsic,not-shown,no,no,no
+A14,gao2024sftnet,A,2024,EEG,1,intrinsic,yes,partial,yes,yes
+A15,xu2026dynamic,A,2026,EEG,1,post-hoc,yes,no,stated,no
 B1,hasan2024validation,B,2024,EEG+EOG+ECG,1,post-hoc,yes,partial,yes,no
 B2,vitorino2023adversarial,B,2023,HRV,1,post-hoc,not-shown,partial,no,no
 B3,puspasari2026predicting,B,2026,HRV,1,post-hoc,yes,partial,yes,no
@@ -19,6 +24,10 @@ B7,beles2024driver,B,2024,EOG+vision,1,intrinsic,yes,no,no,no
 B8,zhang2024multimodal,B,2024,EEG+EOG,1,post-hoc,yes,no,yes,no
 B9,askari2026physiologically,B,2026,EEG+EMG+GSR,0,off-topic,yes,no,no,no
 B10,jha2025realtime,B,2025,Vision+steering,1,post-hoc,not-shown,no,no,no
+B11,zhu2025madfm,B,2025,Steering+vehicle,1,post-hoc,yes,partial,no,no
+B12,guan2025fatigue,B,2025,HRV+EDA+wrist+vehicle,1,post-hoc,yes,no,yes,no
+B13,theivadas2025dynamic,B,2025,EEG+ECG+vision+steering,1,hybrid,not-shown,partial,stated,no
+B14,georgiadis2026timeaware,B,2026,HRV+respiration+SpO2,1,intrinsic,yes,no,na,no
 C1,saxena2026lowlight,C,2026,Vision,1,post-hoc,yes,partial,stated,no
 C2,rafy2026domain,C,2026,Vision,1,post-hoc,yes,partial,stated,no
 C3,oise2026enhancing,C,2026,Vision,1,post-hoc,not-shown,no,stated,no
@@ -29,3 +38,9 @@ C7,hassan2025realtime,C,2025,Vision,1,post-hoc,yes,no,no,no
 C8,albadawi2023realtime,C,2023,Vision,1,intrinsic,yes,no,no,no
 C9,ersoy2026improving,C,2026,Vision,1,intrinsic,yes,no,no,no
 C10,ghoddoosian2019realistic,C,2019,Vision,0,dataset-paper,not-shown,no,yes,yes
+C11,zeynalpour2025multimethod,C,2025,Vision-keypoints,1,post-hoc,yes,faithfulness,yes,no
+C12,jewel2025lightweight,C,2025,Vision,1,post-hoc,yes,no,no,no
+C13,sasikala2026robust,C,2026,Vision-IR,1,post-hoc,not-shown,no,no,no
+C14,nayomi2026vision,C,2026,Vision-IR,0,same-results-as-C13,not-shown,no,no,no
+C15,hu2026human,C,2026,Vision-landmarks,1,intrinsic,yes,no,na,no
+C16,yan2026toward,C,2026,Vision-landmarks,1,intrinsic,yes,no,na,no

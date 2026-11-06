@@ -1,19 +1,25 @@
 \section{Challenges and Future Directions}
 \label{sec:challenges}
 
-\textit{Artefacts and shortcuts.} In the EEG studies we examined, authors repeatedly read alert decisions as muscle, eye and drift signals, and our all-window tests give weak support on the 11-subject subset and clearer support on all 27 subjects (Section~\ref{sec:casestudy}). Future work should test whether a model survives artefact removal, a different sensor or a new site, and should state which signals it is meant to use. Comparing explanations with and without artefact removal would be a direct test.
+\textit{Artefacts and shortcuts.} In the EEG studies we examined, authors repeatedly read alert decisions as muscle, eye and drift signals, and our all-window tests give weak support on the 11-subject subset and clearer support on all 27 subjects (Section~\ref{sec:casestudy}). Occlusion evidence for beta in alert decisions \cite{zhuang2024connectivity} and gamma-led attention at temporal sites \cite{gao2024sftnet} add to the question, since both are hard to separate from muscle activity without further tests. Future work should test whether a model survives artefact removal, a different sensor or a new site, and should state which signals it is meant to use. Comparing explanations with and without artefact removal would be a direct test.
 
-\textit{Better tests for each modality.} Deletion by zeroing pushes EEG out of its normal distribution, and baselines for integrated gradients are a design choice. Vision has a cheap test that none of the reviewed papers ran: mask the eyes and check whether accuracy holds, which would directly test claims of a physiological signal beyond eye closure \cite{nomura2025drowsiness}. Randomisation sanity checks \cite{adebayo2018sanity} are also cheap and were absent from every reviewed study. Our case study shows that deletion and sanity checks can rank methods in opposite order, so more than one test should be reported.
+\textit{Testing attention and other built-in explanations.} Attention and learned graphs are now a common interpretability claim in recent EEG work \cite{an2024attention,zhuang2024connectivity,gao2024sftnet,xu2026dynamic}, and the one direct conflict we found \cite{gao2024sftnet} shows why they should not be reported as importance without a test. Occluding the attended bands or channels in the original model would answer this more directly than retraining on single bands.
 
-\textit{Stability across drivers.} A useful explanation should hold on drivers the model has not seen. Most studies explain a few correctly classified samples. Few report explanation results across all subjects or for errors, and the robustness of explanations under perturbation is untested \cite{vitorino2023adversarial}.
+\textit{Better tests for each modality.} Deletion by zeroing pushes EEG out of its normal distribution, zeroing keypoints creates unrealistic poses \cite{zeynalpour2025multimethod}, and baselines for integrated gradients are a design choice. Vision has a cheap test that none of the reviewed papers ran: mask the eyes and check whether accuracy holds, which would directly test claims of a physiological signal beyond eye closure \cite{nomura2025drowsiness}. Randomisation sanity checks \cite{adebayo2018sanity} are also cheap and were absent from every reviewed study. Our case study and the fidelity comparison of Zeynalpour \textit{et al.}~\cite{zeynalpour2025multimethod} both show that methods rank differently on different tests, so more than one test should be reported.
 
-\textit{Attribution for raw cardiac and vehicle signals.} We found no attribution on raw ECG or steering signals in the reviewed set. Redundant HRV features complicate SHAP, so grouping correlated features, or removing them before explanation, should be standard.
+\textit{Stability across drivers.} A useful explanation should hold on drivers the model has not seen. Most studies explain a few correctly classified samples, or class averages \cite{gao2024sftnet,wu2024driver}. Few report explanation results across all subjects or for errors, and the robustness of explanations under perturbation is untested \cite{vitorino2023adversarial}.
 
-\textit{Multimodal attribution.} Fusion models should report how much each modality contributes, in a way that does not simply reward the modality with more features.
+\textit{Attribution for raw cardiac and vehicle signals.} We found no attribution on raw ECG or steering signals in the reviewed set. Redundant HRV features complicate SHAP, so grouping correlated features, or removing them before explanation, should be standard. Vehicle-only explanation is promising but has not yet been shown on unseen drivers \cite{zhu2025madfm}.
 
-\textit{Transparent models as a real alternative.} Following Rudin \cite{rudin2019stop}, rule-based and personalised threshold systems deserve serious evaluation. Personalising thresholds improved eye and yawn classification by 1.3--1.5 points in one preprint, narrowing part of the gap to a CNN \cite{ersoy2026improving}. Transparent systems still need valid labels and quantitative tests on real drowsiness.
+\textit{Multimodal attribution.} Fusion models should report how much each modality contributes, in a way that does not simply reward the modality with more features. Attention over modalities is a natural display \cite{theivadas2025dynamic}, but no verifiable study yet tests it, and modality ablation has not been connected to SHAP rankings \cite{guan2025fatigue}.
 
-\textit{People and deployment.} None of the reviewed studies shows, with data, that explanations improve driver or expert understanding or trust. One paper reports a gain in trust without describing a user study \cite{jha2025realtime}. Counterfactual advice also needs care in this domain, because telling a driver to blink less in order to avoid an alarm could teach them to mask genuine drowsiness. Running an explanation on embedded hardware adds latency \cite{rafy2026domain}, and several authors note that demographic coverage is thin or unreported \cite{rafy2026domain,oise2026enhancing}. Drowsiness data are also sensitive personal and physiological information, as Ali \textit{et al.} discuss \cite{ali2026intelligent}.
+\textit{Transparent models as a real alternative.} Following Rudin \cite{rudin2019stop}, rule-based and personalised threshold systems deserve serious evaluation. Personalising thresholds improved eye and yawn classification by 1.3--1.5 points in one preprint, narrowing part of the gap to a CNN \cite{ersoy2026improving}. Interpretability constraints on fuzzy sets \cite{yan2026toward} make readability checkable, and could be applied to fuzzy classifiers whose rules are currently unreadable \cite{gao2025comprehensive}. Ontologies add traceable reasoning \cite{georgiadis2026timeaware}. All of these still need valid labels and quantitative tests on real drowsiness, because no reviewed study offers both a readable decision and a verified detection result on unseen drivers.
+
+\textit{Explanations in the control loop.} Once a fatigue estimate sets steering authority \cite{hu2026human,yan2026toward}, an error changes the vehicle's behaviour and not only an alarm. This strengthens the case for readable estimators, but it also raises the bar, because an unvalidated estimate cannot be made safe by being readable. Control studies should validate the estimator separately, on more than a few drivers, and report how the controller behaves when the estimate is wrong.
+
+\textit{Evidence quality and provenance.} Some of the literature cannot be used as evidence at all. We found papers that report no dataset \cite{jha2025realtime}, whose figures disagree with their headline metrics \cite{oise2026enhancing}, whose reported features are not among the described signals \cite{theivadas2025dynamic}, or that report identical results tables under different author lists and no named dataset \cite{sasikala2026robust,nayomi2026vision}. Reviews that only count XAI use would count all of these. Screening for data provenance and duplicated results should precede any count.
+
+\textit{People and deployment.} None of the reviewed studies shows, with data, that explanations improve driver or expert understanding or trust. One paper reports a gain in trust without describing a user study \cite{jha2025realtime}. Counterfactual advice also needs care in this domain, because telling a driver to blink less in order to avoid an alarm could teach them to mask genuine drowsiness. Running an explanation on embedded hardware adds latency \cite{rafy2026domain}, and several authors note that demographic coverage is thin or unreported \cite{rafy2026domain,oise2026enhancing,zhu2025madfm,guan2025fatigue}. Drowsiness data are also sensitive personal and physiological information, as Ali \textit{et al.} discuss \cite{ali2026intelligent}.
 
 \subsection{Reporting checklist}
 Table~\ref{tab:checklist} lists what we suggest future studies report. Most items cost little, and several could be added to an existing study in a day.
@@ -27,18 +33,21 @@ Table~\ref{tab:checklist} lists what we suggest future studies report. Most item
 \toprule
 \textbf{\#} & \textbf{Item} \\
 \midrule
-1 & Show actual explanation output, including misclassified samples and worst-performing subjects, and test claims drawn from selected samples across all windows. \\
-2 & State the mechanism: intrinsic, post-hoc model-specific or post-hoc model-agnostic. \\
-3 & Test faithfulness against a random baseline (for example deletion or ROAR) and run a sanity check; report more than one test, since they can disagree. \\
-4 & Report results on unseen drivers, with splits grouped by person, and give per-subject results. \\
-5 & State whether inference needs other samples from the test subject, such as batch normalisation over a session. \\
-6 & Fix training length without using test-fold accuracy to choose the epoch. \\
-7 & Define the label, and state whether it is derived from any input signal. \\
-8 & Describe artefact handling and test its effect on the explanation. \\
-9 & Compare explanations with known physiology and say where they disagree. \\
-10 & Report explanation stability across folds and subjects. \\
-11 & For multimodal or correlated inputs, report contribution in a way that accounts for feature count and redundancy. \\
-12 & Share code and, where possible, data. \\
+1 & Name the dataset, subject count and labelling procedure, and confirm that every reported feature exists in the data. \\
+2 & Show actual explanation output, including misclassified samples and worst-performing subjects, and test claims drawn from selected samples across all windows. \\
+3 & State the mechanism: intrinsic, post-hoc model-specific or post-hoc model-agnostic, and the exact explainer used. \\
+4 & Test faithfulness against a random baseline (for example deletion, ROAR or fidelity) and run a sanity check; report more than one test, since they can disagree. \\
+5 & Test attention or learned structure before reporting it as importance. \\
+6 & Report results on unseen drivers, with splits grouped by person, and give per-subject results. \\
+7 & State whether inference needs other samples from the test subject, such as batch normalisation over a session. \\
+8 & Keep feature selection, including selection by SHAP, inside training folds, and fix training length without using test-fold accuracy to choose the epoch. \\
+9 & Define the label, and state whether it derives from any input signal, from a recording session or from acted behaviour. \\
+10 & Describe artefact handling and test its effect on the explanation. \\
+11 & Compare explanations with known physiology, say where they disagree, and keep claims within what the sensor layout can resolve. \\
+12 & Report explanation stability across folds and subjects. \\
+13 & For multimodal or correlated inputs, report contribution in a way that accounts for feature count and redundancy. \\
+14 & For rule systems, map rules to named signals, and validate the output against an independent drowsiness measure. \\
+15 & Share code and, where possible, data. \\
 \bottomrule
 \end{tabularx}
 \end{table}

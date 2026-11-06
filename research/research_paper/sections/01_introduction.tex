@@ -1,0 +1,15 @@
+\section{Introduction}
+\IEEEPARstart{E}{EG} models for drowsiness detection lose accuracy on drivers they have not seen, and a vehicle cannot ask each new driver for a labelled calibration session. Euclidean alignment (EA) \cite{he2020transfer} reduces this gap without labels by whitening each person's EEG with their own mean covariance. The difficulty is that this mean normally needs the whole session, which does not exist yet during a drive.
+
+Recent work therefore updates the reference online. Duan \textit{et al.}~\cite{duan2025online} blend a training reference with incoming trials for motor imagery and SSVEP, and Li \textit{et al.}~\cite{li2026backprop} include online EA and batch-norm adaptation in test-time methods evaluated on drowsiness regression. We do not propose a new alignment method. We ask a question specific to drowsiness that we did not find addressed in the literature we searched: \textit{when does online alignment help during a real drive, and why?}
+
+Drowsiness makes this question distinctive. In motor imagery, classes alternate quickly, so a short reference tends to contain all of them. In a drive, the state changes slowly, so a reference early in a session may contain almost only alert windows. Gao and Lv \cite{gao2026early} freeze an early reference to keep late fatigue out of it. Our earlier experiments on the 11-subject subset suggested the opposite: the gain from alignment was largest for mixed-state references.
+
+We study this on all 27 drivers and 62 sessions of the Cao \textit{et al.} dataset \cite{cao2019multichannel}, in time order, under leave-one-subject-out (LOSO) testing. Our contributions are:
+\begin{enumerate}
+\item an exploratory analysis showing, on real drives, that the gain from online alignment varies with the state mix seen so far;
+\item evidence that a running reference holds up late in a drive where a frozen early one does not;
+\item a diagnosis of why short references fail on this data, and how shrinkage or a population prior prevents it;
+\item evidence that updating batch-norm statistics during a drive can severely harm a model that decides from pooled activations; and
+\item tests of how alignment changes what the model relies on and how well attributions hold up.
+\end{enumerate}

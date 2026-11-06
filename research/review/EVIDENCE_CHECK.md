@@ -88,3 +88,29 @@ Zeiler and Fergus 2014 was later confirmed (DOI 10.1007/978-3-319-10590-1_53). N
 - **Read only from search summaries, not full text:** Fadhel et al. 2026 and Hassan et al. 2026 (the two multimodal surveys cited in the introduction). Someone should confirm how they treat explainability.
 - **Case-study attribution tests added** (`eeg-xai-case`): the draft's wording that EEG models "recognise alertness from artefacts" was changed to the authors' reading, because all-window perturbation only partly supports it.
 - **Before submitting:** the paper now states that code and per-subject results are on GitHub. That is only true after `research/` is pushed.
+
+# Second check: IEEE additions (2026-11-05)
+
+Source: team Google Doc tabs A, B, C (A11-A15, B11-B14, C11-C16, R1), against the 16 PDFs in `papers (1).zip`. Crossref confirmed every new DOI, title and page range, including the IEEE Access pages that the doc left open (B12 83815-83827, B14 70486-70509). Counts are in [appraisal_matrix.csv](appraisal_matrix.csv): 41 counted studies.
+
+| Check (n = 41) | Yes | Partial or stated | No, unclear or n/a |
+|---|---|---|---|
+| Agrees with physiology | 32 | - | 9 |
+| Tested on unseen drivers | 15 | 5 | 21 (3 are rule systems with no detection test) |
+| Explanation evaluated | 2 (A4, C11) | 11 | 28 |
+| Code public | 5 | - | 36 |
+
+Types: 24 post-hoc, 11 intrinsic, 5 combined, 1 claimed only. Fig. 3 medians: 97.06% (n = 17) and 77.16% (n = 15). B13 and C13/C14 are left out of Fig. 3 because their splits cannot be verified. A11 is plotted at 70.5% (all bands), not the 72.6% theta-only result, which was chosen after seeing the bands.
+
+## Confirmed in the PDFs
+- A13's tables do not extract as text, so the page was rendered and read: 83.84 and 80.06 confirmed. Precision, recall and F1 are equal within every row of both tables.
+- A14: band results, "does not significantly improve" for attention, delta conflict stated by the authors, LOSO 0.853 with the 21 vs 23 subject inconsistency.
+- A15: 0.891 is reported under the within-subjects experiment; LOSO is described, and we found no separate LOSO result.
+- A12 90/10 split, B11 5-fold plus 7:3 split, B12 timed sessions and tablet movie, C11 18/2 split with explanations on correct predictions only, C15 three drivers.
+
+## Corrections to the team doc
+1. **C13/C14 "same reference ordering" is wrong.** The reference lists differ (ratio 0.29, different first reference). What is verified: identical results tables at all three ratios, shared runs of 100+ words including equations, word-sequence similarity 0.59, no named dataset, different authors. The paper states only these facts and makes no allegation.
+2. **B13 segment-count "impossible" is not used.** The paper's windows overlap, so the arithmetic is not decisive. Stronger facts used instead: skin conductance is listed as a top feature, but none of the three datasets as the paper describes them records it; SIM-DROWSY is cited as [26], while the printed reference list ends at [22]. Also not used: "NTHU-DDD has no PERCLOS annotations", because PERCLOS can be derived from its eye labels.
+3. **A14 and EMG:** the paper does not discuss EMG. The review's muscle-artefact remark is ours and is worded as a possibility.
+4. **B11 leakage:** the paper describes no nesting, which is what the review says. It does not explicitly state that selection used test folds.
+5. **A15 and SEED-VIG:** the review says "temporal and posterior" sites, following the dataset description.

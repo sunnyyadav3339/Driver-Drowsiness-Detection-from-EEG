@@ -1,0 +1,44 @@
+% Research paper draft. Compile on Overleaf: pdfLaTeX, then BibTeX, then pdfLaTeX twice.
+\documentclass[journal]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figures/}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+% Visible reminders for the team. Search for \todo before submitting.
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+
+\begin{document}
+
+\title{When Does Online Alignment Help EEG Drowsiness Detection? State Mix, Reference Stability and Explanations on Real Drives}
+
+\author{Sunny Yadav, Akshay \todo{surname}, Aryan \todo{surname}, and Prachi \todo{surname}%
+\thanks{The authors are with the Indian Institute of Technology Roorkee, India. \todo{department, supervisor, e-mail}}}
+
+\maketitle
+
+\input{sections/00_abstract}
+\input{sections/01_introduction}
+\input{sections/02_related}
+\input{sections/03_methods}
+\input{sections/04_results}
+\input{sections/05_discussion}
+
+\section*{Acknowledgment}
+\todo{Thank the supervisor and TA.}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

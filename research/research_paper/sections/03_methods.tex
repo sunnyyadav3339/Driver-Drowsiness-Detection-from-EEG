@@ -1,0 +1,26 @@
+\section{Data and Methods}
+\label{sec:methods}
+
+\subsection{Data and labels}
+The Cao \textit{et al.} dataset \cite{cao2019multichannel} contains 62 sessions from 27 subjects performing a 90-minute lane-keeping task in a virtual-reality simulator, with random lane departures. We used the pre-processed 30-channel release. Each trial is the 3 s before a deviation onset, resampled to 128 Hz, kept in time order. Reaction time (RT) defines the labels, following Cui \textit{et al.}~\cite{cui2022eeg}: with alert RT as the 5th percentile of a session's valid RTs, a trial is alert if its RT and the mean RT of the preceding 90 s are both below 1.5 times alert RT, drowsy if both exceed 2.5 times, and unlabelled otherwise. Trials with RT below 0.3 s were rejected as artefacts, following the dataset's tutorial. This gave 27{,}192 trials: 8{,}941 alert and 3{,}947 drowsy, with the rest unlabelled or invalid. Unlike studies that keep one session per subject, we use every session and the natural class balance.
+
+\subsection{Protocol}
+All experiments use LOSO over 27 subjects and five seeds, with InterpretableCNN \cite{cui2022eeg} trained for a fixed 11 epochs (Adam, learning rate 0.001, batch 50), so no test data select the training length. Models use running batch-norm statistics, so a window can be scored alone. Training uses the labelled trials of the other subjects. Unless stated, scoring covers labelled trials from the 31st of each session, the same trials for every method. The primary metric is balanced accuracy, reported with AUC. Comparisons use two-sided Wilcoxon signed-rank tests across subjects, on per-subject means over seeds.
+
+\subsection{Alignment}
+Training subjects are whitened per session with their whole-session reference, which is available offline. A held-out window $x$ is transformed to $R^{-1/2}x$, with $R$ a mean of sample covariances. We compare a fixed reference from the first 30 windows; a cumulative reference of all windows so far; the last 100 windows; and the whole session, which is not available live but serves as a reference point. All references are label-free and causal, except the whole-session one.
+
+Two forms of regularisation are tested. \textit{Shrinkage} replaces every reference, in training too, with $(1-\alpha)R + \alpha\,\mathrm{tr}(R)/C \cdot I$. We report $\alpha = 0.1$, chosen by inspecting seed 0 of the same test subjects from 0.01, 0.05, 0.1 and 0.2; on that seed, cumulative alignment ranged from 75.34\% to 76.02\% across these values, so the choice adds little tuning gain. The \textit{population prior} uses
+\begin{equation}
+R_t = (n\,\hat{R}_t + \kappa\,R_{\mathrm{pop}})/(n + \kappa),
+\end{equation}
+where $\hat{R}_t$ is the session's running mean, $n$ the windows seen so far, and $R_{\mathrm{pop}}$ the mean covariance of the training subjects, recomputed in each fold. This has essentially the same form as Duan \textit{et al.}~\cite{duan2025online}. We fixed $\kappa = 30$ against no alignment as the primary test before seeing results, with $\kappa = 10$ and 100 as sensitivity checks, and $R_{\mathrm{pop}}$ alone as a control that uses no data from the driver.
+
+\subsection{Batch-norm adaptation}
+We tested online updates of the statistics of the batch-norm layer, causally, without alignment and on top of it: a blend of training statistics and the session so far, with weight 10, 30 or 100; and an exponential moving average with weight 0.1 or 0.7 on the current trial, the latter being the setting of Duan \textit{et al.}~\cite{duan2025online}, whose self-supervised loss we did not reproduce. The prespecified tests were prior alignment against blended adaptation with weight 30 and, separately, prior alignment with and without the 0.7 update. These are our own implementations.
+
+\subsection{State-mix analysis}
+Each scored trial is assigned the share of drowsy trials among labelled trials so far in its session, and placed in one of five bins. Labels are used only for this analysis. Gain is balanced accuracy minus that of no alignment, paired per subject, counting a subject in a bin only if both classes occur there. This analysis was not prespecified as a primary test.
+
+\subsection{Explanation tests}
+We compared unaligned and prior-aligned models on saliency and gradient$\times$input, computed with respect to the raw input through the fixed per-window whitener so channels remain comparable. Tests were point and channel deletion against a random baseline; a sanity check \cite{adebayo2018sanity} against a re-initialised model; and removal of each frequency band and of the 15 peripheral or 15 central channels, with six prior-versus-none comparisons fixed in advance and Holm-corrected.

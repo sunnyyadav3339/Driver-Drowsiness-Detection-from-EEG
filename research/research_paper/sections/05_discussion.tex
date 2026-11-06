@@ -1,0 +1,13 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\textit{What the state-mix pattern suggests.} A re-centring point between two states may let a boundary learned on other drivers fall in the right place, which would explain why references dominated by one state gain little. If so, this differs from the reasoning behind frozen early references \cite{gao2026early}, where later fatigue is treated as contamination. The two approaches use different features and labels, so this is a point of contrast and not a refutation. It would also explain why the gain is calibration, not ranking. Because share and time are entangled, this interpretation remains a hypothesis.
+
+\textit{Implications.} First, on rank-deficient data, an unregularised short reference can fail severely without warning, so condition numbers should be checked. Second, an adaptive method should not be assumed to help. Batch-norm updates are common in recent work \cite{wimpff2023calibration,li2026backprop,duan2025online}, while Jang \textit{et al.}~\cite{jang2025calibration} keep pretrained statistics, which is consistent with our result. A slowly changing target state differs from rapidly alternating classes, and statistics that follow it may absorb the signal. Third, an accuracy gain can come with weaker explanations, so the two should be reported together.
+
+\textit{Limitations.} This work covers one dataset, one simulator task and one main model, with reaction-time labels. The primary gain depends on a few drivers, and AUC does not improve. The state-mix and time-course analyses are exploratory. Our batch-norm methods are our own implementations and omit the self-supervised stage of Duan \textit{et al.}, and they were tested on an architecture especially exposed to this effect, so they do not contradict results on other models or tasks. The aligned model was also trained on aligned sessions, whereas unaligned adaptation used a model trained without per-session statistics. Finally, our novelty search covered about 30 papers and was not exhaustive.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Online alignment can recover the whole-session gain for a new driver without labels on this model and dataset, but only under specific conditions. Short references must be regularised, the gain arrives after an early period and appears to depend on the mix of states seen so far, and batch-norm updates can undo it. Future work should separate state mix from time on task, test other architectures and datasets, and design references that track whether both states have been seen.

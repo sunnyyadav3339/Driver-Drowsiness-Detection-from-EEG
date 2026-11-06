@@ -47,9 +47,9 @@ def taxonomy():
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
     box(ax, 0.24, 0.90, 0.52, 0.09, "Interpretable and explainable drowsiness detection", BLUE, BLUE, "#ffffff", "bold", 7)
     branches = [
-        (0.015, 0.215, "Intrinsic (by design)", ["Rules, fuzzy logic,\nthresholds", "Transparent features\n(EAR, MAR, band power)", "Model internals\n(LSTM states, attention)"]),
-        (0.255, 0.215, "Post-hoc, model-specific", ["CAM, Grad-CAM,\nGrad-CAM++", "LRP, DeepLIFT,\nintegrated gradients", "Saliency, guided\nbackpropagation"]),
-        (0.495, 0.215, "Post-hoc, model-agnostic", ["SHAP", "LIME, occlusion,\nfeature masking", "Partial dependence,\nICE"]),
+        (0.015, 0.215, "Intrinsic (by design)", ["Rules, fuzzy logic,\nontologies, thresholds", "Transparent features\n(EAR, MAR, band power)", "Model internals (LSTM\nstates, attention, graphs)"]),
+        (0.255, 0.215, "Post-hoc, model-specific", ["CAM, Grad-CAM,\nGrad-CAM++, LayerCAM", "LRP, DeepLIFT,\nintegrated gradients", "Saliency, guided\nbackpropagation"]),
+        (0.495, 0.215, "Post-hoc, model-agnostic", ["SHAP", "LIME, occlusion, feature\nmasking, PGM-Explainer", "Partial dependence,\nICE"]),
         (0.735, 0.25, "Beyond attribution", ["Example-based\ninspection", "Counterfactuals", "Uncertainty\nestimates"]),
     ]
     for x, w, title, items in branches:
@@ -60,7 +60,7 @@ def taxonomy():
             box(ax, x, 0.575 - i * 0.135, w, 0.115, item)
         ax.plot([x + w / 2, x + w / 2], [0.72, 0.69], color=MUTED, lw=0.8)
     ax.text(0.015, 0.215, "What the explanation refers to", color=MUTED, fontsize=7.2, fontweight="bold", va="center")
-    targets = ["Spatial\n(channels, regions)", "Spectral\n(frequency bands)", "Temporal\n(time segments)", "Facial region\n(eyes, mouth, nose)", "Features\n(HRV, blink, steering)", "Decision logic\n(rules)"]
+    targets = ["Spatial (channels,\nregions, connections)", "Spectral\n(frequency bands)", "Temporal\n(time segments)", "Face and body\n(eyes, keypoints)", "Features\n(HRV, blink, steering)", "Decision logic\n(rules)"]
     w = 0.97 / 6 - 0.008
     for i, t in enumerate(targets):
         box(ax, 0.015 + i * (w + 0.0095), 0.045, w, 0.135, t, "#f4f3f0", GRID, INK, "normal", 5.5)
@@ -68,7 +68,7 @@ def taxonomy():
 
 
 def appraisal():
-    """Fig. 2: appraisal checks over the 27 counted studies."""
+    """Fig. 2: appraisal checks over the counted studies; rule systems with no detection test (subject_independent = na) fall in the third bucket."""
     rows = [r for r in csv.DictReader(open(os.path.join(HERE, "..", "appraisal_matrix.csv"))) if r["counted"] == "1"]
     n = len(rows)
     def count(field, full, part=()):
@@ -90,12 +90,12 @@ def appraisal():
                 ax.text(left + v / 2, y, str(v), ha="center", va="center", color=tc, fontsize=5.5 if v == 1 else 7.5, fontweight="bold")
             left += v
     ax.set_yticks(range(len(data))); ax.set_yticklabels([d[0] for d in reversed(data)], color=INK)
-    ax.set_xlim(0, n); ax.set_xticks([0, 9, 18, 27]); ax.set_xlabel(f"Studies (n = {n})")
+    ax.set_xlim(0, n); ax.set_xticks([0, 10, 20, 30, n]); ax.set_xlabel(f"Studies (n = {n})")
     for s in ("top", "right", "left"):
         ax.spines[s].set_visible(False)
     ax.tick_params(axis="y", length=0)
     handles = [plt.Rectangle((0, 0), 1, 1, color=c) for c in colors]
-    ax.legend(handles, ["Yes", "Partial or stated, not verifiable", "No, not shown or unclear"], ncol=1, frameon=False, fontsize=6.6,
+    ax.legend(handles, ["Yes", "Partial or stated, not verifiable", "No, not shown, unclear or not applicable"], ncol=1, frameon=False, fontsize=6.6,
               loc="lower center", bbox_to_anchor=(0.2, 1.0), handlelength=1, handleheight=1, borderaxespad=0.2)
     save(fig, "fig2_appraisal")
     return data
@@ -103,10 +103,12 @@ def appraisal():
 
 def validation():
     """Fig. 3: reported accuracy by test scheme; lines join results from the same study."""
-    mixed = {"A5": 96.9, "A8": 97.47, "A10": 97.06, "B4": 86.05, "B6": 79.0, "C2": 97.2, "C5": 99.71, "C6": 99.88, "C7": 99.15, "C8": 99.0, "C9": 99.1}
-    unseen = {"A1": 78.35, "A2": 73.22, "A3": 72.97, "A4": 77.16, "A5": 50.8, "A7": 74.54, "A8": 85.43, "B1": 80.1, "B3": 77.0, "C2": 92.4, "C4": 90.7, "C10": 65.2}
-    jitter = {"A5": 0, "A8": 0, "C2": 0, "A10": -0.13, "C5": -0.12, "C6": 0.12, "C7": 0.13, "C8": -0.07, "C9": 0.07, "B4": 0, "B6": 0,
-              "A1": 0.1, "A2": -0.1, "A3": 0.11, "A4": -0.11, "A7": -0.05, "B1": -0.08, "B3": 0.04, "C4": 0.06, "C10": 0}
+    mixed = {"A5": 96.9, "A8": 97.47, "A10": 97.06, "A12": 94.1, "A13": 83.84, "A14": 87.13, "A15": 89.1, "B4": 86.05, "B6": 79.0, "B11": 93.71,
+             "C2": 97.2, "C5": 99.71, "C6": 99.88, "C7": 99.15, "C8": 99.0, "C9": 99.1, "C12": 99.28}
+    unseen = {"A1": 78.35, "A2": 73.22, "A3": 72.97, "A4": 77.16, "A5": 50.8, "A7": 74.54, "A8": 85.43, "A11": 70.5, "A14": 85.3, "B1": 80.1, "B3": 77.0,
+              "B12": 94.28, "C2": 92.4, "C4": 90.7, "C10": 65.2}
+    jitter = {"A5": 0, "A8": 0, "C2": 0, "A14": 0, "A10": -0.13, "C5": -0.12, "C6": 0.12, "C7": 0.13, "C8": -0.07, "C9": 0.07, "C12": -0.15, "A12": 0.08, "A13": -0.06,
+              "A15": 0.07, "B4": 0.05, "B6": 0, "B11": -0.08, "A1": 0.1, "A2": -0.1, "A3": 0.11, "A4": -0.11, "A7": -0.05, "A11": 0.06, "B1": -0.08, "B3": 0.04, "B12": 0, "C4": 0.06, "C10": 0}
     fig, ax = plt.subplots(figsize=(3.45, 2.5))
     for k in set(mixed) & set(unseen):
         ax.plot([0, 1], [mixed[k], unseen[k]], color=ORANGE, lw=1.5, zorder=2, solid_capstyle="round")
@@ -117,7 +119,7 @@ def validation():
         med = statistics.median(d.values())
         ax.plot([x - 0.25, x + 0.25], [med, med], color=INK, lw=1.2, zorder=1)
         ax.text(x + (-0.28 if x == 0 else 0.28), med, f"median\n{med:.1f}%", ha="right" if x == 0 else "left", va="center", fontsize=6.6, color=INK)
-    for k, name, dy in (("A5", "Seo", -0.5), ("A8", "Zhou", -0.2), ("C2", "Rafy", 1.0)):
+    for k, name, dy in (("A5", "Seo", -0.5), ("A8", "Zhou", 1.6), ("A14", "Gao", -1.6), ("C2", "Rafy", 0.0)):
         ax.text(1.05, unseen[k] + dy, name, fontsize=6.6, color=MUTED, va="center", ha="left")
     ax.set_xlim(-0.72, 1.72); ax.set_ylim(45, 102)
     ax.set_xticks([0, 1]); ax.set_xticklabels(["Random or\nwithin-subject split", "Tested on\nunseen drivers"], color=INK)

@@ -1,9 +1,13 @@
 \section{Datasets}
 \label{sec:datasets}
 
-Table~\ref{tab:datasets} lists the public datasets used by the reviewed studies. Two features matter for explanation. First, the evidence base is narrow. Seven of the ten EEG papers use the Cao \textit{et al.} lane-departure dataset \cite{cao2019multichannel}, and six use the same 11-subject subset, so claims about what EEG models learn rest largely on one simulator, one labelling rule and about eleven drivers. Second, datasets differ in what their labels mean: reaction time, PERCLOS, self-report, observer rating or eye state. An explanation can only be as meaningful as the label it explains. MRL Eye and CEW, for instance, record whether the eye is open and do not measure drowsiness at all.
+Table~\ref{tab:datasets} lists the public datasets used by the reviewed studies. Three features matter for explanation. First, the evidence base is narrow. Twelve of the 15 EEG papers use the Cao \textit{et al.} lane-departure dataset \cite{cao2019multichannel} or SEED-VIG \cite{zheng2017multimodal}. Eight use Cao, and seven of those use the same 11-subject subset, so many claims about what EEG models learn rest on one simulator, one labelling rule and about eleven drivers.
 
-Several studies also use private data \cite{seo2025driver,jiang2026eeg,hasan2024validation,puspasari2026predicting,nomura2025drowsiness,zhou2021predicting}, which prevents independent checks of their explanations.
+Second, datasets differ in what their labels mean: reaction time, PERCLOS, self-report, observer rating, eye state or the recording session. An explanation can only be as meaningful as the label it explains. MRL Eye and CEW, for instance, record whether the eye is open and do not measure drowsiness at all.
+
+Third, a dataset limits what an explanation can claim. SEED-VIG has temporal and posterior channels only, so it cannot directly support statements about prefrontal activity \cite{xu2026dynamic}, and any band finding at its temporal sites has to contend with muscle activity \cite{gao2024sftnet}. Studies also use differing subsets of SEED-VIG, including 14, 21 and 23 subjects \cite{gao2025comprehensive,zhou2026sedriven,gao2024sftnet}, which complicates comparison between them.
+
+Many studies use private data \cite{seo2025driver,jiang2026eeg,wu2024driver,gao2025comprehensive,hasan2024validation,puspasari2026predicting,nomura2025drowsiness,zhou2021predicting,zhu2025madfm,guan2025fatigue,zeynalpour2025multimethod}, which prevents independent checks of their explanations. Others name no dataset \cite{jha2025realtime,sasikala2026robust,nayomi2026vision} or one we could not trace \cite{theivadas2025dynamic}.
 
 \begin{table*}[!t]
 \centering
@@ -16,7 +20,7 @@ Several studies also use private data \cite{seo2025driver,jiang2026eeg,hasan2024
 \textbf{Dataset} & \textbf{Subjects} & \textbf{Setting} & \textbf{Signals} & \textbf{Labels} \\
 \midrule
 Cao \textit{et al.} \cite{cao2019multichannel} & 27 (62 sessions) & 90-min night-time VR lane keeping & 30-channel EEG, 500 Hz & Reaction time to lane departures \\
-SEED-VIG \cite{zheng2017multimodal} & 23 & About 2 h simulated highway driving & 17-channel EEG, forehead EOG, 200 Hz & PERCLOS from eye-tracking glasses (binarised differently across studies) \\
+SEED-VIG \cite{zheng2017multimodal} & 23 & About 2 h simulated highway driving & 17-channel EEG (temporal, posterior), forehead EOG, 200 Hz & PERCLOS from eye-tracking glasses (binarised differently across studies) \\
 DROZY \cite{massoz2016drozy} & 14 & Three sessions with rising sleep deprivation; vigilance test & EEG, EOG, ECG, EMG, near-infrared video & KSS and vigilance-test reaction time \\
 NTHU-DDD \cite{weng2017nthu} & 36 & Simulated driving, acted drowsiness; day and night, glasses & Infrared video & Drowsy and non-drowsy behaviours \\
 UTA-RLDD \cite{ghoddoosian2019realistic} & 60 & Self-recorded indoors, not driving, about 30 h & RGB phone or webcam video & KSS self-report, three classes \\

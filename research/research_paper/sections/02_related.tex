@@ -1,0 +1,10 @@
+\section{Related Work}
+\label{sec:related}
+
+\textit{Alignment.} EA \cite{he2020transfer} and Riemannian re-centring \cite{zanini2018transfer} are standard for cross-subject EEG; Wu \cite{wu2025revisiting} and Junqueira \textit{et al.}~\cite{junqueira2024systematic} evaluate EA more broadly. Our population-prior reference has essentially the same form as Equation 8 of Duan \textit{et al.}~\cite{duan2025online}, so we treat it as an existing method applied to a new setting. Chu \textit{et al.}~\cite{chu2026rectifying} address class imbalance in online re-centring, but on motor imagery with simulated imbalance, and latent alignment has been examined under imbalance on other EEG tasks \cite{latent2025}. \todo{Team: confirm these two descriptions from the full papers.}
+
+\textit{Test-time adaptation.} Wimpff \textit{et al.}~\cite{wimpff2023calibration} combine alignment and batch-norm updates for motor imagery. Li \textit{et al.}~\cite{li2026backprop} use online EA and batch-norm adaptation within forward-only adaptation for drowsiness regression; they describe both as effective tools and do not analyse the reference's state mix. For drowsiness classification, Jang \textit{et al.}~\cite{jang2025calibration} adapt online while keeping pretrained batch-norm statistics.
+
+\textit{Calibration-free drowsiness detection.} Other work approaches this problem through domain generalisation \cite{dg2023,manifold2024}, black-box adaptation \cite{spark2024} and cross-dataset transfer \cite{edjan2023}. Gao and Lv \cite{gao2026early} use a frozen personal spectral reference from the session's opening and find that even very short windows suffice, under a different feature space and label scheme from ours. Our base model is InterpretableCNN \cite{cui2022eeg}.
+
+\textit{Explanations.} Attribution methods on EEG vary in faithfulness \cite{cui2023towards}, and few drowsiness studies test them. We did not find a study of how online alignment changes attributions for drowsiness.
